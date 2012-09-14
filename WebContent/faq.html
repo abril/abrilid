@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Abril ID - Bootstrap</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+
+      	/* Pattern overlay
+		------------------------- */
+		.superior {
+		  position: relative;
+		  padding: 40px 0;
+		  color: #fff;
+		  text-align: center;
+		  text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+		  background: #020031; /* Old browsers */
+		  background: -moz-linear-gradient(45deg,  #6eabcf 0%, #0033db 100%); /* FF3.6+ */
+		  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#0033db), color-stop(100%,#6d3353)); /* Chrome,Safari4+ */
+		  background: -webkit-linear-gradient(45deg,  #6eabcf 0%,#0033db 100%); /* Chrome10+,Safari5.1+ */
+		  background: -o-linear-gradient(45deg,  #6eabcf 0%,#0033db 100%); /* Opera 11.10+ */
+		  background: -ms-linear-gradient(45deg,  #6eabcf 0%,#0033db 100%); /* IE10+ */
+		  background: linear-gradient(45deg,  #6eabcf 0%,#0033db 100%); /* W3C */
+		  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6eabcf', endColorstr='#0033db',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		  -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+		     -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+		          box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+		}
+		.superior h1 {
+		  font-size: 80px;
+		  font-weight: bold;
+		  letter-spacing: -1px;
+		  line-height: 1;
+		}
+		.superior p {
+		  font-size: 24px;
+		  font-weight: 300;
+		  line-height: 30px;
+		  margin-bottom: 30px;
+		}
+	
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+    <!-- BARRA TOP -->
+    <div class="navbar navbar-inverse  navbar-fixed-top">
+	  <div class="navbar-inner">
+	    <a class="brand" href="index.html">BootsTrap - Abril ID</a>
+	    <ul class="nav">
+	      <li><a href="index.html">Home</a></li>
+	      <li><a href="#">Documenta&ccedil;&atilde;o</a></li>
+	      <li><a href="#">Passo a Passo</a></li>
+	      <li><a href="customizacao.html">Customiza&ccedil;&atilde;o</a></li>
+	      <li><a href="#">Cases</a></li>
+	      <li class="active"><a href="faq.html">FAQ</a></li>
+	      <li><a href="#">newsLetter</a></li>
+	    </ul>
+	  </div>
+	</div>
+
+<!-- Subhead
+================================================== -->
+<div class="superior" id="overview">
+  <div class="container">
+       		<h1>FAQ - Abril ID</h1>
+	   		<p class="lead">Já passamos por isso.</p>
+  </div>
+</div>
+<!-- Head Titulo
+================================================== -->	
+  <div class="container">	
+	<div class="container-fluid">
+	    
+	      <!--Body content-->
+	    <h4>1. Por que os elementos do widget do AbrilId no meu site aparecem centralizados?</h4>
+
+		<p>Verifique se há em seu CSS algum item que altere os elementos HTML, como div, p e outros, pois isso pode afetar o 
+		posicionamento dos elementos dentro do widget.</p>
+		
+		<h4>2. No Internet Explorer 7 (IE7), meu widget aparece deslocado, o que fazer?</h4>
+		
+		<p>Já colocar o tamanho da largura do widget de login na div na qual o mesmo será exibido 
+		pareceresolver o problema de posicionamento: 503px;</p>
+		
+		<h4>3. A customização de layout não funciona no Internet Explorer 7 (IE7), o que fazer?</h4>
+		
+		<p>O IE7 infelizmente não consegue interpretar corretamente inclusões 
+		de css fora do elemento header do HTML. Favor verificar se há algum caso de CSS no corpo.</p>
+		
+		<h4>4. Estou recebendo erro "Permissão negada", o que está acontecendo?</h4>
+		
+		<p>Por favor, verifique se a URL usada contém ".abril.com.br". 
+		Normalmente em ambiente de testes, usamos localhost, mas isso não funciona. 
+		Atualize seu documento /etc/hosts (Unix) ou C:/windows/system32/etc/drivers/hosts colocando algo como 127.0.0.1 local.abril.com.br</p>
+		
+		<h4>5. Os widgets quebram no meu browser, o que está acontecendo?</h4>
+		
+		<p>Verifique se seu browser está na lista de browsers homologados:
+		
+		<p>Internet Explorer (7.x, 8.x e 9.x); Mozilla Firefox (3.5, 3.6 e 5.x); Google Chrome (10.x ou maior), Safari (5.0)</p>
+		
+		<h4>6. Por que recebo a mensagem "Aplicação inválida" quando tento me autenticar nos Widgets ou Includes?</h4>
+		
+		<p>As duas principais causas dessa mensagem são: não definição do identificador da 
+		aplicação nas configurações dos componentes ou a definição do identificador da aplicação 
+		em letras minúsculas (o identificador da aplicação sempre deve ser usado com todas as 
+		letras MAIÚSCULAS. Ex: "CAPRICHO" e não "Capricho");</p>
+	</div>
+	</div>
+	
+	
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
