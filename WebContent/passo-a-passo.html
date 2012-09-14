@@ -39,6 +39,75 @@
 		  line-height: 30px;
 		  margin-bottom: 30px;
 		}
+		
+		/* Sidenav for Docs
+-------------------------------------------------- */
+
+.bs-docs-sidenav {
+  width: 228px;
+  margin: 30px 0 0;
+  padding: 0;
+  background-color: #fff;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+     -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+          box-shadow: 0 1px 4px rgba(0,0,0,.065);
+}
+.bs-docs-sidenav > li > a {
+  display: block;
+  *width: 190px;
+  margin: 0 0 -1px;
+  padding: 8px 14px;
+  border: 1px solid #e5e5e5;
+}
+.bs-docs-sidenav > li:first-child > a {
+  -webkit-border-radius: 6px 6px 0 0;
+     -moz-border-radius: 6px 6px 0 0;
+          border-radius: 6px 6px 0 0;
+}
+.bs-docs-sidenav > li:last-child > a {
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+}
+.bs-docs-sidenav > .active > a {
+  position: relative;
+  z-index: 2;
+  padding: 9px 15px;
+  border: 0;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+  -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+     -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+          box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+}
+/* Chevrons */
+.bs-docs-sidenav .icon-chevron-right {
+  float: right;
+  margin-top: 2px;
+  margin-right: -6px;
+  opacity: .25;
+}
+.bs-docs-sidenav > li > a:hover {
+  background-color: #f5f5f5;
+}
+.bs-docs-sidenav a:hover .icon-chevron-right {
+  opacity: .5;
+}
+.bs-docs-sidenav .active .icon-chevron-right,
+.bs-docs-sidenav .active a:hover .icon-chevron-right {
+  background-image: url(../img/glyphicons-halflings-white.png);
+  opacity: 1;
+}
+.bs-docs-sidenav.affix {
+  top: 40px;
+}
+.bs-docs-sidenav.affix-bottom {
+  position: absolute;
+  top: auto;
+  bottom: 270px;
+}
 	
     </style>
   </head>
@@ -70,18 +139,82 @@
 
 <!-- Body
 ================================================== -->		
+<div class="container">	
 	<div class="container-fluid">
 	  <div class="row-fluid">
-	    <div class="span2">
+	    <div class="span4">
 	      <!--Sidebar content-->
-	      
+	        <ul class="nav nav-list bs-docs-sidenav">
+	          <li><a href="#"><i class="icon-chevron-right"></i> 1º Passo - Instalando o Abril ID</a></li>
+	          <li><a href="#"><i class="icon-chevron-right"></i> 2º Passo - Configurando o Abril ID</a></li>
+	          <li><a href="#"><i class="icon-chevron-right"></i> largura da borda da caixa do widget</a></li>
+	          <li><a href="#"><i class="icon-chevron-right"></i> cor do 'X' para fechar o widget</a></li>
+	          <li><a href="#"><i class="icon-chevron-right"></i> cor da borda da caixa interna</a></li>
+	          <li><a href="#"><i class="icon-chevron-right"></i> cor do background da caixa interna do widget</a></li>
+	        </ul>
 	    </div>
-	    <div class="span10">
+	    <div class="span8">
 	      <!--Body content-->
+<section id="overview">
+          <div class="page-header">
+            <h1>Passo à Passo</h1>
+          </div>
+
+          <h3>1º Passo - Instalando o Abril ID</h3>
+          <p>Para instalar o Javascript do Abril ID é muito simples basta inserir a tag <strong>widget.js</strong>, o ideial é que a tag esteja contida no final da página que você quer aplicar o componente do Abril ID</p>
+
+          <p><strong>Atenção</strong> para realizar testes de implementação devemos adicionar qa a frente da url como no exemplo abaixo:
+          </p><pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;script src=&quot;http://id.abril.com.br/javascripts/widgets.js&quot;&gt;&lt;/script&gt;</span></li></ol></pre>
+          
+          
+          <h3>2º Passo - Configurando o Abril ID</h3>
+          <p>Para configurar o Abril ID no seu site ele deverá possuir no mínimo as seguintes configurações que são obrigatórias, que são o <strong>produto:</strong> que deve conter a marca que será implementada(no caso o nome da revista) no Abril Id e deverá possuir um <strong>container:</strong> que no caso é nome da div que será implementada. Como no exemplo a seguir.</p>
+
+          <p><strong>Atenção</strong> Esse script deverá estar na página na qual você quer implementar o Abril ID.</p>
+          <pre class="prettyprint linenums">
+	         <ol class="linenums">
+	       		<li class="L0">
+	       		<span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span>
+	       		</li>
+	       		<li class="L1"><span class="pln"> &nbsp;&nbsp;var configuracao = {</span>
+	       		</li>
+	       		<li class="L2"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;produto:'ID_DO_SEU_SITE',<br /></span>
+	       		</li>
+	       		<li class="L3"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;container: 'ID_DA_DIV'<br /></span>
+	       		</li>
+	       		<li class="L4"><span class="pln"> &nbsp;&nbsp;};<br /></span>
+	       		</li>
+	       		<li class="L5"><span class="pln"> &lt;/script&gt;</span>
+	       		</li>
+	         </ol>
+          </pre>
+          <p><strong>Observação:</strong> Perceba que no scrpit acima temos na linha 3 o id do seu site, e na linha 4 temos o nome da div que iremos aplicar o widget do abril id ou qualquer outro componente que você queira chamar na tela.</p>
+          <p><strong>produto:</strong> Repare que nessa tag devo inserir o ID do Site.</p>
+          <p><strong>container:</strong> Repare que nessa tag devo inserir o nome da Div que eu quero que componente apareça.</p>
+          
+          <h3>3º Passo - Instanciando o Abril ID</h3>
+          <p>Para instanciar o Abril ID deveremos inserir o código abaixo na sua página para termos o widget.</p>
+              <pre class="prettyprint linenums">
+	         <ol class="linenums">
+	       		<li class="L0">
+	       		<span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span>
+	       		</li>
+	       		<li class="L1"><span class="pln">&nbsp;&nbsp;var exemplo = new AbrilId();</span>
+	       		</li>
+	       		<li class="L2"><span class="pln">&nbsp;&nbsp;exemplo.initialize(configuracao);</span>
+	       		</li>
+	       		<li class="L3"><span class="pln">&lt;/script&gt;</span>
+	       		</li>
+	         </ol>
+          </pre>
+        </section>
+	      
 	      
 	    </div>
 	  </div>
 	</div>
+</div>
+
 	
 	
 	<script src="http://code.jquery.com/jquery-latest.js"></script>

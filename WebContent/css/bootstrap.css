@@ -883,8 +883,17 @@ pre {
           border-radius: 4px;
 }
 
+.prettyprint {
+    background-color: #F7F7F9;
+    border: 1px solid #E1E1E8;
+    padding: 8px;
+}
+.prettyprint.linenums {
+    box-shadow: 40px 0 0 #FBFBFC inset, 41px 0 0 #ECECF0 inset;
+}
+
 pre.prettyprint {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 pre code {
