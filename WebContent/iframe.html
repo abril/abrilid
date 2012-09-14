@@ -3,24 +3,174 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="http://id.abril.com.br/javascripts/widgets.js"></script>
-<title>exeplo abril-id</title>
+<script src="js/jquery-1.3.2.min.js"></script>
+<title>exemplo abril-id</title>
 <script type="text/javascript">
   var configuracao = {
-    produto:'VEJA',
-    container: 'div_widget',
-    componente: Componente.WIDGET
-  };
+		    produto:'VEJA',
+		    container: 'div_widget',
+		    provedores: ['facebook', 'google', 'twitter'],
+		    componente: Componente.WIDGET,
+		    seta: 'SD',
+		    estilo:{ //início da configuração de estilo
+		      'general': {      
+		      'background-color':'#4f6068', //cor do background da caixa do widget//
+		      'border-color':'#111a33', //cor da borda da caixa do widget//
+		      'border-width':'1', //largura da borda da caixa do widget, sem o 'px' - minimo: 1, maximo: 5//
+		      'text-color':'#DDCCBB', //cor do 'X' para fechar o widget e de todos os textos do widget, exceto erros e botoes//
+		      'inner-border-color':'#010729' //cor da borda da caixa interna, do separador e da borda dos campos//
+		      },
+		      'inner-box':{
+		        'background-color':'#66777f' //cor do background da caixa interna do widget//
+		      },
+		      'button':{
+		        'stroke':{
+		          'text-color':'#ffffff' , //cor de fonte do botao com gradiente//
+		          'background-color':{
+		            'start':'#020926', //cor inicial do gradiente do botao//
+		            'end':'#020926' //cor final do gradiente do botao//
+		          },
+		          'border-color':'#020926' //cor de borda do botao com gradiente//
+		        },
+		        'flat':{
+		          'text-color':'#ffffff' , //cor de fonte do botao sem gradiente//
+		          'background-color':'#020926', //cor de fundo do botao sem gradiente//
+		          'border-color':'#020926' //cor de borda do botao sem gradiente//
+		        }
+		      },
+		      'error':{
+		        'background-color':'#66777f', //cor fundo da caixa de erro//
+		        'border-color':'#020926', //cor de borda da caixa de erro//
+		        'text-color':'#ffffff' //cor do texto da caixa de erro e da borda dos campos indicados no erro//
+		      },
+		      'header':{
+		        'type': 'light' //'default': logotipo verde, assinatura cinza escuro | 'light': logotipo e assinatura brancos//
+		      },
+		      'topo': {
+		        'background-color': {
+		          'start': '#CCCCCC', //cor inicial do gradiente do fundo//
+		          'end': '#CCCCCC' //cor final do gradiente do fundo//
+		        },
+		        'line-color':'#888888', //cor do separador //
+		        'text-color':'#888888', //cor dos textos do topo //
+		        'border-color':'#888888', // cor da borda do topo, caso haja //
+		        'border-width':'2', // espessura da borda - de 2 a 5 - default 0//
+		        'logo':'default' // 'default' (verde)|'white' (branco)|'light grey' (cinza claro)|'grey' (cinza)|'black' (preto)  //
+		      }
+		    }
+		  };
 
   var widget = new AbrilId();
   widget.initialize(configuracao);
 </script>
+
+<script type="text/javascript" src="js/jscolor/jscolor.js"></script>
 </head>
 <body>
-<a href="javascript: void(0);" onclick="widget.login.render();">login</a>
+<div style="position: absolute;">
+	<table border="0">
+	
+		<tr><th colspan=2>Geral</th></tr>
+		<tr><td>Cor Texto</td><td><input id="gc_text" type="text" onblur="fgc_text(this.value)" size="6" maxlength="7" value="" class="color {styleElement:'ex_gc_text'}">
+		<input id="ex_gc_text" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		
+		<tr><td>Cor Fundo</td><td><input id="gc_fundo" type="text" onblur="fgc_fundo(this.value)"  size="6" maxlength="7" value="" class="color {styleElement:'ex_gc_fundo'}">
+		<input id="ex_gc_fundo" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		
+		<tr><td>Cor Borda</td><td><input id="gc_borda" type="text" onblur="fgc_borda(this.value)"  size="6" maxlength="7" value="" class="color {styleElement:'ex_gc_borda'}">
+		<input id="ex_gc_borda" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		<tr><td>Cor Cx int Fundo</td><td><input id="gc_cxfundo" onblur="fgc_cxfundo(this.value)"  size="6" maxlength="7" type="text" value="" class="color {styleElement:'ex_gc_cxfundo'}">
+		<input id="ex_gc_cxfundo" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		<tr><td>Cor Cx int Borda</td><td><input id="gc_cxborda" onblur="fgc_cxborda(this.value)"  size="6" maxlength="7" type="text" value="" class="color {styleElement:'ex_gc_cxborda'}">
+		<input id="ex_gc_cxborda" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		<tr>
+		<td>Tamanho Borda Ext</td><td>
+		<select id="tb_borda"  onchange="ftb_borda()" >
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		</select> 
+		</td></tr>
+		<tr>
+		<td>LogoTipo</td><td>
+		<select id="logo_tipo"  onchange="flogo_tipo()" >
+		  <option value="verde">verde</option>
+		  <option value="ligth">ligth</option>
+		</select> 
+		</td></tr>
+		<tr><th colspan=2>Botão especial</th></tr>
+		
+		<tr><td>Cor Texto</td><td><input id="bec_text" type="text" onblur="fbec_text(this.value)" size="6" maxlength="7" value="" class="color {styleElement:'ex_bec_text'}">
+		<input id="ex_bec_text" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		
+		<tr><td>Cor Fd Inical</td><td><input id="bec_inicial" type="text" onblur="fbec_inicial(this.value)" size="6" maxlength="7" disabled=true value="FDFDFD" class="color {styleElement:'ex_bec_inicial'}">
+		<input id="ex_bec_inicial" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		
+		<tr><td>Cor Fd Final</td><td><input id="bec_final" type="text" onblur="fbec_final(this.value)" size="6" maxlength="7" value=""  disabled=true class="color {styleElement:'ex_bec_final'}">
+		<input id="ex_bec_final" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		
+		<tr><td>Cor Borda</td><td><input id="bec_borda" type="text" onblur="fbec_borda(this.value)" size="6" maxlength="7" value="" class="color {styleElement:'ex_bec_borda'}">
+		<input id="ex_bec_borda" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		
+		<tr><th colspan=2>Botão Simples</th></tr>
+		
+		<tr><td>Cor Texto</td><td><input id="bsc_text" type="text" onblur="fbsc_text(this.value)" size="6" maxlength="7" value="" class="color {styleElement:'ex_bsc_text'}">
+		<input id="ex_bsc_text" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		
+		<tr><td>Cor Fundo</td><td><input id="bsc_fundo" type="text" onblur="fbsc_fundo(this.value)" size="6" maxlength="7" value=""  class="color {styleElement:'ex_bsc_fundo'}">
+		<input id="ex_bsc_fundo" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		
+		<tr><td>Cor Borda</td><td><input id="bsc_borda" type="text" onblur="fbsc_borda(this.value)" size="6" maxlength="7" value="" class="color {styleElement:'ex_bsc_borda'}">
+		<input id="ex_bsc_borda" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		
+		<tr><th colspan=2>Msg de Error</th></tr>
+		
+		<tr><td>Cor Texto</td><td><input id="msgec_text" type="text" onblur="fmsgec_text(this.value)" size="6" maxlength="7" value="" class="color {styleElement:'ex_msgec_text'}">
+		<input id="ex_msgec_text" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		
+		<tr><td>Cor Fundo</td><td><input id="msgec_fundo" type="text" onblur="fmsgec_fundo(this.value)" size="6" maxlength="7" value=""  class="color {styleElement:'ex_msgec_fundo'}">
+		<input id="ex_msgec_fundo" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		
+		<tr><td>Cor Borda</td><td><input id="msgec_borda" type="text" onblur="fmsgec_borda(this.value)" size="6" maxlength="7" value="" class="color {styleElement:'ex_msgec_borda'}">
+		<input id="ex_msgec_borda" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		
+	</table>
+</div>
+
+
+
 <div id="div_widget"></div>
 
 <script type="text/javascript">
-  widget.login.render();
+will.use.apply(will, AIW_JS_BASIC)( function (status) {
+	if (status === "success") {		
+		widget.login.render();
+	}
+});
+
+function fgc_text(value) { $(".abril-id-widget-box .custom-text-color").css("color"," #"+value); }
+function fgc_fundo(value) { $(".abril-id-widget-box.custom-abril-id-background").css("background-color"," #"+value); }
+function fgc_borda(value) { $(".abril-id-widget-box.custom-abril-id-border").css("border-color"," #"+value); }
+function fgc_cxfundo(value) { $(".abril-id-widget-box .custom-inner-box-background").css("background-color"," #"+value); }
+function fgc_cxborda(value) { $(".abril-id-widget-box .custom-line").css("border-color"," "+value); }
+function ftb_borda() {	$(".abril-id-widget-box.custom-abril-id-border").css("border-width", $('#tb_borda').find('option').filter(':selected').text()+"px" )}
+function flogo_tipo() {	$(".abril-id-widget-box.custom-abril-id-border").css("border-width", $('#logo_tipo').find('option').filter(':selected').text()+"px" )}
+
+function fbec_text(value)    { $(".abril-id-widget-box .custom-stroke-button").css("color"," #"+ value); }
+function fbec_inicial(value) { $(".abril-id-widget-box .custom-stroke-button").css("background"," -moz-linear-gradient(center top , #"+value +", #B6B4B5) repeat scroll 0 0 transparent;"); }
+function fbec_final(value)   { $(".abril-id-widget-box .custom-stroke-button").css("background"," -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#cccccc));"); }
+function fbec_borda(value)   { $(".abril-id-widget-box .custom-stroke-button").css("border-color"," #"+value); }
+
+function fbsc_text(value)    { $(".abril-id-widget-box .custom-flat-button").css("color"," #"+ value); }
+function fbsc_fundo(value)   { $(".abril-id-widget-box .custom-flat-button").css("background-color"," #"+value); }
+function fbsc_borda(value)   { $(".abril-id-widget-box .custom-flat-button").css("border-color"," #"+value); }
+
+function fmsgec_text(value)    { $(".abril-id-widget-box .custom-error-message").css("color"," #"+ value); }
+function fmsgec_fundo(value)   { $(".abril-id-widget-box .custom-error").css("background-color"," #"+value); }
+function fmsgec_borda(value)   { $(".abril-id-widget-box .custom-error").css("border-color"," #"+value); }
+
 </script>
 
 </body>
