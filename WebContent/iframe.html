@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="http://id.abril.com.br/javascripts/widgets.js"></script>
+<title>exeplo abril-id</title>
+<script type="text/javascript">
+  var configuracao = {
+    produto:'VEJA',
+    container: 'div_widget',
+    componente: Componente.WIDGET
+  };
+
+  var widget = new AbrilId();
+  widget.initialize(configuracao);
+</script>
+</head>
+<body>
+<a href="javascript: void(0);" onclick="widget.login.render();">login</a>
+<div id="div_widget"></div>
+
+<script type="text/javascript">
+  widget.login.render();
+</script>
+
+</body>
+</html>
