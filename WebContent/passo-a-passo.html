@@ -5,6 +5,7 @@
     <title>Abril ID - Bootstrap</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
     <style type="text/css">
 
       	/* Pattern overlay
@@ -108,7 +109,81 @@
   top: auto;
   bottom: 270px;
 }
-	
+/* Bootstrap code examples
+-------------------------------------------------- */
+
+/* Base class */
+.bs-docs-example {
+  position: relative;
+  margin: 15px 0;
+  padding: 39px 19px 14px;
+  *padding-top: 19px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+/* Echo out a label for the example */
+.bs-docs-example:after {
+  content: "Example";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  color: #9da0a4;
+  -webkit-border-radius: 4px 0 4px 0;
+     -moz-border-radius: 4px 0 4px 0;
+          border-radius: 4px 0 4px 0;
+}
+
+/* Remove spacing between an example and it's code */
+.bs-docs-example + .prettyprint {
+  margin-top: -20px;
+  padding-top: 15px;
+}
+
+/* Tweak examples
+------------------------- */
+.bs-docs-example > p:last-child {
+  margin-bottom: 0;
+}
+.bs-docs-example .table,
+.bs-docs-example .progress,
+.bs-docs-example .well,
+.bs-docs-example .alert,
+.bs-docs-example .hero-unit,
+.bs-docs-example .pagination,
+.bs-docs-example .navbar,
+.bs-docs-example > .nav,
+.bs-docs-example blockquote {
+  margin-bottom: 5px;
+}
+.bs-docs-example .pagination {
+  margin-top: 0;
+}	
+/* Images */
+.bs-docs-example-images img {
+  margin: 10px;
+  display: inline-block;
+}
+/* Popovers */
+.bs-docs-example-popover {
+  padding-bottom: 24px;
+  background-color: #f9f9f9;
+}
+.bs-docs-example-popover .popover {
+  position: relative;
+  display: block;
+  float: left;
+  width: 260px;
+  margin: 20px;
+}
     </style>
   </head>
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
@@ -162,53 +237,36 @@
 
           <h3>1º Passo - Instalando o Abril ID</h3>
           <p>Para instalar o Javascript do Abril ID é muito simples basta inserir a tag <strong>widget.js</strong>, o ideial é que a tag esteja contida no final da página que você quer aplicar o componente do Abril ID</p>
-
-          <p><strong>Atenção</strong> para realizar testes de implementação devemos adicionar qa a frente da url como no exemplo abaixo:
-          </p><pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;script src=&quot;http://id.abril.com.br/javascripts/widgets.js&quot;&gt;&lt;/script&gt;</span></li></ol></pre>
+		
+		<div class="bs-docs-example">
+		  		  <div class="alert alert-error">
+          <strong>Atenção</strong> para realizar testes de implementação devemos adicionar qa a frente da url como no exemplo abaixo:
+          </div>
+          </div>
+          <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;script src=&quot;http://id.abril.com.br/javascripts/widgets.js&quot;&gt;</span></li><li class="L1"><span class="pln">&lt;/script&gt;</span></li></ol></pre>
           
           
           <h3>2º Passo - Configurando o Abril ID</h3>
           <p>Para configurar o Abril ID no seu site ele deverá possuir no mínimo as seguintes configurações que são obrigatórias, que são o <strong>produto:</strong> que deve conter a marca que será implementada(no caso o nome da revista) no Abril Id e deverá possuir um <strong>container:</strong> que no caso é nome da div que será implementada. Como no exemplo a seguir.</p>
-
-          <p><strong>Atenção</strong> Esse script deverá estar na página na qual você quer implementar o Abril ID.</p>
-          <pre class="prettyprint linenums">
-	         <ol class="linenums">
-	       		<li class="L0">
-	       		<span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span>
-	       		</li>
-	       		<li class="L1"><span class="pln"> &nbsp;&nbsp;var configuracao = {</span>
-	       		</li>
-	       		<li class="L2"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;produto:'ID_DO_SEU_SITE',<br /></span>
-	       		</li>
-	       		<li class="L3"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;container: 'ID_DA_DIV'<br /></span>
-	       		</li>
-	       		<li class="L4"><span class="pln"> &nbsp;&nbsp;};<br /></span>
-	       		</li>
-	       		<li class="L5"><span class="pln"> &lt;/script&gt;</span>
-	       		</li>
-	         </ol>
-          </pre>
+		  <div class="bs-docs-example">
+		  <div class="alert alert-error">
+		  <strong>Atenção</strong> Esse script deverá estar na página na qual você quer implementar o Abril ID.
+		  </div>
+          </div>
+          <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span></li><li class="L1"><span class="pln"> &nbsp;&nbsp;var configuracao = {</span></li><li class="L2"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;produto:'ID_DO_SEU_SITE',<br /></span></li><li class="L3"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;container: 'ID_DA_DIV'<br /></span></li><li class="L4"><span class="pln"> &nbsp;&nbsp;};<br /></span></li><li class="L5"><span class="pln"> &lt;/script&gt;</span></li></ol></pre>
+          
           <p><strong>Observação:</strong> Perceba que no scrpit acima temos na linha 3 o id do seu site, e na linha 4 temos o nome da div que iremos aplicar o widget do abril id ou qualquer outro componente que você queira chamar na tela.</p>
           <p><strong>produto:</strong> Repare que nessa tag devo inserir o ID do Site.</p>
           <p><strong>container:</strong> Repare que nessa tag devo inserir o nome da Div que eu quero que componente apareça.</p>
+
           
           <h3>3º Passo - Instanciando o Abril ID</h3>
           <p>Para instanciar o Abril ID deveremos inserir o código abaixo na sua página para termos o widget.</p>
-              <pre class="prettyprint linenums">
-	         <ol class="linenums">
-	       		<li class="L0">
-	       		<span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span>
-	       		</li>
-	       		<li class="L1"><span class="pln">&nbsp;&nbsp;var exemplo = new AbrilId();</span>
-	       		</li>
-	       		<li class="L2"><span class="pln">&nbsp;&nbsp;exemplo.initialize(configuracao);</span>
-	       		</li>
-	       		<li class="L3"><span class="pln">&lt;/script&gt;</span>
-	       		</li>
-	         </ol>
-          </pre>
+          <div class="bs-docs-example">
+          </div>
+		  <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span></li><li class="L1"><span class="pln">&nbsp;&nbsp;var exemplo = new AbrilId();</span></li><li class="L2"><span class="pln">&nbsp;&nbsp;exemplo.initialize(configuracao);</span></li><li class="L3"><span class="pln">&lt;/script&gt;</span></li></ol></pre>  
+          
         </section>
-	      
 	      
 	    </div>
 	  </div>
