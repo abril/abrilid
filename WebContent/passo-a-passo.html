@@ -109,6 +109,41 @@
   top: auto;
   bottom: 270px;
 }
+
+/* Desktop large
+------------------------- */
+@media (min-width: 1200px) {
+  .bs-docs-container {
+    max-width: 970px;
+  }
+  .bs-docs-sidenav {
+    width: 258px;
+  }
+}
+/* Desktop
+------------------------- */
+@media (max-width: 980px) {
+  /* Unfloat brand */
+  body > .navbar-fixed-top .brand {
+    float: left;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Inline-block quick links for more spacing */
+  .quick-links li {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  /* When affixed, space properly */
+  .bs-docs-sidenav {
+    top: 0;
+    margin-top: 30px;
+    margin-right: 0;
+  }
+}
 /* Bootstrap code examples
 -------------------------------------------------- */
 
@@ -215,100 +250,100 @@
 <!-- Body
 ================================================== -->		
 <div class="container">	
-	<div class="container-fluid">
-	  <div class="row-fluid">
-	    <div class="span4">
-	      <!--Sidebar content-->
+<!-- Docs nav
+    ================================================== -->
+	<div class="row">
+		<div class="span4 bs-docs-sidebar">
 	        <ul class="nav nav-list bs-docs-sidenav">
-	          <li><a href="#"><i class="icon-chevron-right"></i> 1º Passo - Instalando o Abril ID</a></li>
-	          <li><a href="#"><i class="icon-chevron-right"></i> 2º Passo - Configurando o Abril ID</a></li>
-	          <li><a href="#"><i class="icon-chevron-right"></i> 3º Passo - Instanciando o Abril ID</a></li>
-	          <li><a href="#"><i class="icon-chevron-right"></i> 4º Passo - Criar uma Div para implementação do widget</a></li>
-	          <li><a href="#"><i class="icon-chevron-right"></i> 5º Passo - Realizando a chamada do Widget Abril ID com um link</a></li>
-	        </ul>
-	    </div>
+	          	<li><a href="#passo1"><i class="icon-chevron-right"></i> 1º Passo</a></li>
+	          	<li><a href="#passo2"><i class="icon-chevron-right"></i> 2º Passo</a></li>
+	          	<li><a href="#passo3"><i class="icon-chevron-right"></i> 3º Passo</a></li>
+	          	<li><a href="#passo4"><i class="icon-chevron-right"></i> 4º Passo</a></li>
+	          	<li><a href="#passo5"><i class="icon-chevron-right"></i> 5º Passo</a></li>
+	       	</ul>
+	 	</div>
 	    <div class="span8">
-	      <!--Body content-->
-<section id="overview">
-          <div class="page-header">
-            <h1>Passo à Passo</h1>
-          </div>
-
-          <h3>1º Passo - Instalando o Abril ID</h3>
-          <p>Para instalar o Javascript do Abril ID é muito simples basta inserir a tag <strong>widget.js</strong>, o ideial é que a tag esteja contida no final da página que você quer aplicar o componente do Abril ID</p>
-          
-		
-		<div class="bs-docs-example">
-		  		  <div class="alert alert-error">
-          <strong>Atenção</strong> para realizar testes de implementação devemos adicionar qa a frente da url como no exemplo abaixo:
-          </div>
-          </div>
-          <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;script src=&quot;http://id.abril.com.br/javascripts/widgets.js&quot;&gt;</span></li><li class="L1"><span class="pln">&lt;/script&gt;</span></li></ol></pre>
-          
-          
-          <h3>2º Passo - Configurando o Abril ID</h3>
-          <p>Para configurar o Abril ID no seu site ele deverá possuir no mínimo as seguintes configurações que são obrigatórias, que são o <strong>produto:</strong> que deve conter a marca que será implementada(no caso o nome da revista) no Abril Id e deverá possuir um <strong>container:</strong> que no caso é nome da div que será implementada. Como no exemplo a seguir.</p>
-		  <div class="bs-docs-example">
-		  <div class="alert alert-error">
-		  <strong>Atenção</strong> Esse script deverá estar na página na qual você quer implementar o Abril ID.
-		  </div>
-          </div>
-          <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span></li><li class="L1"><span class="pln"> &nbsp;&nbsp;var configuracao = {</span></li><li class="L2"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;produto:'ID_DO_SEU_SITE',<br /></span></li><li class="L3"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;container: 'ID_DA_DIV'<br /></span></li><li class="L4"><span class="pln"> &nbsp;&nbsp;};<br /></span></li><li class="L5"><span class="pln"> &lt;/script&gt;</span></li></ol></pre>
-          <div class="bs-docs-example">
-    	<div class="alert alert-info">
-		  <strong>Exemplo Prático</strong> Esse exemplo evidência uma forma prática e objetiva de implementação do widget.
-		  </div>
-		  </div>
-          <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span></li><li class="L1"><span class="pln"> &nbsp;&nbsp;var configuracao = {</span></li><li class="L2"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;produto:'VEJA',<br /></span></li><li class="L3"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;container: 'abrilID'<br /></span></li><li class="L4"><span class="pln"> &nbsp;&nbsp;};<br /></span></li><li class="L5"><span class="pln"> &lt;/script&gt;</span></li></ol></pre>
-          <p><strong>Observação:</strong> Perceba que no scrpit acima temos na linha 3 o id do seu site, e na linha 4 temos o nome da div que iremos aplicar o widget do abril id ou qualquer outro componente que você queira chamar na tela.</p>
-          <p><strong>produto:</strong> Repare que nessa tag devo inserir o ID do Site.</p>
-          <p><strong>container:</strong> Repare que nessa tag devo inserir o nome da Div que eu quero que componente apareça.</p>
-
-          
-          <h3>3º Passo - Instanciando o Abril ID</h3>
-          <p>Para instanciar o Abril ID deveremos inserir o código abaixo na sua página para termos o widget.</p>
-          <div class="bs-docs-example">
-          <div class="alert alert-error">
-          <strong>Atenção</strong>Esse é um exemplo teórico para evidenciar uma instancia de widget.
-          </div>
-          </div>
-		  <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span></li><li class="L1"><span class="pln">&nbsp;&nbsp;var exemplo = new AbrilId();</span></li><li class="L2"><span class="pln">&nbsp;&nbsp;exemplo.initialize(configuracao);</span></li><li class="L3"><span class="pln">&lt;/script&gt;</span></li></ol></pre>
-		  <div class="bs-docs-example">
-		  <div class="alert alert-info">
-          <strong>Exemplo Prático </strong> Esse exemplo evidência uma forma prática e objetiva de implementação do widget.
-          </div>
-          </div>
-		  <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span></li><li class="L1"><span class="pln">&nbsp;&nbsp;var widgets = new AbrilId();</span></li><li class="L2"><span class="pln">&nbsp;&nbsp;widgets.initialize(configuracao);</span></li><li class="L3"><span class="pln">&lt;/script&gt;</span></li></ol></pre>
-		  
-		  <h3>4º Passo - Criar uma Div para implementação do widget</h3> 
-		  <p>Para que a implementação do Abril ID seja completa precisamos criar uma div dentro do body que ficará responsavel pela chamada do widget do Abril ID.</p>
-		  <div class="bs-docs-example">
-		  <div class="alert alert-error">
-          <strong>Atenção</strong>Esse é um exemplo prático para evidenciar a criação da div. 
-          </div>
-          </div> 
-          <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;body&gt;</span></li><li class="L1"><span class="pln">&lt;div id='abrilID'&gt;</span></li><li class="L2"><span class="pln">&lt;/div&gt;</span></li><li class="L3"><span class="pln">&lt;/body&gt;</span></li></ol></pre>
-          
-          
-          <h3>5º Passo - Realizando a chamada do Widget Abril ID com um link </h3>
-          <p>Para invocar o widget na página utilizaremos um link para a execução do mesmo colocando dentro da div criada anteriormente</p>
-          <div class="bs-docs-example">
-          <div class="alert alert-info">
-          <strong>Exemplo Prático</strong>Esse é um exemplo prático para evidenciar a chamada do widget dentro de um link. 
-          </div>
-          </div>
-          <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;a href=&quot;javascript: void(0);&quot; onclick=&quot;widgets.login.render();&quot;&gt;login&lt;/a&gt;</span> 
-          
-        </section>
-	      
+	    	<br />
+	    	<div class="alert alert-error">
+		  		<strong>Atenção </strong> Essa sessão passo-a-passo não subistitu a leitura da documentação do abril ID. Sua função é ajudar webmaster realizarem as primeiras implementações.
+		  	</div>
+	    	<section id="passo1">
+	    	<br />
+	    		<div class="page-header">
+				  	<h1>1º Passo - Instalando o Abril ID</h1>
+				</div>
+	    		<p>Para instalar o Javascript do Abril ID é muito simples. Basta  incluir a linha abaixo em todas as páginas onde o Abril ID for necessário. </p>
+			<div class="alert alert-info">O ideial é que está linha esteja contida no final da página que você quer aplicar o componente do Abril ID
+			</div>
+			<div class="bs-docs-example">
+  		  		<div class="alert alert-error">
+        			<strong>Atenção</strong> para realizar testes de implementação seu ambiente de desenvolvimento deve ter acesso ao nosso anbiente de homologação
+	        		</div>
+	        	</div>
+   				<pre class="prettyprint linenums"><ol class="linenums"><span class="pln"><code>&lt;script src=&quot;http://qa.id.abril.com.br/javascripts/widgets.js&quot;&gt;</code></span><span class="pln"><code>&lt;/script&gt;</code></span></ol></pre>
+	    	</section>
+	    	<section id="passo2">
+	    	<br />
+				<div class="page-header">
+      	    		<h1>2º Passo - Configurando o Abril ID</h1>
+      	    	</div>
+	          	<p>Para o Abril ID funcionar em seu site é necessario incluir sua configuração.</p><p> Existem duas formas de configurar o abril ID a forma simplicifada onde você só precisa configurar dois parametros:</p>
+	          	<p><strong>Produto:</strong> que deve ser um nome/ID para sua marca. 
+	          	<p><strong>Container:</strong> que deve ser o <code>id</code> de de um elemento <code>div</code> dentro de sua pagina. 
+	          	<p>A forma avançada que está detalhada em outra sessão. Segue exemplo de implementação escrito em <code>json</code></p>   
+	          		<div class="alert  alert-info">
+				  		Caso ainda  não tenha um <strong>nome/ID</strong> deverá ser solicitado para a equipe de desenvolvimento do Abril ID.</p>
+				  	</div> 
+			  	<div class="bs-docs-example">
+				  	<div class="alert alert-block">
+				  		<strong>Alerta </strong> Esse script deverá estar na página na qual você quer implementar o Abril ID.
+				  	</div>
+	          	</div>
+          		<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span></li><li class="L1"><span class="pln"> &nbsp;&nbsp;var configuracao = {</span></li><li class="L2"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',<br /></span></li><li class="L3"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;container: 'nome_da div_gerado_para_sua_implementação'<br /></span></li><li class="L4"><span class="pln"> &nbsp;&nbsp;};<br /></span></li><li class="L5"><span class="pln"> &lt;/script&gt;</span></li></ol></pre>
+	    	</section>  
+	    	<section id="passo3">
+	    	<br />
+	    		<div class="page-header">
+      	    		<h1>3º Passo - Inicializando o Abril ID</h1>
+      	    	</div> 
+      	    	<p>Para instanciar o funcionamento do Abril ID devemos criar um objeto javascript e declarar o função <code>.initialize()</code> passando a objeto <code>json</code> configuração do <a href="#passo2">Passo 2</a> para o Abril ID.</p>
+          		<div class="bs-docs-example">
+          		</div>
+		  		<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span></li><li class="L1"><span class="pln">&nbsp;&nbsp;var abrilid_teste = new AbrilId();</span></li><li class="L2"><span class="pln">&nbsp;&nbsp;abrilid_teste.initialize(configuracao);</span></li><li class="L3"><span class="pln">&lt;/script&gt;</span></li></ol></pre>
+	    	</section>
+	    	<section id="passo4">
+	    		<br />
+	    		<div class="page-header">
+	    			<h1>4º Passo - Criar uma DIV para implementação do abril ID</h1>
+	    		</div>	 
+		  		<p>Para que a implementação do Abril ID seja completa precisamos criar uma <code>div</code> dentro da pagina do seu site com um <code>id</code> que deve ter o mesmo nome usado no <a href="#passo2">Passo 2</a> no campo <code>compoente</code>. Essa <code>div</code> ficará responsavel por apresentar Abril ID na tela por isso é importante posicionar essa <code>div</code> em um ponto extrategico na pagina do seu site .</p>
+		  		<div class="bs-docs-example">
+          		</div> 
+          		<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;body&gt;</span></li><li class="L1"><span class="pln">&lt;div id='abrilID'&gt;</span></li><li class="L2"><span class="pln">&lt;/div&gt;</span></li><li class="L3"><span class="pln">&lt;/body&gt;</span></li></ol></pre>
+			</section>          
+	  		<section id="passo5">          
+          		<h3>5º Passo - Chamando do Abril ID atravez de um link </h3>
+          		<p>Para invocar o Abril ID na página utilizaremos um link para a realizar chamada do widget de login do Abril ID </p>
+          		<div class="bs-docs-example">
+          		</div>
+          		<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;a href=&quot;javascript: void(0);&quot; onclick=&quot;widgets.login.render();&quot;&gt;login&lt;/a&gt;</span></li></ol></pre>
+			</section>
+			<div class="alert alert-info">
+       			<strong>Exemplo Pratico</strong> Faça o download dessa pagina de teste confirmar tudo que foi passado até agora <a href="exemplo_abrilid.zip">exemplo.zip</a>. 
+       		</div>	
+	    	
 	    </div>
-	  </div>
 	</div>
+   
+   	
 </div>
 
 	
-	
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    
+    <script src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/application.js"></script>
+    
   </body>
 </html>
