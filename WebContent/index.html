@@ -4,9 +4,29 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Abril ID - Bootstrap</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
 
+/* Footer
+-------------------------------------------------- */
+
+.footer {
+  padding: 70px 0;
+  margin-top: 70px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+}
+.footer p {
+  margin-bottom: 0;
+  color: #777;
+}
+.footer-links {
+  margin: 10px 0;
+}
+.footer-links li {
+  display: inline;
+  margin-right: 10px;
+}
       	/* Pattern overlay
 		------------------------- */
 		.superior {
@@ -66,27 +86,85 @@
 	<div class="superior" id="overview">
 	  	<div class="container">
        		<h1>Abril ID</h1>
-	   		<p class="lead">Abril ID a maneira mais pratica de conhecer seus usuario.</p>
+	   		<p class="lead">Abril ID é um app crossbroser desenvolvido para as Marcas Abril SA contectarem-se aos seus usuarios.</p>
+	   		<small>Version 3</small>
 	  	</div>
 	</div>
 
 <!-- Body
 ================================================== -->		
-	<div class="container-fluid">
-	  <div class="row-fluid">
-	    <div class="span2">
-	      <!--Sidebar content-->
-	      
-	    </div>
-	    <div class="span10">
-	      <!--Body content-->
-	      
-	    </div>
+	<div class="container">
+	  <div class="row">
+			<br />
+			<div id="carosel-abrilid" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="item">
+                    <center><img alt="" class="img-polaroid" src="img-widget.jpg"></center>
+                    <div class="carousel-caption">
+                      <h4>Widget - Abril ID</h4>
+                      <p>Atravez dos widget do Abril ID seu site terá mais uma ferramenta para interagir com seus usuários de uma forma mais tranquila, novos usuários podem optar por se cadastrar no Abril ID ou utilizar uma contas como do facebook, google ou twitter.</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <center><img alt=""  class="img-polaroid" src="img-newsletter.jpg"></center>
+                    <div class="carousel-caption">
+                      <h4>Newsletter</h4>
+                      <p>Para disponibilizar newsletter para seus usuários o Abril ID conta com uma interface rápida e simples de implementação onde com 5 linhas de código seus site poderá prover uma newsletter como essa do casa.com.br</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <center><img alt="" class="img-polaroid" src="img-promo.jpg"></center>
+                    <div class="carousel-caption">
+                      <h4>Promoções</h4>
+                      <p>Flexivel, Rápido e Customizável o Abril ID pode ter a cara do seu site, da sua promoção, estar na posição desejável e ainda responder a um volume de chamadas por minuto sem demorar e o publico da capricho não deixa duvida disso.</p>
+                    </div>
+                  </div>
+                  <div class="item active">
+                    <center><img alt="" class="img-polaroid" src="img-topo.jpg"></center>
+                    <div class="carousel-caption">
+                      <h4>Topo Abrill ID</h4>
+                      <p>O Topo é o mais novo componente do Abril ID. Tem uma interface limpa podendo ser colocado no topo de site e manter a identidade do site e apresentar uma saudação marcante para seus usuários</p>
+                    </div>
+                  </div>
+                </div>
+                <a data-slide="prev" href="#carosel-abrilid" class="left carousel-control">‹</a>
+                <a data-slide="next" href="#carosel-abrilid" class="right carousel-control">›</a>
+              </div>	  
+	  
+		
 	  </div>
+	</div>
+		<div class="container">
+	<div class="row">
+	  <div class="span12">
+		<div class="row">
+		  <div class="span4"><h2>O que é Widget</h2><p>Widget é um componente de interface gráfica que "flutua" sobre uma determinada região navegada pelo usuário.</p></div>
+		  <div class="span4"><h2>Vantagens</h2><p>O Abril ID funciona via facebook, Twitter, google. Disponibiliza newsletter por marcas e Tem integração com o SocialCore a mais nova Abril para RedesSociais</p></div>
+		  <div class="span4"><h2>Documentação</h2><p> O Abril ID bootsTraps vem trazendo a facilidade de da web 2.0 para os webMaster navegarem de uma forma mais usual</p></div>
+		</div>
+	  </div>
+	</div>
 	</div>
 	
 	
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <ul class="footer-links">
+          <li><a href="http://id.abril.com.br">Abril Id</a></li>
+          <li><a href="https://confluence.abril.com.br/x/uxZF">Documentação oficial</a></li>
+        </ul>
+      </div>
+    </footer>
+	
+	<script src="js/jquery-latest.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+	<script>
+	$('.carousel').carousel();
+	</script>
   </body>
 </html>
