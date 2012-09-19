@@ -245,22 +245,22 @@
 <!-- Docs nav
     ================================================== -->
 	<div class="row">
-		<div class="span3 bs-docs-sidebar">
+		<div class="span4 bs-docs-sidebar">
 	        <ul class="nav nav-list bs-docs-sidenav">
-	          	<li><a href="#">Basico</a></li>
+	          	<li><a href="javaScript:void(0);">Basico</a></li>
 	          	<li><a href="#passo1"><i class="icon-chevron-right"></i> 1º Passo</a></li>
 	          	<li><a href="#passo2"><i class="icon-chevron-right"></i> 2º Passo</a></li>
 	          	<li><a href="#passo3"><i class="icon-chevron-right"></i> 3º Passo</a></li>
 	          	<li><a href="#passo4"><i class="icon-chevron-right"></i> 4º Passo</a></li>
 	          	<li><a href="#passo5"><i class="icon-chevron-right"></i> 5º Passo</a></li>
-	          	<li><a href="#">Avançado</a></li>
+	          	<li><a href="javaScript:void(0);">Avançado</a></li>
 	          	<li><a href="#tipoComponetes"><i class="icon-chevron-right"></i> Componetes</a></li>
 	          	<li><a href="#redesocial"><i class="icon-chevron-right"></i> Redes Sociais</a></li>
 	          	<li><a href="#layout"><i class="icon-chevron-right"></i> Layout</a></li>
 	       	</ul>
 	       	
 	 	</div>
-	    <div class="span9">
+	    <div class="span8">
 	    	<br />
 	    	<div class="alert alert-error">
 	    	 	<button type="button" class="close" data-dismiss="alert">×</button>
@@ -295,7 +295,7 @@
 				  		Caso ainda  não tenha um <strong>nome/ID</strong> deverá ser solicitado para a equipe de desenvolvimento do Abril ID.</p>
 				  	</div> 
 			  	<div class="bs-docs-example"></div>
-          		<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span></li><li class="L1"><span class="pln"> &nbsp;&nbsp;var configuracao = {</span></li><li class="L2"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',<br /></span></li><li class="L3"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;container: 'nome_da div_gerado_para_sua_implementação'<br /></span></li><li class="L4"><span class="pln"> &nbsp;&nbsp;};<br /></span></li><li class="L5"><span class="pln"> &lt;/script&gt;</span></li></ol></pre>
+          		<pre class="prettyprint "><ol class="linenums"><li class="L0"><span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span></li><li class="L1"><span class="pln"> &nbsp;&nbsp;var configuracao = {</span></li><li class="L2"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',<br /></span></li><li class="L3"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;container: 'nome_da div_gerado_para_sua_implementação'<br /></span></li><li class="L4"><span class="pln"> &nbsp;&nbsp;};<br /></span></li><li class="L5"><span class="pln"> &lt;/script&gt;</span></li></ol></pre>
 	    	</section>  
 	    	<section id="passo3">
 	    	<br />
@@ -315,7 +315,7 @@
 		  		<p>Para que a implementação do Abril ID seja completa precisamos criar uma <code>div</code> dentro da pagina do seu site com um <code>id</code> que deve ter o mesmo nome usado no <a href="#passo2">Passo 2</a> no campo <code>compoente</code>. Essa <code>div</code> ficará responsavel por apresentar Abril ID na tela por isso é importante posicionar essa <code>div</code> em um ponto extrategico na pagina do seu site .</p>
 		  		<div class="bs-docs-example">
           		</div> 
-          		<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;body&gt;</span></li><li class="L1"><span class="pln">&lt;div id='abrilID'&gt;</span></li><li class="L2"><span class="pln">&lt;/div&gt;</span></li><li class="L3"><span class="pln">&lt;/body&gt;</span></li></ol></pre>
+          		<pre class="prettyprint"><ol class="linenums"><li class="L0"><span class="pln">&lt;body&gt;</span></li><li class="L1"><span class="pln">&lt;div id='abrilID'&gt;</span></li><li class="L2"><span class="pln">&lt;/div&gt;</span></li><li class="L3"><span class="pln">&lt;/body&gt;</span></li></ol></pre>
 			</section>          
 	  		<section id="passo5">
 	  			<br />          
@@ -325,7 +325,7 @@
           		<p>Para invocar o Abril ID na página utilizaremos um link para a realizar chamada do widget de login do Abril ID </p>
           		<div class="bs-docs-example">
           		</div>
-          		<pre class="prettyprint linenums"><ol class="linenums"><span class="pln">&lt;a href=&quot;javascript: void(0);&quot; onclick=&quot;widgets.login.render();&quot;&gt;login&lt;/a&gt;</span></ol></pre>
+          		<pre class="prettyprint"><ol class="linenums"><span class="pln">&lt;a href=&quot;javascript: void(0);&quot; onclick=&quot;widgets.login.render();&quot;&gt;login&lt;/a&gt;</span></ol></pre>
 			</section>
 			<br />
 			<div class="alert alert-info">
@@ -341,6 +341,36 @@
 	    		<div class="page-header">
           			<h1>Componentes Abril ID</h1>
           		</div>
+          		<p>O Abril ID atualmente possui 3 tipos diferente de componentes <strong>Widget</strong>, <strong>Include</strong> e <strong>Topo</strong>. Cada um deles possuim funcionalidades compartilhadas e funcionalidades especificas como descrito na sessão de <a href="documentacao.html">documentação > compoentes</a>.</p>
+          		<p>A seguir segui como configurar o parametro para instanciar o Abril ID como widget, include ou topo.
+          		<h3>Configurando widget</h3>
+          		<div class="bs-docs-example">
+          		<img alt="" class="img-polaroid" src="img/widget-padrao.jpg"><br /><br />
+          		<div class="alert alert-info"> <button type="button" class="close" data-dismiss="alert">×</button><p><strong>Info:</strong> Caso não seja declarado o campo <code>componente</code> por padrão o componente carradado é sempre o <strong>widget</strong></p></div>
+          		</div>
+          		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.WIDGET</strong></li><li class="L5">&nbsp;&nbsp;};</li><li class="L6">&lt;/script&gt;</li></ol></pre>
+          		<h3>Configurando include</h3>
+          		<div class="bs-docs-example">
+          		<img alt="" class="img-polaroid" src="img/include-padrao.jpg"><br /><br />
+          		</div>
+          		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.INCLUDE</strong></li><li class="L5">&nbsp;&nbsp;};</li><li class="L6">&lt;/script&gt;</li></ol></pre>
+          		<h3>Configurando topo&nbsp; <span class="label label-info">news</span></h3>
+          		<p>Topo é o mais novo componente do Abril ID e ele contem três opções diferente de formado chados de <strong>mini, pequeno e medio</strong> 
+          		<div class="bs-docs-example">
+          		<img alt="" class="img-polaroid" src="img/topo-mini-off.jpg"><br /><br />
+          		<img alt="" class="img-polaroid" src="img/topo-mini-on.jpg"><br /><br />
+          		</div>
+          		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.TOPO,</strong></li><li class="L5"><strong>&nbsp;&nbsp;&nbsp;&nbsp;topo: 'mini'</strong></li><li class="L6">&nbsp;&nbsp;};</li><li class="L7">&lt;/script&gt;</li></ol></pre>
+          		<div class="bs-docs-example">
+          		<img alt="" class="img-polaroid" src="img/topo-pequeno-off.jpg"><br /><br />
+          		<img alt="" class="img-polaroid" src="img/topo-pequeno-on.jpg"><br /><br />
+          		</div>
+          		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.TOPO,</strong></li><li class="L5"><strong>&nbsp;&nbsp;&nbsp;&nbsp;topo: 'pequeno'</strong></li><li class="L6">&nbsp;&nbsp;};</li><li class="L7">&lt;/script&gt;</li></ol></pre>
+          		<div class="bs-docs-example">
+          		<img alt="" class="img-polaroid" src="img/topo-medio-off.jpg"><br /><br />
+          		<img alt="" class="img-polaroid" src="img/topo-medio-on.jpg"><br /><br />
+          		</div>
+          		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.TOPO,</strong></li><li class="L5"><strong>&nbsp;&nbsp;&nbsp;&nbsp;topo: 'medio'</strong></li><li class="L6">&nbsp;&nbsp;};</li><li class="L7">&lt;/script&gt;</li></ol></pre>
           	</section>
 	  		<section id="redesocial">
 	  			<br />          
