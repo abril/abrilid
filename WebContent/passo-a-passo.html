@@ -377,27 +377,27 @@
 	    		<div class="page-header">
           			<h1>Redes Sociais</h1>
           		</div>
+          		<p>Por padrão o login via redes sociais (Facebook, Twitter ou Google Accounts) estão habilitados pelo Abril ID .</p>
+          		<p>Este configuração permite a ativação/desativação do login via redes sociais.</p>
+          		<div class="bs-docs-example">
+          		<img alt="" class="img-polaroid" src="img/redes-sociais.jpg"><br /><br />
+          		<div class="alert alert-info"> <button type="button" class="close" data-dismiss="alert">×</button><p><strong>Exemplos:</strong>
+          		<p>provedores: ['facebook','twitter'] //facebook e twitter</p>
+				<p>provedores: ['google'] //fapenas google</p>
+				<p>provedores: ['google','twitter'] //google e twitter</p>
+				<p>provedores: [] //nenhum provedor</p></div>
+          		</div>
+          		<pre class="prettyprint" ><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;provedores: ['facebook', 'twitter']</strong></li><li class="L5">&nbsp;&nbsp;};</li><li class="L6">&lt;/script&gt;</li></ol></pre>
+          		
           	</section>
 	  		<section id="layout">
 	  			<br />          
 	    		<div class="page-header">
           			<h1>Configurando Layout do Abril ID</h1>
           		</div>
-          		<br />
-          		<br />
-          		<br />
-          		<br />
-          		<br />
-          		<br />
-          		<br />
-          		<br />
-          		<br />
-          		<br />
-          		<br />
-          		<br />
-          		<br />
-          		<br />
-          		<br />
+          		<p>O Abril ID é customizavel e permite a configuração de layout para ficar adequado ao seu site.</p>
+          		
+          		<pre class="prettyprint" id="codeD"></pre>
           	</section>	
 	    </div>
 	</div>
@@ -421,10 +421,59 @@
 	
 	
 	<script src="js/jquery-latest.js"></script>
+	
     <script src="js/bootstrap.min.js"></script>
     
     <script src="js/google-code-prettify/prettify.js"></script>
     <script src="js/twitter/application.js"></script>
     
+	<script type="text/javascript">
+
+	var print = "";
+	print = "<ol class=\"linenums\">";
+	print = print + "<li class='L0'>var configuracao = {</li>";
+	print = print + "<li class='L1'>  produto:'nome/ID_da_seu_site',</li>";
+	print = print + "<li class='L2'>  container: 'div_exempl',</li>";
+	print = print + "<li class='L3'>  estilo:{ </li>";
+	print = print + "<li class='L4'>    'general': {</li>";      
+	print = print + "<li class='L5'>      'background-color':'#FFFFFF',</li>";
+	print = print + "<li class='L6'>      'border-color':'#FFFFFF',</li>"; 		
+	print = print + "<li class='L7'>      'border-width':'1',</li>"; 		
+	print = print + "<li class='L8'>      'text-color':'#FFFFFF',</li>"; 		
+	print = print + "<li class='L9'>      'inner-border-color':'#FFFFFF'</li>"; 	
+	print = print + "<li class='L10'>    },</li>";
+	print = print + "<li class='L11'>    'inner-box':{</li>";
+	print = print + "<li class='L12'>      'background-color':'#FFFFFF'</li>";
+	print = print + "<li class='L13'>    },</li>";
+	print = print + "<li class='L14'>    'button':{</li>";
+	print = print + "<li class='L15'>      'stroke':{</li>";
+	print = print + "<li class='L16'>        'text-color':'#FFFFFF',</li>";
+	print = print + "<li class='L17'>        'background-color':{</li>";
+	print = print + "<li class='L18'>        'start':'#FFFFFF',</li>";
+	print = print + "<li class='L19'>        'end':'#FFFFFF'</li>";
+	print = print + "<li class='L20'>      },</li>";
+	print = print + "<li class='L21'>      'border-color':'#FFFFFF'</li>";
+	print = print + "<li class='L22'>      },</li>";
+	print = print + "<li class='L23'>      'flat':{</li>";
+	print = print + "<li class='L24'>        'text-color':'#FFFFFF',</li>";
+	print = print + "<li class='L25'>        'background-color':'#FFFFFF',</li>";
+	print = print + "<li class='L26'>        'border-color':'#FFFFFF'</li>";
+	print = print + "<li class='L27'>      }</li>";
+	print = print + "<li class='L28'>    },</li>";
+	print = print + "<li class='L29'>    'error':{</li>";
+	print = print + "<li class='L30'>      'background-color':'#FFFFFF',</li>";
+	print = print + "<li class='L31'>      'border-color':'#FFFFFF',</li>";
+	print = print + "<li class='L32'>      'text-color':'#FFFFFF'</li>";
+	print = print + "<li class='L33'>    },</li>";
+	print = print + "<li class='L34'>    'header':{</li>";
+	print = print + "<li class='L35'>      'type': 'default'</li>";
+	print = print + "<li class='L36'>    }</li>";
+	print = print + "<li class='L77'>};</li>";
+	print = print + "</ol>";
+	
+	function openCodeModal() { 
+		$("#codeD").html(print);
+	}
+	</script>
   </body>
 </html>
