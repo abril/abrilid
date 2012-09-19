@@ -220,12 +220,10 @@
 	    <a class="brand" href="index.html">BootsTrap - Abril ID</a>
 	    <ul class="nav">
 	      <li><a href="index.html">Home</a></li>
-	      <li><a href="documentacao.html">Documenta&ccedil;&atilde;o</a></li>
 	      <li class="active"><a href="passo-a-passo.html">Passo a Passo</a></li>
 	      <li><a href="customizacao.html">Customiza&ccedil;&atilde;o</a></li>
 	      <li><a href="cases.html">Cases</a></li>
 	      <li><a href="faq.html">FAQ</a></li>
-	      <li><a href="newsletter.html">Newsletter</a></li>
 	    </ul>
 	  </div>
 	</div>
@@ -254,9 +252,10 @@
 	          	<li><a href="#passo4"><i class="icon-chevron-right"></i> 4º Passo</a></li>
 	          	<li><a href="#passo5"><i class="icon-chevron-right"></i> 5º Passo</a></li>
 	          	<li><a href="javaScript:void(0);">Avançado</a></li>
-	          	<li><a href="#tipoComponetes"><i class="icon-chevron-right"></i> Componetes</a></li>
+	          	<li><a href="#tipoComponetes"><i class="icon-chevron-right"></i> Componentes</a></li>
 	          	<li><a href="#redesocial"><i class="icon-chevron-right"></i> Redes Sociais</a></li>
 	          	<li><a href="#layout"><i class="icon-chevron-right"></i> Layout</a></li>
+	          	<li><a href="#documentacao"><i class="icon-chevron-right"></i> Documentação</a></li>
 	       	</ul>
 	       	
 	 	</div>
@@ -341,7 +340,7 @@
 	    		<div class="page-header">
           			<h1>Componentes Abril ID</h1>
           		</div>
-          		<p>O Abril ID atualmente possui 3 tipos diferente de componentes <strong>Widget</strong>, <strong>Include</strong> e <strong>Topo</strong>. Cada um deles possuim funcionalidades compartilhadas e funcionalidades especificas como descrito na sessão de <a href="documentacao.html">documentação > compoentes</a>.</p>
+          		<p>O Abril ID atualmente possui 3 tipos diferente de componentes <strong>Widget</strong>, <strong>Include</strong> e <strong>Topo</strong>. Cada um deles possuim funcionalidades compartilhadas e funcionalidades especificas como descrito na sessão de <a href="documentacao.html">documentação > componentes</a>.</p>
           		<p>A seguir segui como configurar o parametro para instanciar o Abril ID como widget, include ou topo.
           		<h3>Configurando widget</h3>
           		<div class="bs-docs-example">
@@ -354,7 +353,7 @@
           		<img alt="" class="img-polaroid" src="img/include-padrao.jpg"><br /><br />
           		</div>
           		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.INCLUDE</strong></li><li class="L5">&nbsp;&nbsp;};</li><li class="L6">&lt;/script&gt;</li></ol></pre>
-          		<h3>Configurando topo&nbsp; <span class="label label-info">news</span></h3>
+          		<h3>Configurando topo&nbsp; <span class="label label-info">new</span></h3>
           		<p>Topo é o mais novo componente do Abril ID e ele contem três opções diferente de formado chados de <strong>mini, pequeno e medio</strong> 
           		<div class="bs-docs-example">
           		<img alt="" class="img-polaroid" src="img/topo-mini-off.jpg"><br /><br />
@@ -395,10 +394,76 @@
 	    		<div class="page-header">
           			<h1>Configurando Layout do Abril ID</h1>
           		</div>
+          		<a href="customizacao.html" class="btn btn-danger">Customizar Abril ID</a><br /><br />
           		<p>O Abril ID é customizavel e permite a configuração de layout para ficar adequado ao seu site.</p>
+          		<p>Para configurar esses parametros você tem a possibilidade de ajustar 6 item:</p>
+          		    <ol>
+				    <li>Layout Geral paramentros <code>general</code></li>
+				    <li>Linhas parametro <code>inner-box</code></li>
+				    <li>Botões parametro <code>button</code></li>
+				    <li>Mensagem de erros parametro <code>error</code></li>
+				    <li>Logo Abril parametro <code>header</code></li>
+				    <li>Layout topo parametro <code>topo</code></li>
+				    </ol>
+				<div class="alert"> <button type="button" class="close" data-dismiss="alert">×</button><p><strong>Atenção:</strong>
+          		<p> a configuração completa encontra-se na sessão <a>documentação > layout</a> </p>
+          		</div>    
+          		<h3>Layout Geral</h3>
+          		<div class="bs-docs-example">
+          		<img alt="" class="img-polaroid" src="img/geral.jpg"><br /><br />
+          		</div>
+          		<pre class="prettyprint"><ol class="linenums"><li class='L0'>var configuracao = {</li><li class='L1'>  produto:'nome/ID_da_seu_site',</li><li class='L2'>  container: 'div_exempl',</li><li class='L3'>  estilo:{ </li><li class='L4'>    'general': {</li><li class='L5'>      'background-color':'#2E0F4D', //Cor de Fundo</li><li class='L6'>      'border-color':'#CCCC43', //Cor da borda</li><li class='L7'>      'border-width':'5', //largura da borda</li><li class='L8'>      'text-color':'#CCCC43', //Cor do Texto</li><li class='L9'>      'inner-border-color':'#7A83FF' //Cor de Fundo Caixa</li><li class='L10'>    },</li><li class='L10'>    ...</li></ol></pre>
           		
-          		<pre class="prettyprint" id="codeD"></pre>
-          	</section>	
+          		<h3>Linhas</h3>
+          		<div class="bs-docs-example">
+          		<img alt="" class="img-polaroid" src="img/linhas.jpg"><br /><br />
+          		</div>
+          		<pre class="prettyprint"><ol class="linenums"><li class='L10'>    ...</li><li class='L11'>    'inner-box':{</li><li class='L12'>      'background-color':'#BB11AA'</li><li class='L13'>    },</li><li class='L14'>    ...</li></ol></pre>
+          		<h3>Botões</h3>
+          		<div class="bs-docs-example">
+          		<img alt="" class="img-polaroid" src="img/botoes.jpg"><br /><br />
+          		</div>
+          		<pre class="prettyprint"><ol class="linenums"><li class='L13'>    ...</li><li class='L14'>    'button':{</li><li class='L15'>      'stroke':{</li><li class='L16'>        'text-color':'#FFFFFF', // Cor texto</li><li class='L17'>        'background-color':{</li><li class='L18'>        'start':'#2E0F4D', // Cor Primaria Fundo </li><li class='L19'>        'end':'#020926' // Cor Secundaria Fundo</li><li class='L20'>      },</li><li class='L21'>      'border-color':'#020926' // Cor Borda</li><li class='L22'>      },</li><li class='L23'>      'flat':{</li><li class='L24'>        'text-color':'#FFFFFF', // Cor texto</li><li class='L25'>        'background-color':'#020926', // Cor Fundo</li><li class='L26'>        'border-color':'#020926' // Cor Borda</li><li class='L27'>      }</li><li class='L28'>    },</li><li class='L29'>    ...</li></ol></pre>
+          		
+          		<h3>Erros</h3>
+          		<div class="bs-docs-example">
+          		<img alt="" class="img-polaroid" src="img/erros.jpg"><br /><br />
+          		</div>
+          		<pre class="prettyprint"><ol class="linenums"><li class='L28'>    ...</li><li class='L29'>    'error':{</li><li class='L30'>      'background-color':'#66777F',// Cor fundo</li><li class='L31'>      'border-color':'#020926',// Cor borda</li><li class='L32'>      'text-color':'#66777F'// Cor texto</li><li class='L33'>    },</li><li class='L34'>    ...</li></ol></pre>
+          		
+          		<h3>Logo Abril</h3>
+          		<div class="bs-docs-example">
+          		<img alt="" class="img-polaroid" src="img/logo-verde.jpg"><br /><br />
+          		<img alt="" class="img-polaroid" src="img/logo-branco.jpg"><br /><br />
+          		<div class="alert alert-info"> <button type="button" class="close" data-dismiss="alert">×</button><p><strong>Exemplos:</strong>
+          		<p>type : 'default' //Logo Abril Verde</p>
+				<p>type : 'light' //Logo Abril Brando</p>
+          		</div>
+          		</div>
+          		<pre class="prettyprint"><ol class="linenums"><li class='L33'>    ...</li><li class='L34'>    'header':{</li><li class='L35'>      'type': 'default'</li><li class='L36'>    }</li><li class='L37'>    ...</li></ol></pre>
+          		
+          		<h3>Layout topo <span class="label label-info">new</span></h3>
+          		<div class="bs-docs-example">
+          		<img alt="" class="img-polaroid" src="img/topo-layout.jpg"><br /><br />
+          		<div class="alert alert-info"> <button type="button" class="close" data-dismiss="alert">×</button><p><strong>Exemplos Logos Abril:</strong>
+          		<p>logo : 'default' //Logo Abril verde</p>
+				<p>logo : 'white' //Logo Abril branco</p>
+				<p>logo : 'light grey' //Logo Abril cinza claro</p>
+				<p>logo : 'grey' //Logo Abril cinza</p>
+				<p>logo : 'black' //Logo Abril preto</p>
+          		</div>
+          		</div>
+          		<pre class="prettyprint"><ol class="linenums"><li class='L33'>    ...</li><li class='L40'>    'topo': {</li><li class='L41'>      'background-color': {</li><li class='L42'>        'start': '#BB11AA', //Cor primaria fundo</li><li class='L43'>        'end': '#020926' //Cor secundaria fundo</li><li class='L44'>      },</li><li class='L45'>      'line-color':'#888888', //Cor linha</li><li class='L46'>      'text-color':'#888888',//Cor texto</li><li class='L47'>      'border-color':'#888888',//Cor borda</li><li class='L48'>      'border-width':'2',//Largura Borda</li><li class='L49'>      'logo':'white'//Logo Abril </li><li class='L50'>    }</li><li class='L51'>    ...</li></ol></pre>
+          	</section>
+          	<section id="layout">
+          		<br />          
+	    		<div class="page-header">
+          			<h1>Download Documentação</h1>
+          		</div>
+          		<a href="arq/documentacao-abrilid.pdf" class="btn btn-danger">Download</a><br /><br />
+          		
+          	</section>
+	  			
 	    </div>
 	</div>
    
@@ -406,14 +471,13 @@
 </div>
 
 	
-    <!-- Footer
-    ================================================== -->
-    <footer class="footer">
+     <footer class="footer">
       <div class="container">
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p class="pull-right"><a href="#">Voltar ao topo</a></p>
+        <p>Entre em contato com nossa equipe: <a href="mailto:nucleo-aap@abril.com.br">abrilid@abril.com.br</p>
+        <p>Copyright &copy; 2012 Editora Abril S/A. Todos os direitos reservados</p>
         <ul class="footer-links">
-          <li><a href="http://id.abril.com.br">Abril Id</a></li>
+          <li><a href="http://id.abril.com.br">Abril ID</a></li>
           <li><a href="https://confluence.abril.com.br/x/uxZF">Documentação oficial</a></li>
         </ul>
       </div>
@@ -427,53 +491,6 @@
     <script src="js/google-code-prettify/prettify.js"></script>
     <script src="js/twitter/application.js"></script>
     
-	<script type="text/javascript">
 
-	var print = "";
-	print = "<ol class=\"linenums\">";
-	print = print + "<li class='L0'>var configuracao = {</li>";
-	print = print + "<li class='L1'>  produto:'nome/ID_da_seu_site',</li>";
-	print = print + "<li class='L2'>  container: 'div_exempl',</li>";
-	print = print + "<li class='L3'>  estilo:{ </li>";
-	print = print + "<li class='L4'>    'general': {</li>";      
-	print = print + "<li class='L5'>      'background-color':'#FFFFFF',</li>";
-	print = print + "<li class='L6'>      'border-color':'#FFFFFF',</li>"; 		
-	print = print + "<li class='L7'>      'border-width':'1',</li>"; 		
-	print = print + "<li class='L8'>      'text-color':'#FFFFFF',</li>"; 		
-	print = print + "<li class='L9'>      'inner-border-color':'#FFFFFF'</li>"; 	
-	print = print + "<li class='L10'>    },</li>";
-	print = print + "<li class='L11'>    'inner-box':{</li>";
-	print = print + "<li class='L12'>      'background-color':'#FFFFFF'</li>";
-	print = print + "<li class='L13'>    },</li>";
-	print = print + "<li class='L14'>    'button':{</li>";
-	print = print + "<li class='L15'>      'stroke':{</li>";
-	print = print + "<li class='L16'>        'text-color':'#FFFFFF',</li>";
-	print = print + "<li class='L17'>        'background-color':{</li>";
-	print = print + "<li class='L18'>        'start':'#FFFFFF',</li>";
-	print = print + "<li class='L19'>        'end':'#FFFFFF'</li>";
-	print = print + "<li class='L20'>      },</li>";
-	print = print + "<li class='L21'>      'border-color':'#FFFFFF'</li>";
-	print = print + "<li class='L22'>      },</li>";
-	print = print + "<li class='L23'>      'flat':{</li>";
-	print = print + "<li class='L24'>        'text-color':'#FFFFFF',</li>";
-	print = print + "<li class='L25'>        'background-color':'#FFFFFF',</li>";
-	print = print + "<li class='L26'>        'border-color':'#FFFFFF'</li>";
-	print = print + "<li class='L27'>      }</li>";
-	print = print + "<li class='L28'>    },</li>";
-	print = print + "<li class='L29'>    'error':{</li>";
-	print = print + "<li class='L30'>      'background-color':'#FFFFFF',</li>";
-	print = print + "<li class='L31'>      'border-color':'#FFFFFF',</li>";
-	print = print + "<li class='L32'>      'text-color':'#FFFFFF'</li>";
-	print = print + "<li class='L33'>    },</li>";
-	print = print + "<li class='L34'>    'header':{</li>";
-	print = print + "<li class='L35'>      'type': 'default'</li>";
-	print = print + "<li class='L36'>    }</li>";
-	print = print + "<li class='L77'>};</li>";
-	print = print + "</ol>";
-	
-	function openCodeModal() { 
-		$("#codeD").html(print);
-	}
-	</script>
   </body>
 </html>
