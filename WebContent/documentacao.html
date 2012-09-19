@@ -299,8 +299,154 @@
 			<div class="alert alert-error">
         		<strong>Atenção</strong>para que o Abril ID funcione propriamente no Internet Explorer 7, 8 e 9, é necessário que o código acima (configuração, criação da instância e inicialização) esteja na mesma página que a chamada para o widgets.js. Não coloque esta parte do código num arquivo externo a ser carregado na página.
 	        </div>
-			</section>
-				
+	        <strong>Configurações Opcionais</strong>
+	        <p>Além das configurações mínimas, o cliente pode fornecer alguns parâmetros com funções específicas. Abaixo seguem alguns exemplos que incluem as configurações obrigatórias e as opcionais.</p>
+			<strong>Provedores</strong>
+			<p><strong>Descrição:</strong>Este parâmetro permite a ativação/desativação do login via redes sociais (Facebook, Twitter ou Google Accounts). Na interface dos componentes Widget ou Include de login a diferença visual é a presença dos diferentes botões das redes sociais ou nenhum botão (quando desabilitados) para login alternativo no Abril ID, impossibilitando o usuário final de fazer uso deste recurso.</p>
+			<p><strong>Padrão:</strong>caso não declare, por padrão serão exibidos os botões de todas as redes sociais disponíveis (Facebook, Twitter e Google Accounts).</p>
+			<pre class="prettyprint linenums"><ol class="linenums"><span class="pln"><code>&lt;script type=&quot;text/javascript&quot;&gt;<br />&nbsp;&nbsp;var configuracao = {<br />&nbsp;&nbsp;&nbsp;&nbsp;produto:'ID_DO_SEU_SITE',<br />&nbsp;&nbsp;&nbsp;&nbsp;container: 'ID_DA_DIV',<br />&nbsp;&nbsp;&nbsp;&nbsp;provedores: ['facebook', 'google']&nbsp;&nbsp;//par&acirc;metro para ativar/desativar login via redes sociais<br />&nbsp;&nbsp;};<br />&lt;/script&gt;</code></span></ol></pre>
+			<p><strong>Uso:</strong>dentro da configuração é necessário declarar um array contendo os provedores desejados, na ordem em que devem aparecer. Exemplo:</p>
+			<pre class="prettyprint linenums"><ol class="linenums"><span class="pln"><code>provedores: ['facebook'] //apenas facebook<br />provedores: ['facebook','google'] //facebook e google<br />provedores: ['google','twitter'] //google e twitter<br />provedores: [] //nenhum provedor</code></span></ol></pre>			
+			<strong>Componente</strong>
+			<pre class="prettyprint linenums"><ol class="linenums"><span class="pln"><code>&lt;script type=&quot;text/javascript&quot;&gt;<br />var configuracao = {<br />&nbsp;&nbsp;&nbsp;&nbsp;produto:'ID_DO_SEU_SITE',<br />&nbsp;&nbsp;&nbsp;&nbsp;container: 'ID_DA_DIV',<br />&nbsp;&nbsp;&nbsp;&nbsp;provedores: ['facebook', 'google'],<br />&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.INCLUDE //par&acirc;metro determinar tipo de componente<br />&nbsp;&nbsp;};<br />&lt;/script&gt;</code></span></ol></pre>
+	    	<p><strong>Descrição:</strong>Este parâmetro define qual o tipo de componente que será carregado. Atualmente existem 3 valores possíveis: Componente.WIDGET, Componente.INCLUDE ou Componente.TOPO. Este parâmetro determina uma série de modificações na interface, de forma a alterar a cara dos dados de forma a ser um componente Widget ou um Include.</p>
+	    	<div class="alert alert-error">
+        		<strong>Atenção</strong>alguns componentes possuem apenas certas interfaces, como mostrado na tabela abaixo.
+	        </div>
+	    	<table class="table table-bordered table-striped responsive-utilities">
+	    		<thead><tr>
+	    		<th>Interface</th>
+	    		<th>Componente.Widget</th>
+	    		<th>Componente.Include</th>
+	    		<th>Componente.TOPO</th></tr></thead>
+	    		<tbody><tr>
+	    		<th><strong>Login</strong></th>
+	    		<td class="is-visible">Possui</td>	    		
+	    		<td class="is-visible">Possui</td>
+	    		<td class="is-visible">Possui</td>
+	    		</tr>
+	    		<tr>
+	    		<th><strong>Logout</strong></th>
+	    		<td class="is-visible">Possui</td>	    		
+	    		<td class="is-visible">Não Possui</td>
+	    		<td class="is-visible">Possui</td>
+	    		</tr>
+	    		<tr>
+	    		<th><strong>Recuperação de senha</strong></th>
+	    		<td class="is-visible">Possui</td>	    		
+	    		<td class="is-visible">Possui</td>
+	    		<td class="is-visible">Possui</td>
+	    		</tr>
+	    		<tr>
+	    		<th><strong>Criação de conta</strong></th>
+	    		<td class="is-visible">Possui</td>	    		
+	    		<td class="is-visible">Possui</td>
+	    		<td class="is-visible">Possui</td>
+	    		</tr>
+	    		<tr>
+	    		<th><strong>Validação de senha</strong></th>
+	    		<td class="is-visible">Possui</td>	    		
+	    		<td class="is-visible">Não Possui</td>
+	    		<td class="is-visible">Não Possui</td>
+	    		</tr>
+	    		<tr>
+	    		<th><strong>Edição completa de perfil</strong></th>
+	    		<td class="is-visible">Não Possui</td>	    		
+	    		<td class="is-visible">Possui</td>
+	    		<td class="is-visible">Não Possui</td>
+	    		</tr>
+	    		<tr>
+	    		<th><strong>Edição básica de perfil</strong></th>
+	    		<td class="is-visible">Possui</td>	    		
+	    		<td class="is-visible">Possui</td>
+	    		<td class="is-visible">Possui</td>
+	    		</tr>
+	    		<tr>
+	    		<th><strong>Alteração de senha</strong></th>
+	    		<td class="is-visible">Possui</td>	    		
+	    		<td class="is-visible">Não Possui</td>
+	    		<td class="is-visible">Não Possui</td>
+	    		</tr>
+	    		<tr>
+	    		<th><strong>Coleta de dados</strong></th>
+	    		<td class="is-visible">Possui</td>	    		
+	    		<td class="is-visible">Não Possui</td>
+	    		<td class="is-visible">Não Possui</td>
+	    		</tr>
+	    		<tr>
+	    		<th><strong>Newsletter</strong></th>
+	    		<td class="is-visible">Não Possui</td>	    		
+	    		<td class="is-visible">Possui</td>
+	    		<td class="is-hidden">Não Possui</td>
+	    		</tr></tbody></table>
+	    		<div class="alert alert-info"><strong>*Padrão:</strong>caso não declare, por padrão o componente será Componente.WIDGET.</div>
+	    		<div class="alert alert-info"><strong>*Uso:</strong>dentro da configuração é possível indicar qual o tipo da interface que deve ser carregada.</div>
+	    		<pre class="prettyprint linenums"><ol class="linenums"><span class="pln"><code>Componente: Componente.WIDGET //a interface aparecer&aacute; como um Widget<br />componente: Componente.INCLUDE //a interface aparecer&aacute; como um Include<br />componente: Componente.TOPO //a interface aparecer&aacute; como um Topo</code></span></ol></pre>
+	    		<p><strong>Seta</strong></p>
+	    		<div class="alert alert-error">
+        			<strong>Atenção: alguns componentes possuem apenas certas interfaces, como mostrado na tabela abaixo.</strong>
+	        	</div>
+	        	<pre class="prettyprint linenums"><ol class="linenums"><span class="pln"><code>&lt;script type=&quot;text/javascript&quot;&gt;<br />&nbsp;&nbsp;var configuracao = {<br />&nbsp;&nbsp;&nbsp;&nbsp;produto:'ID_DO_SEU_SITE',<br />&nbsp;&nbsp;&nbsp;&nbsp;container: 'ID_DA_DIV',<br />&nbsp;&nbsp;&nbsp;&nbsp;provedores: ['facebook', 'google'],<br />&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.WIDGET,<br />&nbsp;&nbsp;&nbsp;&nbsp;seta: 'SD' //par&acirc;metro para posicionar uma seta indicativa no topo do componente Widget<br />&nbsp;&nbsp;};<br />&lt;/script&gt</code></span></ol></pre>
+	        	<strong>Descrição:</strong> Este parâmetro permite o posicionamento de uma seta indicativa na parte superior de um componente Widget. Os valores possíveis são indicativos da posição da seta: 'SE' (superior direita), 'SC' (superior centro), 'SD' (superior direita).
+	        	<strong>Padrão:</strong> caso não declare, por padrão o componente Widget não exibirá nenhuma seta indicativa.
+	        	<strong>Uso:</strong> os valores possíveis são indicativos da posição da seta: 'SE' (superior direita), 'SC' (superior centro), 'SD' (superior direita).
+	        	<pre class="prettyprint linenums"><ol class="linenums"><span class="pln"><code>seta: 'SD' //seta no canto superior direito<br />seta: 'SC' //seta no centro, na parte superior<br />seta: 'SE' //seta no canto superior esquerdo</code></span></ol></pre>
+	        	<div class="alert alert-error"><strong>Observação:</strong>a seta não pode ser utilizada no componente TOPO</div>
+	        	<p><strong>Estilo</strong></p>
+	        	<pre class="prettyprint linenums"><ol class="linenums"><span class="pln"><code>&lt;script type=&quot;text/javascript&quot;&gt;<br />&nbsp;&nbsp;var configuracao = {<br />&nbsp;&nbsp;&nbsp;&nbsp;produto:'ID_DO_SEU_SITE',<br />&nbsp;&nbsp;&nbsp;&nbsp;container: 'ID_DA_DIV',<br />&nbsp;&nbsp;&nbsp;&nbsp;provedores: ['facebook', 'google'],<br />&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.WIDGET,<br />&nbsp;&nbsp;&nbsp;&nbsp;seta: 'SD',<br />&nbsp;&nbsp;&nbsp;&nbsp;estilo:{ //in&iacute;cio da configura&ccedil;&atilde;o de estilo<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'general': {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'background-color':'#4f6068', //cor do background da caixa do widget//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'border-color':'#111a33', //cor da borda da caixa do widget//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'border-width':'1', //largura da borda da caixa do widget, sem o 'px' - minimo: 1, maximo: 5//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'text-color':'#DDCCBB', //cor do 'X' para fechar o widget e de todos os textos do widget, exceto erros e botoes//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'inner-border-color':'#010729' //cor da borda da caixa interna, do separador e da borda dos campos//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'inner-box':{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'background-color':'#66777f' //cor do background da caixa interna do widget//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'button':{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'stroke':{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'text-color':'#ffffff' , //cor de fonte do botao com gradiente//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'background-color':{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'start':'#020926', //cor inicial do gradiente do botao//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'end':'#020926' //cor final do gradiente do botao//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'border-color':'#020926' //cor de borda do botao com gradiente//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'flat':{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'text-color':'#ffffff' , //cor de fonte do botao sem gradiente//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'background-color':'#020926', //cor de fundo do botao sem gradiente//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'border-color':'#020926' //cor de borda do botao sem gradiente//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'error':{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'background-color':'#66777f', //cor fundo da caixa de erro//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'border-color':'#020926', //cor de borda da caixa de erro//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'text-color':'#ffffff' //cor do texto da caixa de erro e da borda dos campos indicados no erro//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'header':{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'type': 'light' //'default': logotipo verde, assinatura cinza escuro | 'light': logotipo e assinatura brancos//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'topo': {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'background-color': {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'start': '#CCCCCC', //cor inicial do gradiente do fundo//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'end': '#CCCCCC' //cor final do gradiente do fundo//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'line-color':'#888888', //cor do separador //<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'text-color':'#888888', //cor dos textos do topo //<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'border-color':'#888888', // cor da borda do topo, caso haja //<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'border-width':'2', // espessura da borda - de 2 a 5 - default 0//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'logo':'default' // 'default' (verde)|'white' (branco)|'light grey' (cinza claro)|'grey' (cinza)|'black' (preto)&nbsp;&nbsp;//<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;};<br />&lt;/script&gt</code></span></ol></pre>
+	        	<p><strong>Descrição:</strong> este parâmetro permite a configuração de layout de praticamente todas as estruturas dos componentes Widget e Include.</p>
+	        	<p><strong>Padrão:</strong> o usuário pode declarar de nenhuma a todas as configurações de layout, e qualquer atributo que não for declarado receberá seu layout padrão.</p>
+	        	<p><strong>Uso:</strong> é necessário preencher os atributos com os valores cabíveis (por exemplo, uma cor hexadecimal)</p>
+	        	<pre class="prettyprint linenums"><ol class="linenums"><span class="pln"><code>&lt;script type=&quot;text/javascript&quot;&gt;<br />...<br />origem_evento: 'Um texto que descreva a origem'<br />//origem_evento: 'Promo&ccedil;&atilde;o Voc&ecirc; em NY'<br />//origem_evento: 'Promo&ccedil;&atilde;o Tititi Premios Todo Dia' <br />//origem_evento: 'Casa Curso de Decora&ccedil;&atilde;o ed 2012'<br />...<br />&lt;/script&gt;</code></span></ol></pre>
+	        	<p><strong>Exibindo o Abril ID</strong></p>
+	        	<p>Após instalar e configurar o Abril ID, você pode exibir a interface escolhida em seu site atravé de apenas um comando, que pode estar relacionado a uma ação do usuário (um click, por exemplo) ou ao carregamento da página. Segue uma tabela com o comando que chama cada um uma das interfaces.</p>
+	        	<table class="table table-bordered table-striped responsive-utilities">
+	    		<thead><tr>
+	    		<th>Interface</th>
+	    		<th>Chamada</th>
+	    		<tbody><tr>
+	    		<th><strong>Login</strong></th>
+	    		<td class="is-visible">[INSTANCIA DO SEU COMPONENTE].login.render();</td>	    		
+	    		</tr>
+	    		<tr>
+	    		<th><strong>Logout</strong></th>
+	    		<td class="is-visible">[INSTANCIA DO SEU COMPONENTE].logout.render();</td>	    		
+	    		</tr>
+	    		<tr>
+	    		<th><strong>Recuperação de senha</strong></th>
+	    		<td class="is-visible">[INSTANCIA DO SEU COMPONENTE].password_reset.render();</td>	    		
+	    		</tr>
+	    		<tr>
+	    		<th><strong>Criação de conta</strong></th>
+	    		<td class="is-visible">[INSTANCIA DO SEU COMPONENTE].signup.render();</td>	    		
+	    		</tr>
+	    		<tr>
+	    		<th><strong>Validação de senha</strong></th>
+	    		<td class="is-visible">[INSTANCIA DO SEU COMPONENTE].password_validation.render();</td>	    		
+	    		</tr>
+	    		<tr>
+	    		<th><strong>Edição completa de perfil</strong></th>
+	    		<td class="is-visible">[INSTANCIA DO SEU COMPONENTE].profile_update.render();</td>	    		
+	    		</tr>
+	    		<tr>
+	    		<th><strong>Alteração de senha</strong></th>
+	    		<td class="is-visible">[INSTANCIA DO SEU COMPONENTE].password_update.render();</td>	    		
+	    		</tr>
+	    		<tr>
+	    		<th><strong>Edição básica de perfil</strong></th>
+	    		<td class="is-visible">[INSTANCIA DO SEU COMPONENTE].profile_update.render();</td>	    		
+	    		</tr>
+	    		<tr>
+	    		<th><strong>Coleta de dados</strong></th>
+	    		<td class="is-visible">[INSTANCIA DO SEU COMPONENTE].profile_attribute.render();</td>	    		
+	    		</tr>
+	    		<tr>
+	    		<th><strong>Newsletter</strong></th>
+	    		<td class="is-visible">[INSTANCIA DO SEU COMPONENTE].newsletter.render();</td>	    		
+	    		</tr>
+	    		</tbody></table>
+	    		<pre class="prettyprint linenums"><ol class="linenums"><span class="pln"><code>&lt;script type=&quot;text/javascript&quot;&gt;<br />&nbsp;&nbsp;var configuracao = {<br />&nbsp;&nbsp;&nbsp;&nbsp;produto:'site',<br />&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_widget',<br />&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.WIDGET<br />&nbsp;&nbsp;};<br /><br />&nbsp;&nbsp;var widget = new AbrilId();<br />&nbsp;&nbsp;widget.initialize(configuracao);<br />&lt;/script&gt;<br /><br />...<br /><br />&lt;a href=&quot;javascript: void(0);&quot; onclick=&quot;widget.login.render();&quot;&gt;login&lt;/a&gt;</code></span></ol></pre>
+	    	</section>
 	    </div>
 	</div>
    
