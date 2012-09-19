@@ -39,7 +39,177 @@
 		  line-height: 30px;
 		  margin-bottom: 30px;
 		}
-	
+		
+		/* Sidenav for Docs
+-------------------------------------------------- */
+
+.bs-docs-sidenav {
+  width: 228px;
+  margin: 30px 0 0;
+  padding: 0;
+  background-color: #fff;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+     -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+          box-shadow: 0 1px 4px rgba(0,0,0,.065);
+}
+.bs-docs-sidenav > li > a {
+  display: block;
+  *width: 190px;
+  margin: 0 0 -1px;
+  padding: 8px 14px;
+  border: 1px solid #e5e5e5;
+}
+.bs-docs-sidenav > li:first-child > a {
+  -webkit-border-radius: 6px 6px 0 0;
+     -moz-border-radius: 6px 6px 0 0;
+          border-radius: 6px 6px 0 0;
+}
+.bs-docs-sidenav > li:last-child > a {
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+}
+.bs-docs-sidenav > .active > a {
+  position: relative;
+  z-index: 2;
+  padding: 9px 15px;
+  border: 0;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+  -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+     -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+          box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+}
+/* Chevrons */
+.bs-docs-sidenav .icon-chevron-right {
+  float: right;
+  margin-top: 2px;
+  margin-right: -6px;
+  opacity: .25;
+}
+.bs-docs-sidenav > li > a:hover {
+  background-color: #f5f5f5;
+}
+.bs-docs-sidenav a:hover .icon-chevron-right {
+  opacity: .5;
+}
+.bs-docs-sidenav .active .icon-chevron-right,
+.bs-docs-sidenav .active a:hover .icon-chevron-right {
+  background-image: url(../img/glyphicons-halflings-white.png);
+  opacity: 1;
+}
+.bs-docs-sidenav.affix {
+  top: 40px;
+}
+.bs-docs-sidenav.affix-bottom {
+  position: absolute;
+  top: auto;
+  bottom: 270px;
+}
+
+/* Bootstrap code examples
+-------------------------------------------------- */
+
+/* Base class */
+.bs-docs-example {
+  position: relative;
+  margin: 15px 0;
+  padding: 39px 19px 14px;
+  *padding-top: 19px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+/* Echo out a label for the example */
+.bs-docs-example:after {
+  content: "Example";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  color: #9da0a4;
+  -webkit-border-radius: 4px 0 4px 0;
+     -moz-border-radius: 4px 0 4px 0;
+          border-radius: 4px 0 4px 0;
+}
+
+/* Remove spacing between an example and it's code */
+.bs-docs-example + .prettyprint {
+  margin-top: -20px;
+  padding-top: 15px;
+}
+
+/* Tweak examples
+------------------------- */
+.bs-docs-example > p:last-child {
+  margin-bottom: 0;
+}
+.bs-docs-example .table,
+.bs-docs-example .progress,
+.bs-docs-example .well,
+.bs-docs-example .alert,
+.bs-docs-example .hero-unit,
+.bs-docs-example .pagination,
+.bs-docs-example .navbar,
+.bs-docs-example > .nav,
+.bs-docs-example blockquote {
+  margin-bottom: 5px;
+}
+.bs-docs-example .pagination {
+  margin-top: 0;
+}	
+/* Images */
+.bs-docs-example-images img {
+  margin: 10px;
+  display: inline-block;
+}
+/* Popovers */
+.bs-docs-example-popover {
+  padding-bottom: 24px;
+  background-color: #f9f9f9;
+}
+.bs-docs-example-popover .popover {
+  position: relative;
+  display: block;
+  float: left;
+  width: 260px;
+  margin: 20px;
+}
+
+
+/* Footer
+-------------------------------------------------- */
+
+.footer {
+  padding: 70px 0;
+  margin-top: 70px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+}
+.footer p {
+  margin-bottom: 0;
+  color: #777;
+}
+.footer-links {
+  margin: 10px 0;
+}
+.footer-links li {
+  display: inline;
+  margin-right: 10px;
+}
+
+
+
+
     </style>
   </head>
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
@@ -72,13 +242,139 @@
   <div class="container">	
 	<div class="container-fluid">
 	    
-	      <!--Body content-->
-	   
+	    <!-- Body
+================================================== -->		
+<div class="container">	
+<!-- Docs nav
+    ================================================== -->
+	<div class="row">
+		<div class="span4 bs-docs-sidebar">
+	        <ul class="nav nav-list bs-docs-sidenav">
+	          	<li><a href="#">Informações e Avisos</a></li>
+	          	<li><a href="#passo1"><i class="icon-chevron-right"></i> 1º Passo</a></li>
+	          	<li><a href="#passo2"><i class="icon-chevron-right"></i> 2º Passo</a></li>
+	          	<li><a href="#passo3"><i class="icon-chevron-right"></i> 3º Passo</a></li>
+	          	<li><a href="#passo4"><i class="icon-chevron-right"></i> 4º Passo</a></li>
+	          	<li><a href="#passo5"><i class="icon-chevron-right"></i> 5º Passo</a></li>
+	          	<li><a href="#">Avançado</a></li>
+	          	<li><a href="#tipoComponetes"><i class="icon-chevron-right"></i> Componetes</a></li>
+	          	<li><a href="#redesocial"><i class="icon-chevron-right"></i> Redes Sociais</a></li>
+	          	<li><a href="#layout"><i class="icon-chevron-right"></i> Layout</a></li>
+	       	</ul>
+	       	
+	 	</div>
+	    <div class="span8">
+	    	<br />
+	    	<section id="passo1">
+	    	<br />
+	    		<div class="page-header">
+				  	<h1>Informações Básicas sobre o Abril ID</h1>
+				</div>
+		    	<div class="alert alert-error">
+			  		<strong>Atenção </strong> A versão 3.x do Abril ID é totalmente retrocompatível com suas versões anteriores, ou seja, é possível instanciar o objeto AbrilId utilizando uma das 3 formas existentes.
+		  		</div>
+	    		<p></p>
+			<div class="alert alert-info">O Abril ID é compatível e está homologado para os seguinte web browsers:</br>Internet Explorer 7.x, 8.x e 9.x;</br>Mozilla Firefox 3.5, 3.6 e 5.x ou maior;</br>Google Chrome 10.x ou maior;</br>Safari 5.0 ou maior;</br>
+			</div>
+			<div class="bs-docs-example">
+			<div class="alert alert-error">
+        		<strong>Atenção</strong> Caso queira garantir que o Internet Explorer 8.x do usuário abra utilizando o modo de exibição Internet Explorer 8, utilize a seguinte metatag:
+	        </div>	   				
+	    	</div>
+	    	<pre class="prettyprint linenums"><ol class="linenums"><span class="pln"><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=8&quot; /&gt;</code></span></ol></pre>
+	    	</section>
+			<br />
+			<section id="comoUsar">
+	    	<div class="page-header">
+			  	<h1>Como usar</h1>
+			</div>
+			<strong>Pré-requisitos</strong>
+			<div class="alert alert-info"><strong>NÃO</strong> é necessário que o site cliente esteja dentro do domínio <strong>abril.com.br</strong>, uma vez que o Abril Id possui suporte cross-domain. Contudo, é necessário comunicar a equipe do Abril Id do uso cross-domain, para que seja feita a liberação para o domínio específico do site;</div>
+			<div class="alert alert-info">Observar se o ambiente de desenvolvimento está impedido de acessar o ambiente de homologação do Abril ID <strong>(http://qa.id.abril.com.br)</strong>. Verificar configurações de proxy ou firewall.</div>
+			<strong>Instalação</strong>
+				<div class="bs-docs-example">
+				<p>Para deixar disponível as funcionalidades do Abril ID nas páginas do seu site, inclua a linha abaixo em todas as páginas onde o Abril Id for necessário:</p>
+   				<pre class="prettyprint linenums"><ol class="linenums"><span class="pln"><code>&lt;script src=&quot;http://id.abril.com.br/javascripts/widgets.js&quot;&gt;&lt;/script&gt;</code></span></ol></pre>
+	    	</div>
+	    	<div class="alert alert-error">
+        		<strong>Atenção</strong> para realizar testes em nosso ambiente de homologação utilize a URL +http://qa.id.abril.com.br/javascripts/widgets.js
+	        </div>
+	        <strong>Configuração Mínima</strong>
+	        <p>Para que o Abril Id funcione propriamente em seu site, duas configurações são obrigatórias. Um exemplo seguido de explicação detalhada segue abaixo.</p>
+	        <pre class="prettyprint linenums"><ol class="linenums"><span class="pln"><code>&lt;script type=&quot;text/javascript&quot;&gt;<br />&nbsp;&nbsp;var configuracao = {<br />&nbsp;&nbsp&nbsp;&nbsp;produto:'ID_DO_SEU_SITE',<br />&nbsp;&nbsp;&nbsp;&nbsp;container: 'ID_DA_DIV'<br />&nbsp;&nbsp;};<br />&lt;/script&gt;</code></span></ol></pre>
+	        <p>produto: representa o ID do seu site no Abril Id. Para obter este ID, entre em contato com a equipe do Abril Id;</p>
+	        <p>container: é o ID da div em que o Abril Id será gerado. <strong>ATENÇÃO: você deve criar essa div em seu site</strong>.</p>
+			<strong>Instanciando o Abril ID</strong>
+			<p>Após criar a configuração, basta instanciar o Abril Id para começar a usá-lo. Isso é feita da maneira exemplificada abaixo.</p>
+			<pre class="prettyprint linenums"><ol class="linenums"><span class="pln"><code>&lt;script type=&quot;text/javascript&quot;&gt;<br />&nbsp;&nbspvar exemplo = new AbrilId();<br />&nbsp;&nbsp;exemplo.initialize(configuracao);<br />&lt;/script&gt;</code></span></ol></pre>
+			<div class="alert alert-error">
+        		<strong>Atenção</strong> é possível instanciar um componente WIDGET, um componente INCLUDE e um componente TOPO numa mesma página. Contudo, não é possível instanciar dois componentes do mesmo tipo. Segue exemplo abaixo.*
+	        </div>
+	        <pre class="prettyprint linenums"><ol class="linenums"><span class="pln"><code>&lt;script type=&quot;text/javascript&quot;&gt;<br />&nbsp;&nbsp;var configuracao_widget = {<br />&nbsp;&nbsp;&nbsp;&nbsp;produto:'site',<br />&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_widget',<br />&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.WIDGET<br />&nbsp;&nbsp;};<br /><br />&nbsp;&nbsp;var configuracao_include = {<br />&nbsp;&nbsp;&nbsp;&nbsp;produto:'site',<br />&nbsp;&nbsp;&nbsp;&nbsp;container:'div_include',<br />&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.INCLUDE<br />&nbsp;&nbsp;};<br /><br />&nbsp;&nbsp;var configuracao_topo = {<br />&nbsp;&nbsp;&nbsp;&nbsp;produto:'site',<br />&nbsp;&nbsp;&nbsp;&nbsp;container:'div_topo',<br />&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.TOPO<br />&nbsp;&nbsp;};<br /><br />&nbsp;&nbsp;var novowidget = new AbrilId();<br />&nbsp;&nbsp;novowidget.initialize(configuracao_widget);<br /><br />&nbsp;&nbsp;var novoinclude = new AbrilId();<br />&nbsp;&nbsp;novoinclude.initialize(configuracao_include);<br /><br />&nbsp;&nbsp;var novotopo = new AbrilId();<br />&nbsp;&nbsp;novotopo.initialize(configuracao_topo);<br />&lt;/script&gt;</code></span></ol></pre>
+			<div class="alert alert-error">
+        		<strong>Atenção</strong>para que o Abril ID funcione propriamente no Internet Explorer 7, 8 e 9, é necessário que o código acima (configuração, criação da instância e inicialização) esteja na mesma página que a chamada para o widgets.js. Não coloque esta parte do código num arquivo externo a ser carregado na página.
+	        </div>
+			</section>
+			<br />
+	  		<section id="tipoComponetes">
+	  			<br />          
+	    		<div class="page-header">
+          			<h1>Componentes Abril ID</h1>
+          		</div>
+          	</section>
+	  		<section id="redesocial">
+	  			<br />          
+	    		<div class="page-header">
+          			<h1>Redes Sociais</h1>
+          		</div>
+          	</section>
+	  		<section id="layout">
+	  			<br />          
+	    		<div class="page-header">
+          			<h1>Configurando Layout do Abril ID</h1>
+          		</div>
+          		<br />
+          		<br />
+          		<br />
+          		<br />
+          		<br />
+          		<br />
+          		<br />
+          		<br />
+          		<br />
+          		<br />
+          		<br />
+          		<br />
+          		<br />
+          		<br />
+          		<br />
+          	</section>	
+	    </div>
 	</div>
-	</div>
+   
+   	
+</div>
+
+	
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <ul class="footer-links">
+          <li><a href="http://id.abril.com.br">Abril Id</a></li>
+          <li><a href="https://confluence.abril.com.br/x/uxZF">Documentação oficial</a></li>
+        </ul>
+      </div>
+    </footer>
 	
 	
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    
+    <script src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/application.js"></script>
+    
   </body>
 </html>
