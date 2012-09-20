@@ -6,217 +6,13 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/prettify.css" rel="stylesheet">
-    <style type="text/css">
-
-      	/* Pattern overlay
-		------------------------- */
-		.superior {
-		  position: relative;
-		  padding: 40px 0;
-		  color: #fff;
-		  text-align: center;
-		  text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
-		  background: #020031; /* Old browsers */
-		  background: -moz-linear-gradient(45deg,  #6eabcf 0%, #0033db 100%); /* FF3.6+ */
-		  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#0033db), color-stop(100%,#6d3353)); /* Chrome,Safari4+ */
-		  background: -webkit-linear-gradient(45deg,  #6eabcf 0%,#0033db 100%); /* Chrome10+,Safari5.1+ */
-		  background: -o-linear-gradient(45deg,  #6eabcf 0%,#0033db 100%); /* Opera 11.10+ */
-		  background: -ms-linear-gradient(45deg,  #6eabcf 0%,#0033db 100%); /* IE10+ */
-		  background: linear-gradient(45deg,  #6eabcf 0%,#0033db 100%); /* W3C */
-		  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6eabcf', endColorstr='#0033db',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-		  -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
-		     -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
-		          box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
-		}
-		.superior h1 {
-		  font-size: 80px;
-		  font-weight: bold;
-		  letter-spacing: -1px;
-		  line-height: 1;
-		}
-		.superior p {
-		  font-size: 24px;
-		  font-weight: 300;
-		  line-height: 30px;
-		  margin-bottom: 30px;
-		}
-		
-		/* Sidenav for Docs
--------------------------------------------------- */
-
-.bs-docs-sidenav {
-  width: 228px;
-  margin: 30px 0 0;
-  padding: 0;
-  background-color: #fff;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
-  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
-     -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
-          box-shadow: 0 1px 4px rgba(0,0,0,.065);
-}
-.bs-docs-sidenav > li > a {
-  display: block;
-  *width: 190px;
-  margin: 0 0 -1px;
-  padding: 8px 14px;
-  border: 1px solid #e5e5e5;
-}
-.bs-docs-sidenav > li:first-child > a {
-  -webkit-border-radius: 6px 6px 0 0;
-     -moz-border-radius: 6px 6px 0 0;
-          border-radius: 6px 6px 0 0;
-}
-.bs-docs-sidenav > li:last-child > a {
-  -webkit-border-radius: 0 0 6px 6px;
-     -moz-border-radius: 0 0 6px 6px;
-          border-radius: 0 0 6px 6px;
-}
-.bs-docs-sidenav > .active > a {
-  position: relative;
-  z-index: 2;
-  padding: 9px 15px;
-  border: 0;
-  text-shadow: 0 1px 0 rgba(0,0,0,.15);
-  -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
-     -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
-          box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
-}
-/* Chevrons */
-.bs-docs-sidenav .icon-chevron-right {
-  float: right;
-  margin-top: 2px;
-  margin-right: -6px;
-  opacity: .25;
-}
-.bs-docs-sidenav > li > a:hover {
-  background-color: #f5f5f5;
-}
-.bs-docs-sidenav a:hover .icon-chevron-right {
-  opacity: .5;
-}
-.bs-docs-sidenav .active .icon-chevron-right,
-.bs-docs-sidenav .active a:hover .icon-chevron-right {
-  background-image: url(../img/glyphicons-halflings-white.png);
-  opacity: 1;
-}
-.bs-docs-sidenav.affix {
-  top: 40px;
-}
-.bs-docs-sidenav.affix-bottom {
-  position: absolute;
-  top: auto;
-  bottom: 270px;
-}
-
-/* Bootstrap code examples
--------------------------------------------------- */
-
-/* Base class */
-.bs-docs-example {
-  position: relative;
-  margin: 15px 0;
-  padding: 39px 19px 14px;
-  *padding-top: 19px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-}
-
-/* Echo out a label for the example */
-.bs-docs-example:after {
-  content: "Example";
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  padding: 3px 7px;
-  font-size: 12px;
-  font-weight: bold;
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  color: #9da0a4;
-  -webkit-border-radius: 4px 0 4px 0;
-     -moz-border-radius: 4px 0 4px 0;
-          border-radius: 4px 0 4px 0;
-}
-
-/* Remove spacing between an example and it's code */
-.bs-docs-example + .prettyprint {
-  margin-top: -20px;
-  padding-top: 15px;
-}
-
-/* Tweak examples
-------------------------- */
-.bs-docs-example > p:last-child {
-  margin-bottom: 0;
-}
-.bs-docs-example .table,
-.bs-docs-example .progress,
-.bs-docs-example .well,
-.bs-docs-example .alert,
-.bs-docs-example .hero-unit,
-.bs-docs-example .pagination,
-.bs-docs-example .navbar,
-.bs-docs-example > .nav,
-.bs-docs-example blockquote {
-  margin-bottom: 5px;
-}
-.bs-docs-example .pagination {
-  margin-top: 0;
-}	
-/* Images */
-.bs-docs-example-images img {
-  margin: 10px;
-  display: inline-block;
-}
-/* Popovers */
-.bs-docs-example-popover {
-  padding-bottom: 24px;
-  background-color: #f9f9f9;
-}
-.bs-docs-example-popover .popover {
-  position: relative;
-  display: block;
-  float: left;
-  width: 260px;
-  margin: 20px;
-}
-
-
-/* Footer
--------------------------------------------------- */
-
-.footer {
-  padding: 70px 0;
-  margin-top: 70px;
-  border-top: 1px solid #e5e5e5;
-  background-color: #f5f5f5;
-}
-.footer p {
-  margin-bottom: 0;
-  color: #777;
-}
-.footer-links {
-  margin: 10px 0;
-}
-.footer-links li {
-  display: inline;
-  margin-right: 10px;
-}
-
-
-
-
-    </style>
+    <link href="css/doc.css" rel="stylesheet">
   </head>
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
     <!-- BARRA TOP -->
     <div class="navbar navbar-inverse  navbar-fixed-top">
 	  <div class="navbar-inner">
+	  
 	    <a class="brand" href="index.html">BootsTrap - Abril ID</a>
 	    <ul class="nav">
 	      <li><a href="index.html">Home</a></li>
@@ -226,8 +22,7 @@
 	      <li><a href="faq.html">FAQ</a></li>
 	    </ul>
 	  </div>
-	</div>
-
+</div>
 <!-- Head title
 ================================================== -->
 	<div class="superior" id="overview">
@@ -251,7 +46,6 @@
 	          	<li><a href="#passo3"><i class="icon-chevron-right"></i> 3º Passo</a></li>
 	          	<li><a href="#passo4"><i class="icon-chevron-right"></i> 4º Passo</a></li>
 	          	<li><a href="#passo5"><i class="icon-chevron-right"></i> 5º Passo</a></li>
-	          	<li><a href="javaScript:void(0);">Avançado</a></li>
 	          	<li><a href="#tipoComponetes"><i class="icon-chevron-right"></i> Componentes</a></li>
 	          	<li><a href="#redesocial"><i class="icon-chevron-right"></i> Redes Sociais</a></li>
 	          	<li><a href="#layout"><i class="icon-chevron-right"></i> Layout</a></li>
@@ -261,10 +55,6 @@
 	 	</div>
 	    <div class="span8">
 	    	<br />
-	    	<div class="alert alert-error">
-	    	 	<button type="button" class="close" data-dismiss="alert">×</button>
-		  		<strong>Atenção </strong> Essa sessão passo-a-passo não subistitu a leitura da documentação do abril ID. Sua função é ajudar webmaster realizarem as primeiras implementações.
-		  	</div>
 	    	<section id="passo1">
 	    	<br />
 	    		<div class="page-header">
@@ -274,11 +64,11 @@
 			<div class="alert alert-info"> <button type="button" class="close" data-dismiss="alert">×</button>O ideial é que está linha esteja contida no final da página que você quer aplicar o componente do Abril ID
 			</div>
 			<div class="bs-docs-example">
+	        </div>
+   			<pre class="prettyprint linenums"><ol class="linenums"><span class="pln"><code>&lt;script src=&quot;http://qa.id.abril.com.br/javascripts/widgets.js&quot;&gt;</code></span><span class="pln"><code>&lt;/script&gt;</code></span></ol></pre>
   		  		<div class="alert alert-error">
         			<strong>Atenção</strong> para realizar testes de implementação seu ambiente de desenvolvimento deve ter acesso ao nosso anbiente de homologação
-	        		</div>
 	        	</div>
-   				<pre class="prettyprint linenums"><ol class="linenums"><span class="pln"><code>&lt;script src=&quot;http://qa.id.abril.com.br/javascripts/widgets.js&quot;&gt;</code></span><span class="pln"><code>&lt;/script&gt;</code></span></ol></pre>
 	    	</section>
 	    	<section id="passo2">
 	    	<br />
@@ -330,10 +120,6 @@
 			<div class="alert alert-info">
        			<strong>Exemplo Pratico</strong> Faça o download dessa pagina de teste confirmar tudo que foi passado até agora <a href="exemplo_abrilid.zip">exemplo.zip</a>. 
        		</div>	
-			<br />
-	    	<div class="page-header">
-			  	<h1>Configurações Avançadas</h1>
-			</div>
 			<br />
 	  		<section id="tipoComponetes">
 	  			<br />          
@@ -455,13 +241,19 @@
           		</div>
           		<pre class="prettyprint"><ol class="linenums"><li class='L33'>    ...</li><li class='L40'>    'topo': {</li><li class='L41'>      'background-color': {</li><li class='L42'>        'start': '#BB11AA', //Cor primaria fundo</li><li class='L43'>        'end': '#020926' //Cor secundaria fundo</li><li class='L44'>      },</li><li class='L45'>      'line-color':'#888888', //Cor linha</li><li class='L46'>      'text-color':'#888888',//Cor texto</li><li class='L47'>      'border-color':'#888888',//Cor borda</li><li class='L48'>      'border-width':'2',//Largura Borda</li><li class='L49'>      'logo':'white'//Logo Abril </li><li class='L50'>    }</li><li class='L51'>    ...</li></ol></pre>
           	</section>
-          	<section id="layout">
+          	<br />
+          	<section id="documentacao">
           		<br />          
 	    		<div class="page-header">
-          			<h1>Download Documentação</h1>
+	    			<h1>Configurações Avançadas</h1>
+          			<h1>Documentação</h1>
           		</div>
           		<a href="arq/documentacao-abrilid.pdf" class="btn btn-danger">Download</a><br /><br />
-          		
+          		<div class="alert alert-error">
+	    	 		<button type="button" class="close" data-dismiss="alert">×</button>
+		  			<strong>Atenção </strong> Essa sessão passo-a-passo não subistitu a leitura da documentação do abril ID. Sua função é ajudar webmaster realizarem as primeiras implementações.
+		  		</div>
+	    	
           	</section>
 	  			
 	    </div>
