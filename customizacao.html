@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>Abril ID - Bootstrap</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="css/bootstrap-pg-custon.min.css" rel="stylesheet">
+	<script src="http://id.abril.com.br/javascripts/widgets.js"></script>
+
+
+
+    <style type="text/css">
+
+		.footer {
+		  padding: 70px 0;
+		  margin-top: 870px;
+		  border-top: 1px solid #e5e5e5;
+		  background-color: #f5f5f5;
+		}
+		.footer p {
+		  margin-bottom: 0;
+		  color: #777;
+		}
+		.footer-links {
+		  margin: 10px 0;
+		}
+		.footer-links li {
+		  display: inline;
+		  margin-right: 10px;
+		}
+
+      	/* Pattern overlay
+		------------------------- */
+		.superior {
+		  position: relative;
+		  padding: 40px 0;
+		  color: #fff;
+		  text-align: center;
+		  text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+		  background: #020031; /* Old browsers */
+		  background: -moz-linear-gradient(45deg,  #6eabcf 0%, #0033db 100%); /* FF3.6+ */
+		  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#0033db), color-stop(100%,#6d3353)); /* Chrome,Safari4+ */
+		  background: -webkit-linear-gradient(45deg,  #6eabcf 0%,#0033db 100%); /* Chrome10+,Safari5.1+ */
+		  background: -o-linear-gradient(45deg,  #6eabcf 0%,#0033db 100%); /* Opera 11.10+ */
+		  background: -ms-linear-gradient(45deg,  #6eabcf 0%,#0033db 100%); /* IE10+ */
+		  background: linear-gradient(45deg,  #6eabcf 0%,#0033db 100%); /* W3C */
+		  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6eabcf', endColorstr='#0033db',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		  -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+		     -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+		          box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+		}
+		.superior h1 {
+		  font-size: 80px;
+		  font-weight: bold;
+		  letter-spacing: -1px;
+		  line-height: 1;
+		}
+		.superior p {
+		  font-size: 24px;
+		  font-weight: 300;
+		  line-height: 30px;
+		  margin-bottom: 30px;
+		}
+	
+    </style>
+  </head>
+  
+	<body onload=" widgetVisual()">
+    <!-- BARRA TOP -->
+    <div class="navbar navbar-inverse  navbar-fixed-top">
+	  <div class="navbar-inner">
+	    <a class="brand" href="index.html">BootsTrap - Abril ID</a>
+	    <ul class="nav">
+	      <li><a href="index.html">Home</a></li>
+	      <li><a href="passo-a-passo.html">Passo a Passo</a></li>
+	      <li class="active"><a href="customizacao.html">Customiza&ccedil;&atilde;o</a></li>
+	      <li><a href="cases.html">Cases</a></li>
+	      <li><a href="faq.html">FAQ</a></li>
+	    </ul>
+	  </div>
+	</div>
+
+<!-- Head title
+================================================== -->
+	<div class="superior" id="overview">
+	  	<div class="container">
+       		<h1> Abril ID - Tool</h1>
+	   		<p class="lead">Customizar o Abril ID ficou ainda mais fácil.</p>
+	  	</div>
+	</div>
+
+<!-- Body
+================================================== -->	
+<!-- <div class="container">	
+	<div class="container-fluid">
+	  <div class="row-fluid">
+	    <div class="span12">
+	      Body content
+	       <iframe src="iframe.html" width="900" height="1100" frameborder="0"></iframe> 
+	      
+	    </div>
+	  </div>
+	</div>
+</div> -->
+<div class="container">
+	  <div class="row">
+<div id="div_widget"  style="width: 1200px; float: right;  position:absolute; margin: 20px; display: inline; " ></div>
+<script language="javascript">
+    function widgetVisual() {
+    	var y_fixo = $("#div_widget").offset().top;
+        $(window).scroll(function () {
+            $("#div_widget").animate({
+                top: y_fixo+$(document).scrollTop()+"px"
+                },{duration:500,queue:false}
+            );
+        });
+    }
+</script>
+
+<div style="position: absolute;">
+<br>
+	<table  class="table table-striped table-bordered table-condensed">
+	
+		<tr><th colspan=2>Geral</th></tr>
+		<tr><td>Cor Texto</td><td><input id="gc_text" type="text" onblur="fgc_text(this.value)" size="6" maxlength="7" value="383838" class="color {styleElement:'ex_gc_text'}">
+		<input id="ex_gc_text" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		<tr><td>Cor Fundo</td><td><input id="gc_fundo" type="text" onblur="fgc_fundo(this.value)"  size="6" maxlength="7" value="F1F2F2" class="color {styleElement:'ex_gc_fundo'}">
+		<input id="ex_gc_fundo" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		<tr><td>Cor Borda</td><td><input id="gc_borda" type="text" onblur="fgc_borda(this.value)"  size="6" maxlength="7" value="CCCCCC" class="color {styleElement:'ex_gc_borda'}">
+		<input id="ex_gc_borda" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		<tr><td>Cor caixa interna Fundo</td><td><input id="gc_cxfundo" onblur="fgc_cxfundo(this.value)"  size="6" maxlength="7" type="text" value="F6F6F6" class="color {styleElement:'ex_gc_cxfundo'}">
+		<input id="ex_gc_cxfundo" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		<tr><td>Cor linha interna</td><td><input id="gc_cxborda" onblur="fgc_cxborda(this.value)"  size="6" maxlength="7" type="text" value="BABABA" class="color {styleElement:'ex_gc_cxborda'}">
+		<input id="ex_gc_cxborda" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		<tr>
+		<td>Tamanho Borda</td><td>
+		<select id="tb_borda"  onchange="ftb_borda()" >
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		</select> 
+		</td></tr>
+		<tr>
+		<td>Logo Abril</td><td>
+		<select id="logo_tipo"  onchange="flogo_tipo()" >
+		  <option value="verde">verde</option>
+		  <option value="branco">ligth</option>
+		</select> 
+		</td></tr>
+		<tr><th colspan=2>Botão especial</th></tr>
+		
+		<tr><td>Cor Texto</td><td><input id="bec_text" type="text" onblur="fbec_text(this.value)" size="6" maxlength="7" value="272727" class="color {styleElement:'ex_bec_text'}">
+		<input id="ex_bec_text" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		<tr><td>Cor Fundo Inical</td><td><input id="bec_inicial" type="text" onblur="fbec_inicial(this.value)" size="6" maxlength="7" disabled=true value="FDFDFD" class="color {styleElement:'ex_bec_inicial'}">
+		<input id="ex_bec_inicial" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		<tr><td>Cor Fundo Final</td><td><input id="bec_final" type="text" onblur="fbec_final(this.value)" size="6" maxlength="7" value="B6B4B5"  disabled=true class="color {styleElement:'ex_bec_final'}">
+		<input id="ex_bec_final" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		<tr><td>Cor Borda</td><td><input id="bec_borda" type="text" onblur="fbec_borda(this.value)" size="6" maxlength="7" value="BEBEBE" class="color {styleElement:'ex_bec_borda'}">
+		<input id="ex_bec_borda" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		
+		<tr><th colspan=2>Botão Simples</th></tr>
+		
+		<tr><td>Cor Texto</td><td><input id="bsc_text" type="text" onblur="fbsc_text(this.value)" size="6" maxlength="7" value="272727" class="color {styleElement:'ex_bsc_text'}">
+		<input id="ex_bsc_text" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		<tr><td>Cor Fundo</td><td><input id="bsc_fundo" type="text" onblur="fbsc_fundo(this.value)" size="6" maxlength="7" value="FDFDFD"  class="color {styleElement:'ex_bsc_fundo'}">
+		<input id="ex_bsc_fundo" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		<tr><td>Cor Borda</td><td><input id="bsc_borda" type="text" onblur="fbsc_borda(this.value)" size="6" maxlength="7" value="BEBEBE" class="color {styleElement:'ex_bsc_borda'}">
+		<input id="ex_bsc_borda" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		
+		<tr><th colspan=2>Msg de Error</th></tr>
+		<tr><td>Cor Texto</td><td><input id="msgec_text" type="text" onblur="fmsgec_text(this.value)" size="6" maxlength="7" value="B30000" class="color {styleElement:'ex_msgec_text'}">
+		<input id="ex_msgec_text" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		<tr><td>Cor Fundo</td><td><input id="msgec_fundo" type="text" onblur="fmsgec_fundo(this.value)" size="6" maxlength="7" value="FDDDDD"  class="color {styleElement:'ex_msgec_fundo'}">
+		<input id="ex_msgec_fundo" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		<tr><td>Cor Borda</td><td><input id="msgec_borda" type="text" onblur="fmsgec_borda(this.value)" size="6" maxlength="7" value="B30000" class="color {styleElement:'ex_msgec_borda'}">
+		<input id="ex_msgec_borda" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		<!-- 
+		<tr><th colspan=2>Topo 	<span class="label">em desenvolvimento</span></th></tr>
+		
+		<tr>
+		<td>Logo</td><td>
+		<select id="logo_tipo_topo" disabled=true  onchange="flogo_tipo_topo()" >
+		  <option value="default">verde</option>
+		  <option value="white">white</option>
+		  <option value="ligth grey">light grey</option>
+		  <option value="grey">grey</option>
+		  <option value="black">black</option>
+		</select> 
+		</td></tr>
+		<tr><td>Cor Fd Inical</td><td><input id="topoc_inicial" type="text" onblur="ftopoc_inicial(this.value)" size="6" maxlength="7" disabled=true value="FDFDFD" class="color {styleElement:'ex_topoc_inicial'}">
+		<input id="ex_topoc_inicial" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		<tr><td>Cor Fd Final</td><td><input id="topoc_final" type="text" onblur="ftopoc_final(this.value)" size="6" maxlength="7" value=""  disabled=true class="color {styleElement:'ex_topoc_final'}">
+		<tr><td>Cor da Borda</td><td><input disabled=true  id="topoc_borda" type="text" onblur="ftopoc_borda(this.value)" size="6" maxlength="7" value="" class="color {styleElement:'ex_topoc_borda'}">
+		<input id="ex_topoc_borda" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		<tr><td>Cor lina Separadora</td><td><input disabled=true  id="topoc_borda" type="text" onblur="ftopoc_borda(this.value)" size="6" maxlength="7" value="" class="color {styleElement:'ex_topoc_borda'}">
+		<input id="ex_topoc_borda" style="border: 0.5pt solid #000000; border-spacing: 0; height: 10pt; width: 0.18in;" size="1" disabled=true></td></tr>
+		<tr>
+		<td>Tamanho Borda</td><td>
+		<select id="topotb_borda" disabled="true"  onchange="ftopotb_borda()" >
+		  <option value="1">1</option>
+		  <option value="2">2</option>
+		  <option value="3">3</option>
+		  <option value="4">4</option>
+		  <option value="5">5</option>
+		</select> 
+		</td></tr> -->
+		<tr><th colspan=2>Gerar Codigo</th></tr>
+		<tr><th colspan=2><center>
+		<input class="btn btn-info" type="button" onclick="openCodeModal()" value="Viem code" />
+		<a href="javascript:void(0);" class="btn btn-inverse" id="d_clip_button" onclick="compliarCode()" >copy code</a>
+		</center></th></tr>
+		
+	</table>
+</div>
+	
+
+<div id="codeModal" class="modal hide">
+	 <div class="modal-header">
+	  	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	  	<h3>Modal header</h3>
+	 </div>
+	 <div class="modal-body" id="modal-body">
+	 	
+	 </div>
+	 <div class="modal-footer">
+	  	<a href="javascript:void(0);" class="btn" data-dismiss="modal" aria-hidden="true">Close</a>
+	 </div>
+</div>
+
+
+</div>	
+
+</div>	
+	<footer class="footer">
+      <div class="container">
+        <p class="pull-right"><a href="#">Voltar ao topo</a></p>
+        <p>Entre em contato com nossa equipe: <a href="mailto:nucleo-aap@abril.com.br">abrilid@abril.com.br</p>
+        <p>Copyright &copy; 2012 Editora Abril S/A. Todos os direitos reservados</p>
+        <ul class="footer-links">
+          <li><a href="http://id.abril.com.br">Abril ID</a></li>
+          <li><a href="https://confluence.abril.com.br/x/uxZF">Documentação oficial</a></li>
+        </ul>
+      </div>
+    </footer>
+	
+<script type="text/javascript">
+
+
+function openCodeModal() { 
+	 
+		var print = "<pre class=\"prettyprint\"><ol class=\"linenums\">";
+		print = print + "<li class='L0'>var configuracao = {</li>";
+		print = print + "<li class='L1'>  produto:'EXEMPLO',</li>";
+		print = print + "<li class='L2'>  container: 'EXEMPLO_DIV',</li>";
+		print = print + "<li class='L3'>  provedores: ['facebook', 'google', 'twitter'],</li>";
+		print = print + "<li class='L4'>  componente: Componente.WIDGET,</li>";
+		print = print + "<li class='L5'>  seta: 'SD',</li>";
+		print = print + "<li class='L6'>  estilo:{ </li>";
+		print = print + "<li class='L7'>    'general': {</li>";      
+		print = print + "<li class='L8'>      'background-color':'#" + $("#gc_fundo").val()  + "',</li>";
+		print = print + "<li class='L9'>      'border-color':'#" + $("#gc_borda").val() + "',</li>"; 		
+		print = print + "<li class='L10'>      'border-width':'" + $('#tb_borda').find('option').filter(':selected').text() + "',</li>"; 		
+		print = print + "<li class='L11'>      'text-color':'#" + $("#gc_text").val() + "',</li>"; 		
+		print = print + "<li class='L12'>      'inner-border-color':'#" + $("#gc_cxborda").val() + "'</li>"; 	
+		print = print + "<li class='L13'>    },</li>";
+		print = print + "<li class='L14'>    'inner-box':{</li>";
+		print = print + "<li class='L15'>      'background-color':'#" + $("#gc_cxfundo").val() + "'</li>";
+		print = print + "<li class='L16'>    },</li>";
+		print = print + "<li class='L17'>    'button':{</li>";
+		print = print + "<li class='L18'>      'stroke':{</li>";
+		print = print + "<li class='L19'>        'text-color':'#" + $("#bec_text").val() + "',</li>";
+		print = print + "<li class='L20'>        'background-color':{</li>";
+		print = print + "<li class='L21'>        'start':'#" + $("#bec_inicial").val() + "',</li>";
+		print = print + "<li class='L22'>        'end':'#" + $("#bec_final").val() + "'</li>";
+		print = print + "<li class='L23'>      },</li>";
+		print = print + "<li class='L24'>      'border-color':'#" + $("#bec_borda").val() + "'</li>";
+		print = print + "<li class='L25'>      },</li>";
+		print = print + "<li class='L26'>      'flat':{</li>";
+		print = print + "<li class='L27'>        'text-color':'#" + $("#bsc_text").val() + "',</li>";
+		print = print + "<li class='L28'>        'background-color':'#" + $("#bsc_fundo").val() + "',</li>";
+		print = print + "<li class='L39'>        'border-color':'#" + $("#bsc_borda").val() + "'</li>";
+		print = print + "<li class='L30'>      }</li>";
+		print = print + "<li class='L31'>    },</li>";
+		print = print + "<li class='L32'>    'error':{</li>";
+		print = print + "<li class='L33'>      'background-color':'#" + $("#msgec_fundo").val() + "f',</li>";
+		print = print + "<li class='L34'>      'border-color':'#" + $("#msgec_borda").val() + "',</li>";
+		print = print + "<li class='L35'>      'text-color':'#" + $("#msgec_text").val() + "'</li>";
+		print = print + "<li class='L36'>    },</li>";
+		print = print + "<li class='L37'>    'header':{</li>";
+		print = print + "<li class='L38'>      'type': '"+$('#logo_tipo').find('option').filter(':selected').text()+"'</li>";
+		print = print + "<li class='L39'>    }</li>";
+		/* print = print + "<li class='L40'>    'topo': {</li>";
+		print = print + "<li class='L41'>      'background-color': {</li>";
+		print = print + "<li class='L42'>        'start': '#CCCCCC',</li>"; 		
+		print = print + "<li class='L43'>        'end': '#CCCCCC'</li>"; 			
+		print = print + "<li class='L44'>      },</li>";
+		print = print + "<li class='L45'>      'line-color':'#888888',</li>";		
+		print = print + "<li class='L46'>      'text-color':'#888888',</li>";		
+		print = print + "<li class='L47'>      'border-color':'#888888',</li>"; 		
+		print = print + "<li class='L48'>      'border-width':'2',</li>"; 		
+		print = print + "<li class='L49'>      'logo':'default'</li>";
+		print = print + "<li class='L50'>    }</li>";
+		print = print + "<li class='L51'>  }</li>"; */
+		print = print + "<li class='L52'>};</li>";
+		print = print + "</ol></pre>";
+		$("#modal-body").html(print);
+		$('#codeModal').modal('show');
+}
+	
+function compliarCode(){
+	
+	var print = "var configuracao = {\n";
+	print = print + "  produto:'EXEMPLO',\n";
+	print = print + "  container: 'EXEMPLO_DIV',\n";
+	print = print + "  provedores: ['facebook', 'google', 'twitter'],\n";
+	print = print + "  componente: Componente.WIDGET,\n";
+	print = print + "  seta: 'SD',\n";
+	print = print + "  estilo:{ \n";
+	print = print + "    'general': {\n";      
+	print = print + "      'background-color':'#" + $("#gc_fundo").val()  + "',\n";
+	print = print + "      'border-color':'#" + $("#gc_borda").val() + "',\n"; 		
+	print = print + "      'border-width':'" + $('#tb_borda').find('option').filter(':selected').text() + "',\n"; 		
+	print = print + "      'text-color':'#" + $("#gc_text").val() + "',\n"; 		
+	print = print + "      'inner-border-color':'#" + $("#gc_cxborda").val() + "'\n"; 	
+	print = print + "    },\n";
+	print = print + "    'inner-box':{\n";
+	print = print + "      'background-color':'#" + $("#gc_cxfundo").val() + "'\n";
+	print = print + "    },\n";
+	print = print + "    'button':{\n";
+	print = print + "      'stroke':{\n";
+	print = print + "        'text-color':'#" + $("#bec_text").val() + "',\n";
+	print = print + "        'background-color':{\n";
+	print = print + "        'start':'#" + $("#bec_inicial").val() + "',\n";
+	print = print + "        'end':'#" + $("#bec_final").val() + "'\n";
+	print = print + "      },\n";
+	print = print + "      'border-color':'#" + $("#bec_borda").val() + "'\n";
+	print = print + "      },\n";
+	print = print + "      'flat':{\n";
+	print = print + "        'text-color':'#" + $("#bsc_text").val() + "',\n";
+	print = print + "        'background-color':'#" + $("#bsc_fundo").val() + "',\n";
+	print = print + "        'border-color':'#" + $("#bsc_borda").val() + "'\n";
+	print = print + "      }\n";
+	print = print + "    },\n";
+	print = print + "    'error':{\n";
+	print = print + "      'background-color':'#" + $("#msgec_fundo").val() + "f',\n";
+	print = print + "      'border-color':'#" + $("#msgec_borda").val() + "',\n";
+	print = print + "      'text-color':'#" + $("#msgec_text").val() + "'\n";
+	print = print + "    },\n";
+	print = print + "    'header':{\n";
+	print = print + "      'type': '"+$('#logo_tipo').find('option').filter(':selected').val()+"'\n";
+	print = print + "    }\n"//,\n";
+	/* print = print + "    'topo': {\n";
+	print = print + "      'background-color': {\n";
+	print = print + "        'start': '#CCCCCC',\n"; 		
+	print = print + "        'end': '#CCCCCC'\n"; 			
+	print = print + "      },\n";
+	print = print + "      'line-color':'#888888',\n";		
+	print = print + "      'text-color':'#888888',\n";		
+	print = print + "      'border-color':'#888888',\n"; 		
+	print = print + "      'border-width':'2',\n"; 		
+	print = print + "      'logo':'default'\n";
+	print = print + "    }\n"; */
+	print = print + "  }\n";
+	print = print + "};"; 
+	
+	
+	
+	ZeroClipboard.setMoviePath( 'swf/ZeroClipboard.swf' );
+	var clip = new ZeroClipboard.Client();
+	clip.setText( print );
+	clip.setHandCursor( true );
+	clip.glue( 'd_clip_button');
+	clip.reposition();
+}
+
+var configuracao = {
+	    produto:'VEJA',
+	    container: 'div_widget',
+	    provedores: ['facebook', 'google', 'twitter'],
+	    componente: Componente.WIDGET,
+	    seta: 'SD',
+	    estilo:{ //início da configuração de estilo
+	      'general': {      
+	      'background-color':'#4f6068', //cor do background da caixa do widget//
+	      'border-color':'#111a33', //cor da borda da caixa do widget//
+	      'border-width':'1', //largura da borda da caixa do widget, sem o 'px' - minimo: 1, maximo: 5//
+	      'text-color':'#DDCCBB', //cor do 'X' para fechar o widget e de todos os textos do widget, exceto erros e botoes//
+	      'inner-border-color':'#010729' //cor da borda da caixa interna, do separador e da borda dos campos//
+	      },
+	      'inner-box':{
+	        'background-color':'#66777f' //cor do background da caixa interna do widget//
+	      },
+	      'button':{
+	        'stroke':{
+	          'text-color':'#ffffff' , //cor de fonte do botao com gradiente//
+	          'background-color':{
+	            'start':'#020926', //cor inicial do gradiente do botao//
+	            'end':'#020926' //cor final do gradiente do botao//
+	          },
+	          'border-color':'#020926' //cor de borda do botao com gradiente//
+	        },
+	        'flat':{
+	          'text-color':'#ffffff' , //cor de fonte do botao sem gradiente//
+	          'background-color':'#020926', //cor de fundo do botao sem gradiente//
+	          'border-color':'#020926' //cor de borda do botao sem gradiente//
+	        }
+	      },
+	      'error':{
+	        'background-color':'#66777f', //cor fundo da caixa de erro//
+	        'border-color':'#020926', //cor de borda da caixa de erro//
+	        'text-color':'#ffffff' //cor do texto da caixa de erro e da borda dos campos indicados no erro//
+	      },
+	      'header':{
+	        'type': 'light' //'default': logotipo verde, assinatura cinza escuro | 'light': logotipo e assinatura brancos//
+	      }/* ,
+	      'topo': {
+	        'background-color': {
+	          'start': '#CCCCCC', //cor inicial do gradiente do fundo//
+	          'end': '#CCCCCC' //cor final do gradiente do fundo//
+	        },
+	        'line-color':'#888888', //cor do separador //
+	        'text-color':'#888888', //cor dos textos do topo //
+	        'border-color':'#888888', // cor da borda do topo, caso haja //
+	        'border-width':'2', // espessura da borda - de 2 a 5 - default 0//
+	        'logo':'default' // 'default' (verde)|'white' (branco)|'light grey' (cinza claro)|'grey' (cinza)|'black' (preto)  //
+	      } */
+	    }
+	  };
+
+var widget = new AbrilId();
+widget.initialize(configuracao);
+
+setTimeout ("widget.login.render();", 1800); 
+function fgc_text(value) { $(".abril-id-widget-box .custom-text-color").css("color"," #"+value); }
+function fgc_fundo(value) { $(".abril-id-widget-box.custom-abril-id-background").css("background-color"," #"+value); }
+function fgc_borda(value) { $(".abril-id-widget-box.custom-abril-id-border").css("border-color"," #"+value); }
+function fgc_cxfundo(value) { $(".abril-id-widget-box .custom-inner-box-background").css("background-color"," #"+value); }
+function fgc_cxborda(value) { $(".abril-id-widget-box .custom-line").css("border-color"," #"+value); }
+function ftb_borda() {	$(".abril-id-widget-box.custom-abril-id-border").css("border-width", $('#tb_borda').find('option').filter(':selected').text()+"px" )}
+function flogo_tipo() {	
+	$(".abril-id-widget-box #abril-id-header #abril-id-logotipo.default").css("background-image", "url('http://id.abril.com.br/images/widgets-2.0/logo-abril-id-"+$('#logo_tipo').find('option').filter(':selected').val()+".png')");
+	$("#abril-id-header #abril-id-slogan.default").css("color", ($('#logo_tipo').find('option').filter(':selected').text() == "verde") ? "#343434" : "#FFFFFF" ); 	
+}
+
+function fbec_text(value)    { $(".abril-id-widget-box .custom-stroke-button").css("color"," #"+ value); }
+function fbec_inicial(value) { $(".abril-id-widget-box .custom-stroke-button").css("background"," -moz-linear-gradient(center top , #"+value +", #B6B4B5) repeat scroll 0 0 transparent;"); }
+function fbec_final(value)   { $(".abril-id-widget-box .custom-stroke-button").css("background"," -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#cccccc));"); }
+function fbec_borda(value)   { $(".abril-id-widget-box .custom-stroke-button").css("border-color"," #"+value); }
+
+function fbsc_text(value)    { $(".abril-id-widget-box .custom-flat-button").css("color"," #"+ value); }
+function fbsc_fundo(value)   { $(".abril-id-widget-box .custom-flat-button").css("background-color"," #"+value); }
+function fbsc_borda(value)   { $(".abril-id-widget-box .custom-flat-button").css("border-color"," #"+value); }
+
+function fmsgec_text(value)    { $(".abril-id-widget-box .custom-error-message").css("color"," #"+ value); }
+function fmsgec_fundo(value)   { $(".abril-id-widget-box .custom-error").css("background-color"," #"+value); }
+function fmsgec_borda(value)   { $(".abril-id-widget-box .custom-error").css("border-color"," #"+value); }
+
+function ftopoc_inicial(value) { $(".abril-id-widget-box .custom-stroke-button").css("background"," -moz-linear-gradient(center top , #"+value +", #B6B4B5) repeat scroll 0 0 transparent;"); }
+function ftopoc_final(value)   { $(".abril-id-widget-box .custom-stroke-button").css("background"," -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#cccccc));"); }
+function ftopoc_borda(value)   { $(".abril-id-widget-box .custom-stroke-button").css("border-color"," #"+value); }
+
+</script> 
+	
+	<script type="text/javascript" src="js/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/jscolor/jscolor.js"></script>
+	<script type="text/javascript" src="js/ZeroClipboard.js"></script>
+    <script type="text/javascript" src="js/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="js/bootstrap-pg-custon.min.js"></script>
+    <script type="text/javascript" src="js/twitter/application.js"></script>
+  </body>
+</html>
