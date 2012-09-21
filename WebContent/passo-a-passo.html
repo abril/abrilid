@@ -60,12 +60,12 @@
 	    		<div class="page-header">
 				  	<h1>1º Passo - Instalando o Abril ID</h1>
 				</div>
-	    		<p>Para instalar o Javascript do Abril ID é muito simples. Basta  incluir a linha abaixo em todas as páginas onde o Abril ID for necessário. </p>
-			<div class="alert">O ideal é que está linha esteja colocada antes do <code>&lt;/boby&gt;</code> dentro da página que você quer aplicar o componente do Abril ID
+	    		<p>Para instalar o Javascript do Abril ID é muito simples. Basta incluir a linha abaixo em todas as páginas onde o Abril ID for necessário. </p>
+			<div class="alert">O ideal é que está linha seja colocada antes do <code>&lt;/boby&gt;</code> dentro da página que você quer aplicar o componente do Abril ID
 			</div>
    			<pre class="prettyprint"><ol class="linenums"><li class="L1">&lt;script src=&quot;http://qa.id.abril.com.br/javascripts/widgets.js&quot;&gt;&lt;/script&gt;</li></ol></pre>
   		  		<div class="alert alert-error">
-        			<strong>Atenção</strong> para realizar testes de implementação seu ambiente de desenvolvimento deve ter acesso ao nosso anbiente de homologação
+        			<strong>Atenção</strong> para realizar testes de implementação seu ambiente de desenvolvimento deve ter acesso ao nosso anbiente de homologação.
 	        	</div>
 	    	</section>
 	    	<section id="passo2">
@@ -73,7 +73,7 @@
 				<div class="page-header">
       	    		<h1>2º Passo - Configurando o Abril ID</h1>
       	    	</div>
-	          	<p>Para o Abril ID funcionar em seu site é necessário incluir sua configuração.</p><p> Existem duas formas de configurar o Abril ID a forma simplificadaonde você só precisa configurar dois parâmetros:</p>
+	          	<p>Para o Abril ID funcionar em seu site é necessário incluir sua configuração.</p><p> Existem duas formas de configurar o Abril ID a forma simplificada na qual você só precisa configurar dois parâmetros:</p>
 	          	<ul>
 	          	<li>
 	          	<p><strong>Produto:</strong> que deve ser um nome/ID para sua marca.</p></li><li> 
@@ -91,7 +91,7 @@
 	    		<div class="page-header">
       	    		<h1>3º Passo - Inicializando o Abril ID</h1>
       	    	</div> 
-      	    	<p>Para instanciar criar um objeto javascript do Abril ID e declarar o função <code>.initialize()</code> passando a objeto <code>json</code> configuração do <a href="#passo2">Passo 2</a> para o Abril ID.</p>
+      	    	<p>Para instanciar criar um objeto javascript do Abril ID e declarar a função <code>.initialize()</code> passando o objeto <code>json</code> configuração do <a href="#passo2">Passo 2</a> para o Abril ID.</p>
           		<pre class="prettyprint"><ol class="linenums"><li class="L0"><span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span></li><li class="L1"><span class="pln">&nbsp;&nbsp;var abrilid_teste = new AbrilId();</span></li><li class="L2"><span class="pln">&nbsp;&nbsp;abrilid_teste.initialize(configuracao);</span></li><li class="L3"><span class="pln">&lt;/script&gt;</span></li></ol></pre>
 	    	</section>
 	    	<section id="passo4">
@@ -112,7 +112,7 @@
 			</section>
 			<br />
 			<div class="alert alert-info">
-       			<strong>Exemplo Pratico</strong> Faça o download dessa pagina de teste confirmar tudo que foi passado até agora <a href="exemplo_abrilid.zip"><i class="icon-download"></i> exemplo.zip</a>. 
+       			<strong>Exemplo Prático</strong> Faça o download dessa pagina de teste para confirmar tudo que foi passado até agora <a href="exemplo_abrilid.zip"><i class="icon-download"></i> exemplo.zip</a>. 
        		</div>	
 			<br />
 	  		<section id="tipoComponetes">
@@ -121,7 +121,7 @@
           			<h1>Componentes Abril ID</h1>
           		</div>
           		<p>O Abril ID atualmente possui 3 tipos diferente de componentes <strong>Widget</strong>, <strong>Include</strong> e <strong>Topo</strong>. Cada um deles possuem funcionalidades compartilhadas e funcionalidades especificas como descrito na sessão componentes da documentação</a>.</p>
-          		<p>A seguir segui como configurar o parâmetro para instanciar o Abril ID como widget, include ou topo.
+          		<p>A seguir, como configurar o parâmetro para instanciar o Abril ID como widget, include ou topo.
           		<h3>Configurando widget</h3>
           		<div class="bs-docs-example">
           		<img alt="" class="img-polaroid" src="img/widget-padrao.jpg"><br /><br />
@@ -160,7 +160,7 @@
           			<h1>Redes Sociais</h1>
           		</div>
           		<p>Por padrão o login via redes sociais (Facebook, Twitter ou Google Accounts) estão habilitados pelo Abril ID .</p>
-          		<p>Este configuração permite a ativação/desativação do login via redes sociais.</p>
+          		<p>Essa configuração permite a ativação/desativação do login via redes sociais.</p>
           		<div class="bs-docs-example">
           		<img alt="" class="img-polaroid" src="img/redes-sociais.jpg"><br /><br />
           		<div class="alert alert-info"> <p><strong>Exemplos:</strong>
@@ -178,18 +178,18 @@
           			<h1>Configurando Layout do Abril ID</h1>
           		</div>
           		<a href="customizacao.html" class="btn btn-danger">Customizar Abril ID</a><br /><br />
-          		<p>O Abril ID é customizavel e permite a configuração de layout para ficar adequado ao seu site.</p>
-          		<p>Para configurar esses parâmetros você tem a possibilidade de ajustar 6 item:</p>
+          		<p>O Abril ID é customizável e permite a configuração de layout para ficar adequado ao seu site.</p>
+          		<p>Para configurar esses parâmetros você tem a possibilidade de ajustar 6 itens:</p>
           		    <ol>
-				    <li>Layout Geral paramentros <code>general</code></li>
-				    <li>Linhas parâmetro <code>inner-box</code></li>
-				    <li>Botões parâmetro <code>button</code></li>
-				    <li>Mensagem de erros parâmetro <code>error</code></li>
-				    <li>Logo Abril parâmetro <code>header</code></li>
-				    <li>Layout topo parâmetro <code>topo</code></li>
+				    <li>Layout Geral: <code>general</code></li>
+				    <li>Linhas: <code>inner-box</code></li>
+				    <li>Botões: <code>button</code></li>
+				    <li>Mensagem de erros: <code>error</code></li>
+				    <li>Logo Abril: <code>header</code></li>
+				    <li>Layout topo: <code>topo</code></li>
 				    </ol>
 				<div class="alert"><p><strong>Atenção:</strong>
-          		<p> a configuração completa encontra-se na sessão documentação oficial layout</p>
+          		<p>A configuração completa encontra-se na sessão documentação oficial layout</p>
           		</div>    
           		<h3>Layout Geral</h3>
           		<div class="bs-docs-example">
@@ -248,7 +248,7 @@
           		<a href="arq/documentacao-abrilid.pdf" class="btn btn-danger">Download</a><br /><br />
           		<div class="alert alert-error">
 	    	 		
-		  			<strong>Atenção </strong> Essa sessão passo-a-passo não substitui a leitura da documentação do Abril ID. Sua função é ajudar webmaster realizarem as primeiras implementações.
+		  			<strong>Atenção </strong> Essa sessão passo-a-passo não substitui a leitura da documentação do Abril ID. Sua função é ajudar webmaster a realizar as primeiras implementações.
 		  		</div>
 	    	
           	</section>
