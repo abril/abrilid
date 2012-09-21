@@ -61,11 +61,9 @@
 				  	<h1>1º Passo - Instalando o Abril ID</h1>
 				</div>
 	    		<p>Para instalar o Javascript do Abril ID é muito simples. Basta  incluir a linha abaixo em todas as páginas onde o Abril ID for necessário. </p>
-			<div class="alert alert-info"> <button type="button" class="close" data-dismiss="alert">×</button>O ideial é que está linha esteja contida no final da página que você quer aplicar o componente do Abril ID
+			<div class="alert">O ideal é que está linha esteja colocada antes do <code>&lt;/boby&gt;</code> dentro da página que você quer aplicar o componente do Abril ID
 			</div>
-			<div class="bs-docs-example">
-	        </div>
-   			<pre class="prettyprint linenums"><ol class="linenums"><span class="pln"><code>&lt;script src=&quot;http://qa.id.abril.com.br/javascripts/widgets.js&quot;&gt;</code></span><span class="pln"><code>&lt;/script&gt;</code></span></ol></pre>
+   			<pre class="prettyprint"><ol class="linenums"><li class="L1">&lt;script src=&quot;http://qa.id.abril.com.br/javascripts/widgets.js&quot;&gt;&lt;/script&gt;</li></ol></pre>
   		  		<div class="alert alert-error">
         			<strong>Atenção</strong> para realizar testes de implementação seu ambiente de desenvolvimento deve ter acesso ao nosso anbiente de homologação
 	        	</div>
@@ -75,35 +73,33 @@
 				<div class="page-header">
       	    		<h1>2º Passo - Configurando o Abril ID</h1>
       	    	</div>
-	          	<p>Para o Abril ID funcionar em seu site é necessario incluir sua configuração.</p><p> Existem duas formas de configurar o abril ID a forma simplicifada onde você só precisa configurar dois parametros:</p>
-	          	<p><strong>Produto:</strong> que deve ser um nome/ID para sua marca. 
-	          	<p><strong>Container:</strong> que deve ser o <code>id</code> de de um elemento <code>div</code> dentro de sua pagina. 
-	          	<p>A segunda forma é está mais detalhada em outra sessão.</p><p> Segue exemplo de implementação escrito no formato <code>json</code></p>   
+	          	<p>Para o Abril ID funcionar em seu site é necessário incluir sua configuração.</p><p> Existem duas formas de configurar o Abril ID a forma simplificadaonde você só precisa configurar dois parâmetros:</p>
+	          	<ul>
+	          	<li>
+	          	<p><strong>Produto:</strong> que deve ser um nome/ID para sua marca.</p></li><li> 
+	          	<p><strong>Container:</strong> que deve ser o <code>id</code> de de um elemento <code>div</code> dentro de sua pagina.</p></li> 
+	          	</ul>
+	          	<p> Segue exemplo de implementação escrito no formato <code>json</code></p>   
 	          		<div class="alert  alert-info">
-	          			 <button type="button" class="close" data-dismiss="alert">×</button>
-				  		Caso ainda  não tenha um <strong>nome/ID</strong> deverá ser solicitado para a equipe de desenvolvimento do Abril ID.</p>
+	          			 
+				  		Caso ainda  não tenha um <strong>nome/ID</strong> deverá ser solicitado para a equipe de desenvolvimento do Abril ID. email: <i class="icon-envelope"></i><a href="mailto:nucleo-aap@abril.com.br"> nucleo-aap@abril.com.br </a>
 				  	</div> 
-			  	<div class="bs-docs-example"></div>
-          		<pre class="prettyprint "><ol class="linenums"><li class="L0"><span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span></li><li class="L1"><span class="pln"> &nbsp;&nbsp;var configuracao = {</span></li><li class="L2"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',<br /></span></li><li class="L3"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;container: 'nome_da div_gerado_para_sua_implementação'<br /></span></li><li class="L4"><span class="pln"> &nbsp;&nbsp;};<br /></span></li><li class="L5"><span class="pln"> &lt;/script&gt;</span></li></ol></pre>
+			  	<pre class="prettyprint "><ol class="linenums"><li class="L0"><span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span></li><li class="L1"><span class="pln"> &nbsp;&nbsp;var configuracao = {</span></li><li class="L2"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',<br /></span></li><li class="L3"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;container: 'nome_da div_gerado_para_sua_implementação'<br /></span></li><li class="L4"><span class="pln"> &nbsp;&nbsp;};<br /></span></li><li class="L5"><span class="pln"> &lt;/script&gt;</span></li></ol></pre>
 	    	</section>  
 	    	<section id="passo3">
 	    	<br />
 	    		<div class="page-header">
       	    		<h1>3º Passo - Inicializando o Abril ID</h1>
       	    	</div> 
-      	    	<p>Para instanciar o funcionamento devemos criar um objeto javascript do Abril ID e declarar o função <code>.initialize()</code> passando a objeto <code>json</code> configuração do <a href="#passo2">Passo 2</a> para o Abril ID.</p>
-          		<div class="bs-docs-example">
-          		</div>
-		  		<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span></li><li class="L1"><span class="pln">&nbsp;&nbsp;var abrilid_teste = new AbrilId();</span></li><li class="L2"><span class="pln">&nbsp;&nbsp;abrilid_teste.initialize(configuracao);</span></li><li class="L3"><span class="pln">&lt;/script&gt;</span></li></ol></pre>
+      	    	<p>Para instanciar criar um objeto javascript do Abril ID e declarar o função <code>.initialize()</code> passando a objeto <code>json</code> configuração do <a href="#passo2">Passo 2</a> para o Abril ID.</p>
+          		<pre class="prettyprint"><ol class="linenums"><li class="L0"><span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span></li><li class="L1"><span class="pln">&nbsp;&nbsp;var abrilid_teste = new AbrilId();</span></li><li class="L2"><span class="pln">&nbsp;&nbsp;abrilid_teste.initialize(configuracao);</span></li><li class="L3"><span class="pln">&lt;/script&gt;</span></li></ol></pre>
 	    	</section>
 	    	<section id="passo4">
 	    		<br />
 	    		<div class="page-header">
-	    			<h1>4º Passo - Criar uma DIV para implementação do abril ID</h1>
+	    			<h1>4º Passo - Criar uma DIV para implementação do Abril ID</h1>
 	    		</div>	 
-		  		<p>Para que a implementação do Abril ID seja completa precisamos criar uma <code>div</code> dentro da pagina do seu site com um <code>id</code> que deve ter o mesmo nome usado no <a href="#passo2">Passo 2</a> no campo <code>compoente</code>. Essa <code>div</code> ficará responsavel por apresentar Abril ID na tela por isso é importante posicionar essa <code>div</code> em um ponto extrategico na pagina do seu site .</p>
-		  		<div class="bs-docs-example">
-          		</div> 
+		  		<p>Para que a implementação do Abril ID seja completa precisamos criar uma <code>div</code> dentro da pagina do seu site com um <code>id</code> que deve ter o mesmo nome usado no <a href="#passo2">Passo 2</a> no campo <code>componente</code>. Essa <code>div</code> ficará responsável por apresentar Abril ID na tela por isso é importante posicionar essa <code>div</code> em um ponto estratégico na pagina do seu site .</p>
           		<pre class="prettyprint"><ol class="linenums"><li class="L0"><span class="pln">&lt;body&gt;</span></li><li class="L1"><span class="pln">&lt;div id='abrilID'&gt;</span></li><li class="L2"><span class="pln">&lt;/div&gt;</span></li><li class="L3"><span class="pln">&lt;/body&gt;</span></li></ol></pre>
 			</section>          
 	  		<section id="passo5">
@@ -112,13 +108,11 @@
           			<h1>5º Passo - Chamando do Abril ID atravez de um link </h1>
           		</div>
           		<p>Para invocar o Abril ID na página utilizaremos um link para a realizar chamada do widget de login do Abril ID </p>
-          		<div class="bs-docs-example">
-          		</div>
-          		<pre class="prettyprint"><ol class="linenums"><span class="pln">&lt;a href=&quot;javascript: void(0);&quot; onclick=&quot;widgets.login.render();&quot;&gt;login&lt;/a&gt;</span></ol></pre>
+          		<pre class="prettyprint"><ol class="linenums"><li class="L0">&lt;a href=&quot;javascript: void(0);&quot; onclick=&quot;widgets.login.render();&quot;&gt;login&lt;/a&gt;</li></ol></pre>
 			</section>
 			<br />
 			<div class="alert alert-info">
-       			<strong>Exemplo Pratico</strong> Faça o download dessa pagina de teste confirmar tudo que foi passado até agora <a href="exemplo_abrilid.zip">exemplo.zip</a>. 
+       			<strong>Exemplo Pratico</strong> Faça o download dessa pagina de teste confirmar tudo que foi passado até agora <a href="exemplo_abrilid.zip"><i class="icon-download"></i> exemplo.zip</a>. 
        		</div>	
 			<br />
 	  		<section id="tipoComponetes">
@@ -126,12 +120,12 @@
 	    		<div class="page-header">
           			<h1>Componentes Abril ID</h1>
           		</div>
-          		<p>O Abril ID atualmente possui 3 tipos diferente de componentes <strong>Widget</strong>, <strong>Include</strong> e <strong>Topo</strong>. Cada um deles possuim funcionalidades compartilhadas e funcionalidades especificas como descrito na sessão de <a href="documentacao.html">documentação > componentes</a>.</p>
-          		<p>A seguir segui como configurar o parametro para instanciar o Abril ID como widget, include ou topo.
+          		<p>O Abril ID atualmente possui 3 tipos diferente de componentes <strong>Widget</strong>, <strong>Include</strong> e <strong>Topo</strong>. Cada um deles possuem funcionalidades compartilhadas e funcionalidades especificas como descrito na sessão componentes da documentação</a>.</p>
+          		<p>A seguir segui como configurar o parâmetro para instanciar o Abril ID como widget, include ou topo.
           		<h3>Configurando widget</h3>
           		<div class="bs-docs-example">
           		<img alt="" class="img-polaroid" src="img/widget-padrao.jpg"><br /><br />
-          		<div class="alert alert-info"> <button type="button" class="close" data-dismiss="alert">×</button><p><strong>Info:</strong> Caso não seja declarado o campo <code>componente</code> por padrão o componente carradado é sempre o <strong>widget</strong></p></div>
+          		<div class="alert "> <p><i class="icon-warning-sign "></i> Caso não seja declarado o campo <code>componente</code> por padrão o componente carregado será o <strong>widget</strong></p></div>
           		</div>
           		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.WIDGET</strong></li><li class="L5">&nbsp;&nbsp;};</li><li class="L6">&lt;/script&gt;</li></ol></pre>
           		<h3>Configurando include</h3>
@@ -140,17 +134,20 @@
           		</div>
           		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.INCLUDE</strong></li><li class="L5">&nbsp;&nbsp;};</li><li class="L6">&lt;/script&gt;</li></ol></pre>
           		<h3>Configurando topo&nbsp; <span class="label label-info">new</span></h3>
-          		<p>Topo é o mais novo componente do Abril ID e ele contem três opções diferente de formado chados de <strong>mini, pequeno e medio</strong> 
+          		<p>Topo é o mais novo componente do Abril ID e ele contem três opções diferente de formado chamados de <strong>mini, pequeno e medio</strong></p> 
+          		<h4>Topo mini</h4>
           		<div class="bs-docs-example">
           		<img alt="" class="img-polaroid" src="img/topo-mini-off.jpg"><br /><br />
           		<img alt="" class="img-polaroid" src="img/topo-mini-on.jpg"><br /><br />
           		</div>
           		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.TOPO,</strong></li><li class="L5"><strong>&nbsp;&nbsp;&nbsp;&nbsp;topo: 'mini'</strong></li><li class="L6">&nbsp;&nbsp;};</li><li class="L7">&lt;/script&gt;</li></ol></pre>
+          		<h4>Topo pequeno</h4>
           		<div class="bs-docs-example">
           		<img alt="" class="img-polaroid" src="img/topo-pequeno-off.jpg"><br /><br />
           		<img alt="" class="img-polaroid" src="img/topo-pequeno-on.jpg"><br /><br />
           		</div>
           		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.TOPO,</strong></li><li class="L5"><strong>&nbsp;&nbsp;&nbsp;&nbsp;topo: 'pequeno'</strong></li><li class="L6">&nbsp;&nbsp;};</li><li class="L7">&lt;/script&gt;</li></ol></pre>
+          		<h4>Topo Medio</h4>
           		<div class="bs-docs-example">
           		<img alt="" class="img-polaroid" src="img/topo-medio-off.jpg"><br /><br />
           		<img alt="" class="img-polaroid" src="img/topo-medio-on.jpg"><br /><br />
@@ -166,7 +163,7 @@
           		<p>Este configuração permite a ativação/desativação do login via redes sociais.</p>
           		<div class="bs-docs-example">
           		<img alt="" class="img-polaroid" src="img/redes-sociais.jpg"><br /><br />
-          		<div class="alert alert-info"> <button type="button" class="close" data-dismiss="alert">×</button><p><strong>Exemplos:</strong>
+          		<div class="alert alert-info"> <p><strong>Exemplos:</strong>
           		<p>provedores: ['facebook','twitter'] //facebook e twitter</p>
 				<p>provedores: ['google'] //fapenas google</p>
 				<p>provedores: ['google','twitter'] //google e twitter</p>
@@ -182,17 +179,17 @@
           		</div>
           		<a href="customizacao.html" class="btn btn-danger">Customizar Abril ID</a><br /><br />
           		<p>O Abril ID é customizavel e permite a configuração de layout para ficar adequado ao seu site.</p>
-          		<p>Para configurar esses parametros você tem a possibilidade de ajustar 6 item:</p>
+          		<p>Para configurar esses parâmetros você tem a possibilidade de ajustar 6 item:</p>
           		    <ol>
 				    <li>Layout Geral paramentros <code>general</code></li>
-				    <li>Linhas parametro <code>inner-box</code></li>
-				    <li>Botões parametro <code>button</code></li>
-				    <li>Mensagem de erros parametro <code>error</code></li>
-				    <li>Logo Abril parametro <code>header</code></li>
-				    <li>Layout topo parametro <code>topo</code></li>
+				    <li>Linhas parâmetro <code>inner-box</code></li>
+				    <li>Botões parâmetro <code>button</code></li>
+				    <li>Mensagem de erros parâmetro <code>error</code></li>
+				    <li>Logo Abril parâmetro <code>header</code></li>
+				    <li>Layout topo parâmetro <code>topo</code></li>
 				    </ol>
-				<div class="alert"> <button type="button" class="close" data-dismiss="alert">×</button><p><strong>Atenção:</strong>
-          		<p> a configuração completa encontra-se na sessão <a>documentação > layout</a> </p>
+				<div class="alert"><p><strong>Atenção:</strong>
+          		<p> a configuração completa encontra-se na sessão documentação oficial layout</p>
           		</div>    
           		<h3>Layout Geral</h3>
           		<div class="bs-docs-example">
@@ -221,7 +218,7 @@
           		<div class="bs-docs-example">
           		<img alt="" class="img-polaroid" src="img/logo-verde.jpg"><br /><br />
           		<img alt="" class="img-polaroid" src="img/logo-branco.jpg"><br /><br />
-          		<div class="alert alert-info"> <button type="button" class="close" data-dismiss="alert">×</button><p><strong>Exemplos:</strong>
+          		<div class="alert alert-info"> <p><strong>Exemplos:</strong>
           		<p>type : 'default' //Logo Abril Verde</p>
 				<p>type : 'light' //Logo Abril Brando</p>
           		</div>
@@ -231,7 +228,7 @@
           		<h3>Layout topo <span class="label label-info">new</span></h3>
           		<div class="bs-docs-example">
           		<img alt="" class="img-polaroid" src="img/topo-layout.jpg"><br /><br />
-          		<div class="alert alert-info"> <button type="button" class="close" data-dismiss="alert">×</button><p><strong>Exemplos Logos Abril:</strong>
+          		<div class="alert alert-info"> <p><strong>Exemplos Logos Abril:</strong>
           		<p>logo : 'default' //Logo Abril verde</p>
 				<p>logo : 'white' //Logo Abril branco</p>
 				<p>logo : 'light grey' //Logo Abril cinza claro</p>
@@ -250,8 +247,8 @@
           		</div>
           		<a href="arq/documentacao-abrilid.pdf" class="btn btn-danger">Download</a><br /><br />
           		<div class="alert alert-error">
-	    	 		<button type="button" class="close" data-dismiss="alert">×</button>
-		  			<strong>Atenção </strong> Essa sessão passo-a-passo não subistitu a leitura da documentação do abril ID. Sua função é ajudar webmaster realizarem as primeiras implementações.
+	    	 		
+		  			<strong>Atenção </strong> Essa sessão passo-a-passo não substitui a leitura da documentação do Abril ID. Sua função é ajudar webmaster realizarem as primeiras implementações.
 		  		</div>
 	    	
           	</section>
