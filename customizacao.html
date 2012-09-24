@@ -123,10 +123,7 @@
     }
 </script>
 <br>
-<div id="semsuporteie" class="alert alert-error" css="display:none;">
-	<button type="button" class="close" data-dismiss="alert">×</button>
-    <strong>Atenção <i class="icon-warning-sign"></i> - Abril ID Tool </strong> não é suportado pelo <img src="img/ie.png"> Internet Explorer sua utilização podendo ocasionar mal funcionamento. 
-    <p>Recomendamos a utilização: <img src="img/firefox.png"> Firefox, <img src="img/chrome.png"> Chrome ou <img src="img/safari.png"> Safari.</p>
+<div id="semsuporteie" >
 </div>
 
 <div style="position: absolute;">
@@ -260,10 +257,15 @@
 
 function verificarBrowser() {
 	 if(navigator.appName.indexOf('Internet Explorer')>0){
-		 $('#semsuporteie').css('display','block');
-	 } else {
-		 $('#semsuporteie').css('display','none');
+		 notei = '<div class="alert alert-error" css="display:none;">';
+		 notei = notei + '<button type="button" class="close" data-dismiss="alert">×</button>';
+		 notei = notei + '<strong>Atenção <i class="icon-warning-sign"></i> - Abril ID Tool </strong> não é suportado pelo <img src="img/ie.png"> Internet Explorer sua utilização podendo ocasionar mal funcionamento.'; 
+		 notei = notei + '<p>Recomendamos a utilização: <img src="img/firefox.png"> Firefox, <img src="img/chrome.png"> Chrome ou <img src="img/safari.png"> Safari.</p>';
+		 notei = notei + '</div>';
+		$("#semsuporteie").html(notei);
 	 }
+		 
+		
 }
 function openCodeModal() { 
 	 
