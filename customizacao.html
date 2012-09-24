@@ -2,7 +2,16 @@
 <html>
   <head>
     <title>Abril ID - Bootstrap</title>
+
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+
 	<link href="css/bootstrap-pg-custon.min.css" rel="stylesheet">
 	<script src="http://id.abril.com.br/javascripts/widgets.js"></script>
 
@@ -218,7 +227,7 @@
 <div id="codeModal" class="modal hide">
 	 <div class="modal-header">
 	  	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	  	<h3>Modal header</h3>
+	  	<h3>Code</h3>
 	 </div>
 	 <div class="modal-body" id="modal-body">
 	 	
@@ -249,19 +258,18 @@
 
 function openCodeModal() { 
 	 
-		var print = "<pre class=\"prettyprint\"><ol class=\"linenums\">";
-		print = print + "<li class='L0'>var configuracao = {</li>";
-		print = print + "<li class='L1'>  produto:'EXEMPLO',</li>";
-		print = print + "<li class='L2'>  container: 'EXEMPLO_DIV',</li>";
-		print = print + "<li class='L3'>  provedores: ['facebook', 'google', 'twitter'],</li>";
-		print = print + "<li class='L4'>  componente: Componente.WIDGET,</li>";
-		print = print + "<li class='L5'>  seta: 'SD',</li>";
-		print = print + "<li class='L6'>  estilo:{ </li>";
-		print = print + "<li class='L7'>    'general': {</li>";      
-		print = print + "<li class='L8'>      'background-color':'#" + $("#gc_fundo").val()  + "',</li>";
-		print = print + "<li class='L9'>      'border-color':'#" + $("#gc_borda").val() + "',</li>"; 		
-		print = print + "<li class='L10'>      'border-width':'" + $('#tb_borda').find('option').filter(':selected').text() + "',</li>"; 		
-		print = print + "<li class='L11'>      'text-color':'#" + $("#gc_text").val() + "',</li>"; 		
+		var print = "<pre ><ul class=\"unstyled\">";
+		print = print + "<li>var configuracao = {</li>";
+		print = print + "<li>  produto:'EXEMPLO',</li>";
+		print = print + "<li>  container: 'EXEMPLO_DIV',</li>";
+		print = print + "<li>  provedores: ['facebook', 'google', 'twitter'],</li>";
+		print = print + "<li >  componente: Componente.WIDGET,</li>";
+		print = print + "<li >  estilo:{ </li>";
+		print = print + "<li >    'general': {</li>";      
+		print = print + "<li >      'background-color':'#" + $("#gc_fundo").val()  + "',</li>";
+		print = print + "<li >      'border-color':'#" + $("#gc_borda").val() + "',</li>"; 		
+		print = print + "<li >      'border-width':'" + $('#tb_borda').find('option').filter(':selected').text() + "',</li>"; 		
+		print = print + "<li >      'text-color':'#" + $("#gc_text").val() + "',</li>"; 		
 		print = print + "<li class='L12'>      'inner-border-color':'#" + $("#gc_cxborda").val() + "'</li>"; 	
 		print = print + "<li class='L13'>    },</li>";
 		print = print + "<li class='L14'>    'inner-box':{</li>";
@@ -303,7 +311,7 @@ function openCodeModal() {
 		print = print + "<li class='L50'>    }</li>";
 		print = print + "<li class='L51'>  }</li>"; */
 		print = print + "<li class='L52'>};</li>";
-		print = print + "</ol></pre>";
+		print = print + "</ul></pre>";
 		$("#modal-body").html(print);
 		$('#codeModal').modal('show');
 }
