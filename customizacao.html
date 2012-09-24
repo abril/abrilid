@@ -73,7 +73,7 @@
     </style>
   </head>
   
-	<body onload=" widgetVisual()">
+	<body onload=" widgetVisual();verificarBrowser()">
     <!-- BARRA TOP -->
     <div class="navbar navbar-inverse  navbar-fixed-top">
 	  <div class="navbar-inner">
@@ -233,10 +233,25 @@
 	 	
 	 </div>
 	 <div class="modal-footer">
-	  	<a href="javascript:void(0);" class="btn" data-dismiss="modal" aria-hidden="true">Close</a>
+	  	<a href="javascript:void(0);" class="btn" data-dismiss="modal" aria-hidden="true">Fechar</a>
 	 </div>
 </div>
 
+
+<div id="semsuporteie" class="modal hide">
+	 <div class="modal-header">
+	  	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	  	<h3>Abril ID Tool</h3>
+	 </div>
+	 <div class="modal-body" id="modal-body">
+	 	<h4>Abril ID Tool - não é suportado pelo Internet Explorer sua utilização podendo ocasionar mal funcionamento.</h4>
+	 	<h4>Recomendamos a utilização: Firefox, Chrome ou Safari</h4>
+	 	<center><img src="img/internet_explorer_7_logo.jpg" width="300" height="300"></center>
+	 </div>
+	 <div class="modal-footer">
+	  	<a href="javascript:void(0);" class="btn" data-dismiss="modal" aria-hidden="true">Fechar</a>
+	 </div>
+</div>
 
 </div>	
 
@@ -254,7 +269,11 @@
     </footer>
 	
 <script type="text/javascript">
-
+function verificarBrowser() {
+	 if(navigator.appName.indexOf('Internet Explorer')>0){
+		 $('#semsuporteie').modal('show');
+	 }
+}
 
 function openCodeModal() { 
 	 
