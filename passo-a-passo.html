@@ -33,7 +33,7 @@
 	<div class="superior" id="overview">
 	  	<div class="container">
        		<h1> Passo a passo - Abril ID </h1>
-	   		<p class="lead">Siga nosso roteiro passos a passo para instalação do Abril ID.</p>
+	   		<p class="lead">Siga nosso roteiro passo a passo para instalação do Abril ID.</p>
 	  	</div>
 	</div>
 
@@ -51,12 +51,11 @@
 	          	<li><a href="#passo3"><i class="icon-chevron-right"></i> 3º Passo</a></li>
 	          	<li><a href="#passo4"><i class="icon-chevron-right"></i> 4º Passo</a></li>
 	          	<li><a href="#passo5"><i class="icon-chevron-right"></i> 5º Passo</a></li>
-	          	<li><a href="#tipoComponetes"><i class="icon-chevron-right"></i> Componentes</a></li>
+	          	<li><a href="#tipoComponentes"><i class="icon-chevron-right"></i> Componentes</a></li>
 	          	<li><a href="#redesocial"><i class="icon-chevron-right"></i> Redes Sociais</a></li>
 	          	<li><a href="#layout"><i class="icon-chevron-right"></i> Layout</a></li>
 	          	<li><a href="#documentacao"><i class="icon-chevron-right"></i> Documentação</a></li>
 	       	</ul>
-	       	
 	 	</div>
 	    <div class="span8">
 	    	<br />
@@ -70,7 +69,7 @@
 			</div>
    			<pre class="prettyprint"><ol class="linenums"><li class="L1">&lt;script src=&quot;http://qa.id.abril.com.br/javascripts/widgets.js&quot;&gt;&lt;/script&gt;</li></ol></pre>
   		  		<div class="alert alert-error">
-        			<strong>Atenção</strong> para realizar testes de implementação seu ambiente de desenvolvimento deve ter acesso ao nosso anbiente de homologação.
+        			<strong>Atenção</strong> para realizar testes de implementação seu ambiente de desenvolvimento deve ter acesso ao nosso ambiente de homologação.
 	        	</div>
 	    	</section>
 	    	<section id="passo2">
@@ -81,13 +80,13 @@
 	          	<p>Para o Abril ID funcionar em seu site é necessário incluir sua configuração.</p><p> Existem duas formas de configurar o Abril ID a forma simplificada na qual você só precisa configurar dois parâmetros:</p>
 	          	<ul>
 	          	<li>
-	          	<p><strong>Produto:</strong> que deve ser um nome/ID para sua marca.</p></li><li> 
-	          	<p><strong>Container:</strong> que deve ser o <code>id</code> de de um elemento <code>div</code> dentro de sua pagina.</p></li> 
+	          	<p><strong>Produto:</strong> que deve ser Login/ID para sua marca/site.</p></li><li> 
+	          	<p><strong>Container:</strong> que deve ser o <code>id</code> de de um elemento <code>div</code> onde será renderizado o widget na página do site.</p></li> 
 	          	</ul>
 	          	<p> Segue exemplo de implementação escrito no formato <code>json</code></p>   
 	          		<div class="alert  alert-info">
 	          			 
-				  		Caso ainda  não tenha um <strong>nome/ID</strong> deverá ser solicitado para a equipe de desenvolvimento do Abril ID. email: <i class="icon-envelope"></i><a href="mailto:nucleo-aap@abril.com.br"> nucleo-aap@abril.com.br </a>
+				  		Caso ainda  não tenha um <strong>Login/ID</strong> deverá ser solicitado para a equipe de desenvolvimento do Abril ID. email: <i class="icon-envelope"></i><a href="mailto:nucleo-aap@abril.com.br"> nucleo-aap@abril.com.br </a>
 				  	</div> 
 			  	<pre class="prettyprint "><ol class="linenums"><li class="L0"><span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span></li><li class="L1"><span class="pln"> &nbsp;&nbsp;var configuracao = {</span></li><li class="L2"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',<br /></span></li><li class="L3"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;container: 'nome_da div_gerado_para_sua_implementação'<br /></span></li><li class="L4"><span class="pln"> &nbsp;&nbsp;};<br /></span></li><li class="L5"><span class="pln"> &lt;/script&gt;</span></li></ol></pre>
 	    	</section>  
@@ -120,7 +119,7 @@
        			<strong>Exemplo Prático</strong> Faça o download dessa pagina de teste para confirmar tudo que foi passado até agora <a href="exemplo_abrilid.zip"><i class="icon-download"></i> exemplo.zip</a>. 
        		</div>	
 			<br />
-	  		<section id="tipoComponetes">
+	  		<section id="tipoComponentes">
 	  			<br />          
 	    		<div class="page-header">
           			<h1>Componentes Abril ID</h1>
@@ -138,26 +137,35 @@
           		<img alt="" class="img-polaroid" src="img/include-padrao.jpg"><br /><br />
           		</div>
           		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.INCLUDE</strong></li><li class="L5">&nbsp;&nbsp;};</li><li class="L6">&lt;/script&gt;</li></ol></pre>
-          		<h3>Configurando topo&nbsp; <span class="label label-info">new</span></h3>
-          		<p>Topo é o mais novo componente do Abril ID e ele contem três opções diferente de formado chamados de <strong>mini, pequeno e medio</strong></p> 
+          		<h3>Configuração do Topo Abril ID&nbsp; <span class="label label-info">new</span></h3>
+          		<p>Topo é o componente de renderização do widget de login do Abril ID, disponível nas versões: <strong>mini, pequeno e medio</strong></p>
+<p>O Topo <strong>mini</strong> exibe o botão entrar quando o usuário está deslogado e exibe o botão sair, caso o usuário já esteja autenticado em algum site da Abril.</p>
+<p>O topo <strong>pequeno</strong> exibe, as opções de autênticação através de redes sociais, além dos botões entrar e sair do Abril ID</p>
+<p>O topo <strong>medio</strong> exibe o nome e avatar do usuário logado, além das opções dos demais topos.</p>
           		<h4>Topo mini</h4>
           		<div class="bs-docs-example">
           		<img alt="" class="img-polaroid" src="img/topo-mini-off.jpg"><br /><br />
           		<img alt="" class="img-polaroid" src="img/topo-mini-on.jpg"><br /><br />
           		</div>
-          		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.TOPO,</strong></li><li class="L5"><strong>&nbsp;&nbsp;&nbsp;&nbsp;topo: 'mini'</strong></li><li class="L6">&nbsp;&nbsp;};</li><li class="L7">&lt;/script&gt;</li></ol></pre>
+          		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'Login/ID_do_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.TOPO,</strong></li><li class="L5"><strong>&nbsp;&nbsp;&nbsp;&nbsp;topo: 'mini'</strong></li><li class="L6">&nbsp;&nbsp;};</li><li class="L7">&lt;/script&gt;</li></ol></pre>
           		<h4>Topo pequeno</h4>
           		<div class="bs-docs-example">
           		<img alt="" class="img-polaroid" src="img/topo-pequeno-off.jpg"><br /><br />
           		<img alt="" class="img-polaroid" src="img/topo-pequeno-on.jpg"><br /><br />
           		</div>
-          		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.TOPO,</strong></li><li class="L5"><strong>&nbsp;&nbsp;&nbsp;&nbsp;topo: 'pequeno'</strong></li><li class="L6">&nbsp;&nbsp;};</li><li class="L7">&lt;/script&gt;</li></ol></pre>
+          		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'Login/ID_do_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.TOPO,</strong></li><li class="L5"><strong>&nbsp;&nbsp;&nbsp;&nbsp;topo: 'pequeno'</strong></li><li class="L6">&nbsp;&nbsp;};</li><li class="L7">&lt;/script&gt;</li></ol></pre>
           		<h4>Topo Medio</h4>
+							<p>O topo Medio permite customizar um link de edição de perfil no nome do usuário logado. Esse link pode ser uma página customizada pelo cliente/site, um include de edição de perfil ou mesmo a página de edição de perfil do Abril ID.</p>
+							<p>Basta passar o link de edição de perfil através do parâmetro <i>url_edicao_perfil</i> na instância do Topo, conforme exemplo abaixo.</p>
+							<p>Exemplos de links:</p>
+							<ul><li>http://url_seusite/editar_perfil</li>
+							<li>http://url_seusite/editar_perfil/abril_id (Exibe a página de edição no site do Abril ID)</li>
+							<li>http://url_seusite/editar_perfil/{user_id} (Exibe página de edição do site, alterando o placeholder {user_id} para o ID do usuário logado)</li></ul>
           		<div class="bs-docs-example">
           		<img alt="" class="img-polaroid" src="img/topo-medio-off.jpg"><br /><br />
           		<img alt="" class="img-polaroid" src="img/topo-medio-on.jpg"><br /><br />
           		</div>
-          		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.TOPO,</strong></li><li class="L5"><strong>&nbsp;&nbsp;&nbsp;&nbsp;topo: 'medio'</strong></li><li class="L6">&nbsp;&nbsp;};</li><li class="L7">&lt;/script&gt;</li></ol></pre>
+          		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'Login/ID_do_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;url_edicao_perfil: 'http://seusite/edicao_perfil',</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.TOPO,</strong></li><li class="L5"><strong>&nbsp;&nbsp;&nbsp;&nbsp;topo: 'medio'</strong></li><li class="L6">&nbsp;&nbsp;};</li><li class="L7">&lt;/script&gt;</li></ol></pre>
           	</section>
 	  		<section id="redesocial">
 	  			<br />          
