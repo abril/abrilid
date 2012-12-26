@@ -59,6 +59,7 @@
         	<li><a href="#widget"><i class="icon-chevron-right"></i> Widget</a></li>
         	<li><a href="#include"><i class="icon-chevron-right"></i> Include</a></li>
         	<li><a href="#configuracaoTopo"><i class="icon-chevron-right"></i> Topo</a></li>
+        	<li><a href="#newsletter"><i class="icon-chevron-right"></i> Newsletter</a></li>
   	
         	<li class="nav-header">Customização</li>
         	<li><a href="#redesocial"><i class="icon-chevron-right"></i> Redes Sociais</a></li>
@@ -228,7 +229,25 @@
       		</div>
       		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'Login/ID_do_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;url_edicao_perfil: 'http://seusite/edicao_perfil',</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.TOPO,</strong></li><li class="L5"><strong>&nbsp;&nbsp;&nbsp;&nbsp;topo: 'medio'</strong></li><li class="L6">&nbsp;&nbsp;};</li><li class="L7">&lt;/script&gt;</li></ol></pre>
         </section>
-
+      
+        <!-- COMPONENTES - NEWSLETTER -->
+        <section id="newsletter">
+          <br />
+          <br />
+          <h2>Newsletter</h2>
+          <p>O componente <small>Newsletter</small> fornece uma interface para subscrição nas listas de notícias de seu site.</p>
+          <p>Para adicionar o componente em seu site basta criar um objeto de configuração e inicializar uma instância do Abril ID com a mesma:</p>
+          <pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var id_newsletter_config = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;produto: 'login_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_newsletter'</li><li class="L4">&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.TOPO</li><li class="L6">&nbsp;&nbsp;};</li><li class="L7">&nbsp;&nbsp;var id_newsletter = new AbrilId();</li><li class="L8">&nbsp;&nbsp;id_newsletter.initialize(id_newsletter_config);</li><li class="L8">&lt;/script&gt;</li></ol></pre>
+          
+        <p>sem seguida crie uma <code>div</code> com o id especificado no parâmetro <code>container</code> da configuração, e finalmente utilize o método <code>render()</code> para exibir o componente na página:</p>
+        
+        <pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;a href=&quot;javascript: void(0);&quot; onclick=&quot;id_newsletter.newsletter.render();&quot;&gt;Assine nossa Newsletter&lt;/a&gt;</li></ol></pre>
+        
+        <p>No exemplo acima utilizamos um link no qual o usuário deve clicar para exibir o formulário, mas você pode chamar o método em qualquer momento, por exemplo através de um callback do evento <code>document.ready()</code> para exibir o formulário automaticamente.</p>
+        
+        <p>Se ainda não possue newsletters criadas para o seu site entre em contato com a equipe do Abril ID para mais informações</p>  
+        </section>
+      
         <!-- CUSTOMIZACAO - REDES SOCIAIS (inicio) -->
     		<section id="redesocial">
     			<br />          
