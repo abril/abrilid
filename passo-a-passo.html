@@ -6,7 +6,7 @@
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    
+
     <title>Abril ID - Bootstrap</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -38,13 +38,13 @@
   	</div>
 
 <!-- Body
-================================================== -->		
-  <div class="container">	
+================================================== -->
+  <div class="container">
 <!-- Docs nav
     ================================================== -->
     <!-- row (inicio) -->
   	<div class="row">
-  	  
+
   	  <!-- NAV BAR (inicio) -->
   		<div class="span4 bs-docs-sidebar">
         <ul class="nav nav-list bs-docs-sidenav">
@@ -54,13 +54,13 @@
         	<li><a href="#passo_configuracao" ><i class="icon-chevron-right"></i> Configuração</a></li>
         	<li><a href="#passo_inicializacao"><i class="icon-chevron-right"></i> Inicialização</a></li>
         	<li><a href="#passo_exibicao"     ><i class="icon-chevron-right"></i> Exibição da tela de login</a></li>
-  	
+
         	<li class="nav-header">Componentes</li>
         	<li><a href="#widget"><i class="icon-chevron-right"></i> Widget</a></li>
         	<li><a href="#include"><i class="icon-chevron-right"></i> Include</a></li>
         	<li><a href="#configuracaoTopo"><i class="icon-chevron-right"></i> Topo</a></li>
         	<li><a href="#newsletter"><i class="icon-chevron-right"></i> Newsletter</a></li>
-  	
+
         	<li class="nav-header">Customização</li>
         	<li><a href="#redesocial"><i class="icon-chevron-right"></i> Redes Sociais</a></li>
         	<li><a href="#layout"><i class="icon-chevron-right"></i> Layout</a></li>
@@ -68,10 +68,10 @@
        	</ul>
   	 	</div>
   	 	<!-- NAV BAR (termino) -->
-  	 	
+
   	  <!-- CONTEUDO (inicio)-->
 	    <div class="span8">
-	    
+
         <!-- PASSO A PASSO - INSTALAÇÃO -->
       	<section id="passo_instalacao">
       	  <br />
@@ -85,7 +85,7 @@
       			<strong>Atenção</strong> para realizar testes de implementação seu ambiente de desenvolvimento deve ter acesso ao nosso ambiente de homologação.
         	</div>
       	</section>
-    	
+
       	<!-- PASSO A PASSO - CRIAÇÃO DA div -->
       	<section id="passo_div">
       		<br />
@@ -93,7 +93,7 @@
     			<h2>Criação da &lt;div&gt;</h2>
   	  		<p>Para que a implementação do Abril ID seja completa precisamos criar uma <code>div</code> dentro da pagina do seu site com um <code>id</code> que deve ter o mesmo nome usado no <a href="#passo2">Passo 2</a> no campo <code>componente</code>. Essa <code>div</code> ficará responsável por apresentar Abril ID na tela por isso é importante posicionar essa <code>div</code> em um ponto estratégico na pagina do seu site .</p>
       		<pre class="prettyprint"><ol class="linenums"><li class="L0"><span class="pln">&lt;body&gt;</span></li><li class="L1"><span class="pln">&lt;div id='abrilID'&gt;</span></li><li class="L2"><span class="pln">&lt;/div&gt;</span></li><li class="L3"><span class="pln">&lt;/body&gt;</span></li></ol></pre>
-  			</section>          
+  			</section>
 
         <!-- PASSO A PASSO - CONFIGURAÇÃO -->
       	<section id="passo_configuracao">
@@ -103,16 +103,16 @@
         	<p>Para o Abril ID funcionar em seu site é necessário incluir sua configuração.</p><p> Existem duas formas de configurar o Abril ID a forma simplificada na qual você só precisa configurar dois parâmetros:</p>
         	<ul>
           	<li>
-          	<p><strong>Produto:</strong> que deve ser Login/ID para sua marca/site.</p></li><li> 
-          	<p><strong>Container:</strong> que deve ser o <code>id</code> de de um elemento <code>div</code> onde será renderizado o widget na página do site.</p></li> 
+          	<p><strong>Produto:</strong> que deve ser Login/ID para sua marca/site.</p></li><li>
+          	<p><strong>Container:</strong> que deve ser o <code>id</code> de de um elemento <code>div</code> onde será renderizado o widget na página do site.</p></li>
         	</ul>
-        	<p> Segue exemplo de implementação escrito no formato <code>json</code></p>   
+        	<p> Segue exemplo de implementação escrito no formato <code>json</code></p>
         	<div class="alert  alert-info">
         	  Caso ainda  não tenha um <strong>Login/ID</strong> deverá ser solicitado para a equipe de desenvolvimento do Abril ID. email: <i class="icon-envelope"></i><a href="mailto:nucleo-aap@abril.com.br"> nucleo-aap@abril.com.br </a>
-        	</div> 
+        	</div>
   		  	<pre class="prettyprint "><ol class="linenums"><li class="L0"><span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span></li><li class="L1"><span class="pln"> &nbsp;&nbsp;var id_widget_config = {</span></li><li class="L2"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;produto: 'login_site',<br /></span></li><li class="L3"><span class="pln"> &nbsp;&nbsp;&nbsp;&nbsp;container: 'id_div_widget'<br /></span></li><li class="L4"><span class="pln"> &nbsp;&nbsp;};<br /></span></li><li class="L5"><span class="pln"> &lt;/script&gt;</span></li></ol></pre>
-      	</section>  
-    	
+      	</section>
+
       	<!-- PASSO A PASSO - INICIALIZAÇÃO -->
       	<section id="passo_inicializacao">
       	  <br />
@@ -121,21 +121,7 @@
   	    	<p>Antes de utilizar o componente widget é necessário criar uma instância do objeto <code>AbrilId</code> e inicializa-lo com os parâmetros criados no passo <a href="#passo2">Configuração</a> através do método <code>initialize()</code>:</p>
       		<pre class="prettyprint"><ol class="linenums"><li class="L0"><span class="pln">&lt;script type=&quot;text/javascript&quot;&gt;</span></li><li class="L1"><span class="pln">&nbsp;&nbsp;var id_widget = new AbrilId();</span></li><li class="L2"><span class="pln">&nbsp;&nbsp;id_widget.initialize( id_widget_config );</span></li><li class="L3"><span class="pln">&lt;/script&gt;</span></li></ol></pre>
       	</section>
-    	
-        <!-- PASSO A PASSO - EXIBIÇÃO DA TELA DE LOGIN -->
-    		<section id="passo_exibicao">
-    			<br />
-    			<br />
-    			<h2>Exibição da tela de login</h2>
-      		<p>Para invocar o Abril ID na página utilizaremos um link para a realizar chamada do widget de login do Abril ID </p>
-      		<pre class="prettyprint"><ol class="linenums"><li class="L0">&lt;a href=&quot;javascript: void(0);&quot; onclick=&quot;id_widget.login.render();&quot;&gt;login&lt;/a&gt;</li></ol></pre>
-      		<div class="alert alert-info">
-       			<strong>Exemplo Prático</strong> Faça o download dessa pagina de teste para confirmar tudo que foi passado até agora <a href="exemplo_abrilid.zip"><i class="icon-download"></i> exemplo.zip</a>. 
-       		</div>	
-    		</section>
 
-    		<br />
-			
   			<!-- COMPONENTES -->
     		<section id="componentes">
     		  <br />
@@ -152,7 +138,7 @@
       		</ul>
       		<p>Nas seções a seguir cada um deles é descrito com mais detalhes.
   		  </section>
-      
+
         <!-- COMPONENTES - WIDGET -->
     		<section id="widget">
     		  <br />
@@ -165,10 +151,22 @@
       		<div class="bs-docs-example">
       		<img alt="" class="img-polaroid" src="img/widget-padrao.jpg"><br /><br />
       		<div class="alert "> <p><i class="icon-warning-sign "></i> Caso não seja declarado o campo <code>componente</code> por padrão o componente carregado será o <strong>widget</strong></p></div>
-      		</div>
-      		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var id_widget_config = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;produto: 'login_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_widget'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.WIDGET</strong></li><li class="L5">&nbsp;&nbsp;};</li><li class="L6">&lt;/script&gt;</li></ol></pre>
+            </div>
+
+    		<h4>Configuração Widget</h4>
+            <pre class="prettyprint"><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var id_widget_config = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;produto: 'login_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_widget'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.WIDGET</strong></li><li class="L5">&nbsp;&nbsp;};</li><li class="L6">&lt;/script&gt;</li></ol></pre>
+            <!-- PASSO A PASSO - EXIBIÇÃO DA TELA DE LOGIN -->
+            <br />
+    		<h4>Exibição da tela de login</h4>
+      		<p>Para invocar o Abril ID na página utilizaremos um link para a realizar chamada do widget de login do Abril ID </p>
+            <pre class="prettyprint"><ol class="linenums"><li class="L0">&lt;a href=&quot;javascript: void(0);&quot; onclick=&quot;id_widget.login.render();&quot;&gt;login&lt;/a&gt;</li></ol></pre>
+      		<div class="alert alert-info">
+       			<strong>Exemplo Prático</strong> Faça o download dessa pagina de teste para confirmar tudo que foi passado até agora <a href="exemplo_abrilid.zip"><i class="icon-download"></i> exemplo.zip</a>.
+       		</div>
+    		<br />
+
     		</section>
-    		
+
     		<!-- COMPONENTES - INCLUDE -->
     		<section id="include">
     		  <br/>
@@ -178,6 +176,18 @@
       		<img alt="" class="img-polaroid" src="img/include-padrao.jpg"><br /><br />
       		</div>
       		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.INCLUDE</strong></li><li class="L5">&nbsp;&nbsp;};</li><li class="L6">&lt;/script&gt;</li></ol></pre>
+            <h4>Tipos de include</h4>
+      		<p>É possível fazer include dos seguintes componentes na página: </p>
+      		<ul>
+      		  <li><strong>Login</strong></li>
+      		  <li><strong>Newsletter</strong></li>
+      		  <li><strong>Edição de Perfil Completo</strong></li>
+      		  <li><strong>Edição de Perfil Básico</strong></li>
+      		  <li><strong>Criação de conta</strong></li>
+      		  <li><strong>Reset de Password</strong></li>
+      		</ul>
+      		<p>Exemplos: </p>
+            <pre class="prettyprint"><ol class="linenums"><li class="L0">&lt;a href=&quot;#&quot; onclick=&quot;includes.login.render();&quot;&gt;login&lt;/a&gt;</li><li class="L1">&lt;a href=&quot;#&quot; onclick=&quot;includes.newsletter.render();&quot;&gt;newsletter&lt;/a&gt;</li><li class="L2">&lt;a href=&quot;#&quot; onclick=&quot;includes.signup.render();&quot;&gt;criar conta&lt;/a&gt;</li><li class="L3">&lt;a href=&quot;#&quot; onclick=&quot;includes.profile_full_update.render();&quot;&gt;perfil completo&lt;/a&gt;</li></ol></pre>
         </section>
 
         <!-- COMPONENTES - TOPO -->
@@ -185,40 +195,43 @@
           <br />
           <br />
       		<h2>Topo</h2>
-      		<p>Topo é o componente de renderização do widget de login do Abril ID, disponível nas 
+      		<p>Topo é o componente de renderização do widget de login do Abril ID, disponível nas
       		  versões: <strong>mini, pequeno e medio</strong></p>
-        
+
+      		<div class="alert alert-error">
+                <strong>Atenção </strong> O Topo <strong>não</strong> necessita da chamada do método render. Ex: id_widget.login.render() não é necessário
+      		</div>
       		<h3>Topo mini</h3>
-      		<p>O topo mini exibe o logo do Abril ID junto com um botão entrar quando o usuário está 
+      		<p>O topo mini exibe o logo do Abril ID junto com um botão entrar quando o usuário está
       		  deslogado, ou botão o sair caso já esteja autenticado.</p>
-    		
+
       		<div class="bs-docs-example">
       		<img alt="" class="img-polaroid" src="img/topo-mini-off.jpg"><br /><br />
       		<img alt="" class="img-polaroid" src="img/topo-mini-on.jpg"><br /><br />
       		</div>
       		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'Login/ID_do_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.TOPO,</strong></li><li class="L5"><strong>&nbsp;&nbsp;&nbsp;&nbsp;topo: 'mini'</strong></li><li class="L6">&nbsp;&nbsp;};</li><li class="L7">&lt;/script&gt;</li></ol></pre>
-    		
+
       		<h3>Topo pequeno</h3>
-      		<p>O topo pequeno, além dos botões entrar e sair, exibe também as opções de autênticação 
+      		<p>O topo pequeno, além dos botões entrar e sair, exibe também as opções de autênticação
       		  através de redes sociais.</p>
-        
+
       		<div class="bs-docs-example">
       		<img alt="" class="img-polaroid" src="img/topo-pequeno-off.jpg"><br /><br />
       		<img alt="" class="img-polaroid" src="img/topo-pequeno-on.jpg"><br /><br />
       		</div>
       		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'Login/ID_do_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.TOPO,</strong></li><li class="L5"><strong>&nbsp;&nbsp;&nbsp;&nbsp;topo: 'pequeno'</strong></li><li class="L6">&nbsp;&nbsp;};</li><li class="L7">&lt;/script&gt;</li></ol></pre>
-    		
+
       		<h3>Topo Médio</h3>
       		<p>O topo médio exibe o nome e avatar do usuário logado, além dos botões de entrar e sair
       		  e redes sociais.</p>
-        
+
   				<p>O topo médio permite também customizar um link de edição de perfil no nome e no avatar
-  				  do usuário logado. Esse link pode ser uma página customizada pelo site, um include de 
+  				  do usuário logado. Esse link pode ser uma página customizada pelo site, um include de
   				  edição de perfil do Abril ID ou mesmo a página de edição de perfil no site do Abril ID.</p>
-				  
-  				<p>Basta passar o link de edição de perfil através do parâmetro <i>url_edicao_perfil</i> 
+
+  				<p>Basta passar o link de edição de perfil através do parâmetro <i>url_edicao_perfil</i>
   				  na instância do Topo, conforme exemplo abaixo.</p>
-				  
+
   				<p>Exemplos de links:</p>
   				<ul><li><strong>url_edicao_perfil:</strong> http://url_seusite/editar_perfil</li>
   				<li><strong>url_edicao_perfil:</strong> abril_id (Exibe a página de edição no site do Abril ID)</li>
@@ -229,7 +242,7 @@
       		</div>
       		<pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'Login/ID_do_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;url_edicao_perfil: 'http://seusite/edicao_perfil',</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.TOPO,</strong></li><li class="L5"><strong>&nbsp;&nbsp;&nbsp;&nbsp;topo: 'medio'</strong></li><li class="L6">&nbsp;&nbsp;};</li><li class="L7">&lt;/script&gt;</li></ol></pre>
         </section>
-      
+
         <!-- COMPONENTES - NEWSLETTER -->
         <section id="newsletter">
           <br />
@@ -238,20 +251,20 @@
           <p>O componente <small>Newsletter</small> fornece uma interface para subscrição nas listas de notícias de seu site.</p>
           <p>Para adicionar o componente em seu site basta criar um objeto de configuração e inicializar uma instância do Abril ID com a mesma:</p>
           <pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var id_newsletter_config = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;produto: 'login_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_newsletter',</li><li class="L4">&nbsp;&nbsp;&nbsp;&nbsp;componente: Componente.INCLUDE</li><li class="L6">&nbsp;&nbsp;};</li><li class="L7">&nbsp;&nbsp;var id_newsletter = new AbrilId();</li><li class="L8">&nbsp;&nbsp;id_newsletter.initialize(id_newsletter_config);</li><li class="L8">&lt;/script&gt;</li></ol></pre>
-          
+
         <p>sem seguida crie uma <code>div</code> com o id especificado no parâmetro <code>container</code> da configuração, e finalmente utilize o método <code>render()</code> para exibir o componente na página:</p>
-        
+
         <pre class="prettyprint "><ol class="linenums"><li class="L0">&lt;a href=&quot;javascript: void(0);&quot; onclick=&quot;id_newsletter.newsletter.render();&quot;&gt;Assine nossa Newsletter&lt;/a&gt;</li></ol></pre>
-        
+
         <p>No exemplo acima utilizamos um link no qual o usuário deve clicar para exibir o formulário, mas você pode chamar o método em qualquer momento, por exemplo através de um callback do evento <code>document.ready()</code> para exibir o formulário automaticamente.</p>
-        
-        <p>Se ainda não possue newsletters criadas para o seu site entre em contato com a equipe do Abril ID para mais informações</p>  
+
+        <p>Se ainda não possue newsletters criadas para o seu site entre em contato com a equipe do Abril ID para mais informações</p>
         </section>
-      
+
         <!-- CUSTOMIZACAO - REDES SOCIAIS (inicio) -->
     		<section id="redesocial">
-    			<br />          
-    			<br />          
+    			<br />
+    			<br />
     			<h2>Redes Sociais</h2>
       		<p>Por padrão o login via redes sociais (Facebook, Twitter ou Google Accounts) estão habilitados pelo Abril ID .</p>
       		<p>Essa configuração permite a ativação/desativação do login via redes sociais.</p>
@@ -266,11 +279,11 @@
         		<pre class="prettyprint" ><ol class="linenums"><li class="L0">&lt;script type=&quot;text/javascript&quot;&gt;</li><li class="L1">&nbsp;&nbsp;var configuracao = {</li><li class="L2">&nbsp;&nbsp;&nbsp;&nbsp;produto:'nome/ID_da_seu_site',</li><li class="L3">&nbsp;&nbsp;&nbsp;&nbsp;container: 'div_exempl'</li><li class="L4"><strong>&nbsp;&nbsp;&nbsp;&nbsp;provedores: ['facebook', 'twitter']</strong></li><li class="L5">&nbsp;&nbsp;};</li><li class="L6">&lt;/script&gt;</li></ol></pre>
       		</div>
       	</section>
-      
+
         <!-- CUSTOMIZACAO - LAYOUT (inicio) -->
     		<section id="layout">
-    			<br />          
-    			<br />          
+    			<br />
+    			<br />
     			<h2>Configurando Layout do Abril ID</h2>
       		<a href="customizacao.html" class="btn btn-danger">Customizar Abril ID</a><br /><br />
       		<p>O Abril ID é customizável e permite a configuração de layout para ficar adequado ao seu site.</p>
@@ -285,13 +298,13 @@
   		    </ol>
   			  <div class="alert"><p><strong>Atenção:</strong>
         		<p>A configuração completa encontra-se na sessão documentação oficial layout</p>
-      		</div>    
+      		</div>
       		<h3>Layout Geral</h3>
       		<div class="bs-docs-example">
         		<img alt="" class="img-polaroid" src="img/geral.jpg"><br /><br />
       		</div>
       		<pre class="prettyprint"><ol class="linenums"><li class='L0'>var configuracao = {</li><li class='L1'>  produto:'nome/ID_da_seu_site',</li><li class='L2'>  container: 'div_exempl',</li><li class='L3'>  estilo:{ </li><li class='L4'>    'general': {</li><li class='L5'>      'background-color':'#2E0F4D', //Cor de Fundo</li><li class='L6'>      'border-color':'#CCCC43', //Cor da borda</li><li class='L7'>      'border-width':'5', //largura da borda</li><li class='L8'>      'text-color':'#CCCC43', //Cor do Texto</li><li class='L9'>      'inner-border-color':'#7A83FF' //Cor de Fundo Caixa</li><li class='L10'>    },</li><li class='L10'>    ...</li></ol></pre>
-        		
+
       		<h3>Linhas</h3>
       		<div class="bs-docs-example">
       		<img alt="" class="img-polaroid" src="img/linhas.jpg"><br /><br />
@@ -302,13 +315,13 @@
       		<img alt="" class="img-polaroid" src="img/botoes.jpg"><br /><br />
       		</div>
       		<pre class="prettyprint"><ol class="linenums"><li class='L13'>    ...</li><li class='L14'>    'button':{</li><li class='L15'>      'stroke':{</li><li class='L16'>        'text-color':'#FFFFFF', // Cor texto</li><li class='L17'>        'background-color':{</li><li class='L18'>        'start':'#2E0F4D', // Cor Primaria Fundo </li><li class='L19'>        'end':'#020926' // Cor Secundaria Fundo</li><li class='L20'>      },</li><li class='L21'>      'border-color':'#020926' // Cor Borda</li><li class='L22'>      },</li><li class='L23'>      'flat':{</li><li class='L24'>        'text-color':'#FFFFFF', // Cor texto</li><li class='L25'>        'background-color':'#020926', // Cor Fundo</li><li class='L26'>        'border-color':'#020926' // Cor Borda</li><li class='L27'>      }</li><li class='L28'>    },</li><li class='L29'>    ...</li></ol></pre>
-        		
+
       		<h3>Erros</h3>
       		<div class="bs-docs-example">
         		<img alt="" class="img-polaroid" src="img/erros.jpg"><br /><br />
       		</div>
       		<pre class="prettyprint"><ol class="linenums"><li class='L28'>    ...</li><li class='L29'>    'error':{</li><li class='L30'>      'background-color':'#66777F',// Cor fundo</li><li class='L31'>      'border-color':'#020926',// Cor borda</li><li class='L32'>      'text-color':'#66777F'// Cor texto</li><li class='L33'>    },</li><li class='L34'>    ...</li></ol></pre>
-    		
+
       		<h3>Logo Abril</h3>
       		<div class="bs-docs-example">
         		<img alt="" class="img-polaroid" src="img/logo-verde.jpg"><br /><br />
@@ -319,9 +332,9 @@
         		</div>
       		</div>
       		<pre class="prettyprint"><ol class="linenums"><li class='L33'>    ...</li><li class='L34'>    'header':{</li><li class='L35'>      'type': 'default'</li><li class='L36'>    }</li><li class='L37'>    ...</li></ol></pre>
-    		
+
       		<h3>Layout topo <span class="label label-info">new</span></h3>
-    		
+
       		<div class="bs-docs-example">
         		<img alt="" class="img-polaroid" src="img/topo-layout.jpg"><br /><br />
         		<div class="alert alert-info"> <p><strong>Exemplos Logos Abril:</strong>
@@ -345,9 +358,9 @@
       			<strong>Atenção </strong> Essa sessão passo-a-passo não substitui a leitura da documentação do Abril ID. Sua função é ajudar webmaster a realizar as primeiras implementações.
       		</div>
       	</section>
-      	
+
     	</div><!-- span8 (termino)-->
-      
+
     </div><!-- row (termino)-->
 
     <footer class="footer">
@@ -361,7 +374,7 @@
       </ul>
     </div>
     </footer>
-	
+
   	<script src="js/jquery-latest.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/google-code-prettify/prettify.js"></script>
